@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Datalist with Local Storage</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 50px;
+            background: #f9fbfd;
+        }
+
+        input {
+            padding: 10px;
+            width: 300px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        label {
+            font-weight: bold;
+            margin-bottom: 10px;
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+
+    <label for="city">Choose a city:</label>
+    <input list="cities" id="city" placeholder="Type to search...">
+    <datalist id="cities"></datalist>
+
+    <script>
+        const defaultCities = ["Peshawar", "Lahore", "Karachi", "Islamabad", "Quetta"];
+        const key = "cityOptions";
+
+        function populateDatalist(data) {
+            const datalist = document.getElementById("cities");
+            datalist.innerHTML = ""; // Clear previous options
+            data.forEach(city => {
+                const option = document.createElement("option");
+                option.value = city;
+                datalist.appendChild(option);
+            });
+        }
+
+        function initialize() {
+            let stored = localStorage.getItem(key);
+            if (stored) {
+                const cities = JSON.parse(stored);
+                populateDatalist(cities);
+            } else {
+                localStorage.setItem(key, JSON.stringify(defaultCities));
+                populateDatalist(defaultCities);
+            }
+        }
+
+        initialize();
+    </script>
+
+</body>
+
+</html>
