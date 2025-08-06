@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Image Preview</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f2f4f8;
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .preview-card {
+      background-color: white;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    input[type="file"] {
+      margin-top: 1rem;
+      font-size: 1rem;
+    }
+
+    img {
+      margin-top: 1rem;
+      max-width: 200px;
+      border-radius: 8px;
+      border: 2px solid #ccc;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="preview-card">
+    <h2>Upload an Image</h2>
+    <input type="file" onchange="img.src = window.URL.createObjectURL(this.files[0])" />
+    <img id="img" />
+  </div>
+</body>
+
+</html>

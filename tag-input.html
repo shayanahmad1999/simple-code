@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tag Input</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f6fa;
+      display: flex;
+      justify-content: center;
+      padding: 2rem;
+    }
+
+    .tag-box {
+      background: white;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+      max-width: 500px;
+      width: 100%;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      padding: 0.6rem;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    .tags {
+      margin-top: 1rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .tag {
+      background-color: #0078D4;
+      color: white;
+      padding: 0.4rem 0.8rem;
+      border-radius: 50px;
+      display: flex;
+      align-items: center;
+      font-size: 0.95rem;
+    }
+
+    .tag button {
+      background: none;
+      border: none;
+      color: white;
+      font-weight: bold;
+      margin-left: 8px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="tag-box">
+    <h2>Add Tags</h2>
+    <input type="text" id="tagInput" placeholder="Type and press enter" onkeydown="handleTag(event)" />
+    <div class="tags" id="tagList"></div>
+  </div>
+
+  <script>
+    function handleTag(e) {
+      if (e.key === 'Enter') {
+        const input = document.getElementById('tagInput');
+        const tagText = input.value.trim();
+        if (tagText) {
+          const tag = document.createElement('div');
+          tag.classList.add('tag');
+          tag.innerHTML = `${tagText} <button onclick="this.parentElement.remove()">×</button>`;
+          document.getElementById('tagList').appendChild(tag);
+          input.value = '';
+        }
+        e.preventDefault();
+      }
+    }
+  </script>
+</body>
+</html>

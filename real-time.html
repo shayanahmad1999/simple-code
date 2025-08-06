@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Character Counter</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #f4f6f9;
+            display: flex;
+            justify-content: center;
+            padding: 2rem;
+        }
+
+        .counter-box {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 500px;
+        }
+
+        textarea {
+            width: 100%;
+            padding: 0.8rem;
+            font-size: 1rem;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            resize: vertical;
+        }
+
+        .count {
+            margin-top: 10px;
+            font-size: 0.9rem;
+        }
+
+        .warning {
+            color: orange;
+        }
+
+        .limit {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="counter-box">
+        <h2>Character Counter</h2>
+        <textarea id="textInput" placeholder="Type something..." rows="5" maxlength="200"
+            oninput="updateCount()"></textarea>
+        <p id="charCount" class="count">0 / 200 characters</p>
+    </div>
+
+    <script>
+        function updateCount() {
+            const input = document.getElementById('textInput');
+            const count = document.getElementById('charCount');
+            const len = input.value.length;
+            count.textContent = `${len} / 200 characters`;
+
+            count.className = 'count';
+            if (len > 160 && len <= 200) count.classList.add('warning');
+            if (len > 190) count.classList.add('limit');
+        }
+    </script>
+</body>
+
+</html>

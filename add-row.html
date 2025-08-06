@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Enhanced Row Manager</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #eef2f7;
+            margin: 0;
+            padding: 2rem;
+            display: flex;
+            justify-content: center;
+        }
+
+        .table-container {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 700px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 1rem;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #0078D4;
+            color: white;
+        }
+
+        input {
+            width: 90%;
+            padding: 5px;
+        }
+
+        .btn-group {
+            display: flex;
+            justify-content: flex-end;
+            gap: 10px;
+        }
+
+        .add-btn,
+        .remove-btn {
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 6px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .add-btn {
+            background-color: #28a745;
+            color: white;
+        }
+
+        .add-btn:hover {
+            background-color: #218838;
+        }
+
+        .remove-btn {
+            background-color: #dc3545;
+            color: white;
+        }
+
+        .remove-btn:hover {
+            background-color: #c82333;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="table-container">
+        <h2>Dynamic Table with Add/Remove</h2>
+        <table id="dynamicTable">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Rows will be added via JS -->
+            </tbody>
+        </table>
+        <div class="btn-group">
+            <button class="add-btn" onclick="addRow()">Add Row</button>
+        </div>
+    </div>
+
+    <script>
+        function addRow(name = '', email = '') {
+            const table = document.getElementById('dynamicTable').getElementsByTagName('tbody')[0];
+            const row = document.createElement('tr');
+
+            const nameCell = document.createElement('td');
+            const emailCell = document.createElement('td');
+            const actionCell = document.createElement('td');
+
+            nameCell.innerHTML = `<input type="text" value="${name}" placeholder="Enter name" />`;
+            emailCell.innerHTML = `<input type="email" value="${email}" placeholder="Enter email" />`;
+
+            const removeBtn = document.createElement('button');
+            removeBtn.className = 'remove-btn';
+            removeBtn.innerText = 'Remove';
+            removeBtn.onclick = () => row.remove();
+
+            actionCell.appendChild(removeBtn);
+            row.appendChild(nameCell);
+            row.appendChild(emailCell);
+            row.appendChild(actionCell);
+            table.appendChild(row);
+        }
+
+        // Load 3 default rows on page load
+        window.onload = () => {
+            addRow();
+            addRow();
+            addRow();
+        };
+    </script>
+</body>
+
+</html>

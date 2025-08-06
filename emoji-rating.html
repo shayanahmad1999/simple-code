@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Emoji Rating</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f6fa;
+      display: flex;
+      justify-content: center;
+      padding: 2rem;
+    }
+
+    .rating-box {
+      background: white;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+      text-align: center;
+      max-width: 400px;
+      width: 100%;
+    }
+
+    .emoji-group {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      font-size: 2rem;
+      margin: 1rem 0;
+      cursor: pointer;
+    }
+
+    .emoji-group span {
+      transition: transform 0.2s ease;
+    }
+
+    .emoji-group span:hover {
+      transform: scale(1.3);
+    }
+
+    .selected {
+      transform: scale(1.3);
+      background-color: #d1eaff;
+      border-radius: 50%;
+      padding: 5px;
+    }
+
+    .feedback {
+      font-size: 1rem;
+      color: #0078D4;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="rating-box">
+    <h2>Rate Your Experience</h2>
+    <div class="emoji-group" id="emojis">
+      <span onclick="selectEmoji(this)" title="Terrible">😠</span>
+      <span onclick="selectEmoji(this)" title="Bad">😕</span>
+      <span onclick="selectEmoji(this)" title="Okay">😐</span>
+      <span onclick="selectEmoji(this)" title="Good">😊</span>
+      <span onclick="selectEmoji(this)" title="Awesome">😍</span>
+    </div>
+    <p class="feedback" id="feedbackText">Select an emoji to rate</p>
+  </div>
+
+  <script>
+    function selectEmoji(selected) {
+      document.querySelectorAll('.emoji-group span').forEach(emoji => {
+        emoji.classList.remove('selected');
+      });
+
+      selected.classList.add('selected');
+      document.getElementById('feedbackText').textContent = `You rated: ${selected.getAttribute('title')}`;
+    }
+  </script>
+</body>
+</html>

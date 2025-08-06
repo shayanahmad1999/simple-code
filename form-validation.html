@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Live Form Validation</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #f4f6fa;
+            display: flex;
+            justify-content: center;
+            padding: 2rem;
+        }
+
+        .form-box {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            width: 100%;
+        }
+
+        .form-field {
+            margin-bottom: 1rem;
+            position: relative;
+        }
+
+        input {
+            width: 100%;
+            padding: 0.6rem 2.5rem 0.6rem 0.6rem;
+            font-size: 1rem;
+            border: 2px solid #ccc;
+            border-radius: 6px;
+            transition: border-color 0.3s;
+        }
+
+        input.valid {
+            border-color: #28a745;
+        }
+
+        input.invalid {
+            border-color: #dc3545;
+        }
+
+        .icon {
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            font-size: 1.2rem;
+            pointer-events: none;
+        }
+
+        .icon.valid {
+            color: #28a745;
+        }
+
+        .icon.invalid {
+            color: #dc3545;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="form-box">
+        <h2>Live Form Validation</h2>
+        <div class="form-field">
+            <input type="text" id="name" placeholder="Enter your name" oninput="validateName()" />
+            <span id="nameIcon" class="icon">❔</span>
+        </div>
+        <div class="form-field">
+            <input type="email" id="email" placeholder="Enter your email" oninput="validateEmail()" />
+            <span id="emailIcon" class="icon">❔</span>
+        </div>
+    </div>
+
+    <script>
+        function validateName() {
+            const input = document.getElementById('name');
+            const icon = document.getElementById('nameIcon');
+            const valid = input.value.length >= 3;
+            input.className = valid ? 'valid' : 'invalid';
+            icon.className = 'icon ' + (valid ? 'valid' : 'invalid');
+            icon.textContent = valid ? '✔' : '✖';
+        }
+
+        function validateEmail() {
+            const input = document.getElementById('email');
+            const icon = document.getElementById('emailIcon');
+            const valid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(input.value);
+            input.className = valid ? 'valid' : 'invalid';
+            icon.className = 'icon ' + (valid ? 'valid' : 'invalid');
+            icon.textContent = valid ? '✔' : '✖';
+        }
+    </script>
+</body>
+
+</html>

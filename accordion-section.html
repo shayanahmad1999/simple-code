@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>FAQ Accordion</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f6fa;
+      display: flex;
+      justify-content: center;
+      padding: 2rem;
+    }
+
+    .faq-box {
+      background: white;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+      max-width: 600px;
+      width: 100%;
+    }
+
+    .faq {
+      margin-bottom: 1rem;
+      border-bottom: 1px solid #ccc;
+    }
+
+    .faq-question {
+      cursor: pointer;
+      font-weight: bold;
+      padding: 0.5rem 0;
+      position: relative;
+    }
+
+    .faq-question::after {
+      content: '+';
+      position: absolute;
+      right: 0;
+      font-size: 1.2rem;
+    }
+
+    .faq.open .faq-question::after {
+      content: '−';
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease;
+      font-size: 0.95rem;
+      color: #333;
+    }
+
+    .faq.open .faq-answer {
+      max-height: 300px;
+      margin-top: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="faq-box">
+    <h2>FAQs</h2>
+
+    <div class="faq" onclick="this.classList.toggle('open')">
+      <div class="faq-question">What is Livewire?</div>
+      <div class="faq-answer">Livewire is a full-stack framework for Laravel that makes building dynamic interfaces simple, without writing a lot of JavaScript.</div>
+    </div>
+
+    <div class="faq" onclick="this.classList.toggle('open')">
+      <div class="faq-question">How does Laravel handle roles?</div>
+      <div class="faq-answer">Laravel uses middleware, gates, and policies to manage user roles and permissions in a scalable way.</div>
+    </div>
+
+    <div class="faq" onclick="this.classList.toggle('open')">
+      <div class="faq-question">Can I use Vue with Laravel?</div>
+      <div class="faq-answer">Yes! Laravel provides excellent integration with Vue, and you can use it for creating reactive UI components easily.</div>
+    </div>
+  </div>
+</body>
+</html>

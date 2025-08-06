@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Range Slider Preview</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f6fa;
+      display: flex;
+      justify-content: center;
+      padding: 2rem;
+    }
+
+    .slider-box {
+      background: white;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+      max-width: 500px;
+      width: 100%;
+      text-align: center;
+    }
+
+    input[type="range"] {
+      width: 100%;
+      margin-top: 1rem;
+    }
+
+    .value-label {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #0078D4;
+      margin-top: 0.5rem;
+      transition: color 0.3s ease;
+    }
+  </style>
+</head>
+<body>
+  <div class="slider-box">
+    <h2>Adjust Range</h2>
+    <input type="range" min="0" max="100" value="50" oninput="updateValue(this.value)" />
+    <div id="valueDisplay" class="value-label">Value: 50</div>
+  </div>
+
+  <script>
+    function updateValue(val) {
+      const display = document.getElementById('valueDisplay');
+      display.textContent = `Value: ${val}`;
+      display.style.color = val > 75 ? '#28a745' : val < 25 ? '#dc3545' : '#0078D4';
+    }
+  </script>
+</body>
+</html>

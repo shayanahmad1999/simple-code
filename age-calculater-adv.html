@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Elegant Age Calculator</title>
+  <!-- Flatpickr styles -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      background: linear-gradient(to right, #83a4d4, #b6fbff);
+    }
+
+    input {
+      padding: 10px;
+      font-size: 16px;
+      width: 100%;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .output {
+      font-weight: bold;
+      font-size: 1.2rem;
+      color: #0077b6;
+    }
+
+    .highlight {
+      font-weight: bold;
+      color: #1abc9c;
+    }
+
+    .container {
+      background-color: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+      text-align: center;
+      width: 500px;
+      height: 300px;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+      color: #333;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Age Calculator 🎂</h1>
+    <input id="dob" placeholder="Select your birthdate" />
+    <p class="output">Your age is: <span id="age" class="highlight"></span></p>
+    <p class="output">You were born on: <span id="formatted-date" class="highlight"></span></p>
+  </div>
+  <!-- Flatpickr script -->
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+  <script>
+    flatpickr("#dob", {
+      dateFormat: "Y-m-d",
+      onChange: function (selectedDates, dateStr) {
+        calculateFullAge(dateStr);
+      }
+    });
+
+    function calculateFullAge(birthDateStr) {
+      const birthDate = new Date(birthDateStr);
+      const today = new Date();
+
+      let years = today.getFullYear() - birthDate.getFullYear();
+      let months = today.getMonth() - birthDate.getMonth();
+      let days = today.getDate() - birthDate.getDate();
+
+      if (days < 0) {
+        months--;
+        const prevMonth = new Date(today.getFullYear(), today.getMonth(), 0);
+        days += prevMonth.getDate();
+      }
+
+      if (months < 0) {
+        years--;
+        months += 12;
+      }
+
+      document.getElementById("age").innerText = `${years} years, ${months} months, ${days} days`;
+
+      const options = { year: 'numeric', month: 'long', day: 'numeric' };
+      const formatted = birthDate.toLocaleDateString('en-US', options);
+      document.getElementById("formatted-date").innerText = formatted;
+    }
+  </script>
+</body>
+
+</html>
