@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Skill Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <style>
+        :root {
+            --bg-color: #f4f4f4;
+            --text-color: #333;
+            --card-bg: #fff;
+            --accent: #4e89ff;
+        }
+
+        [data-theme="dark"] {
+            --bg-color: #121212;
+            --text-color: #eee;
+            --card-bg: #1e1e1e;
+            --accent: #00c9a7;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: var(--bg-color);
+            color: var(--text-color);
+            transition: background 0.3s, color 0.3s;
+        }
+
+        .container {
+            max-width: 700px;
+            margin: 50px auto;
+            padding: 20px;
+            background: var(--card-bg);
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .skill {
+            margin: 15px 0;
+        }
+
+        .skill-name {
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .skill-bar {
+            height: 10px;
+            background: #ccc;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .skill-fill {
+            height: 100%;
+            width: 0;
+            border-radius: 5px;
+            transition: width 0.5s ease-in-out;
+        }
+
+        form {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        form input {
+            flex: 1;
+            padding: 8px;
+            border: 1px solid #aaa;
+            border-radius: 6px;
+        }
+
+        form button {
+            padding: 8px 16px;
+            background: var(--accent);
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        form button:hover {
+            background: #333;
+        }
+
+        .toggle-btn {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background: var(--accent);
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        .toggle-btn:hover {
+            background: #333;
+        }
+
+        .tab {
+            margin-top: 30px;
+        }
+
+        .project {
+            cursor: pointer;
+            padding: 10px;
+            border: 1px solid var(--accent);
+            border-radius: 8px;
+            transition: background 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .project:hover {
+            background: var(--accent);
+            color: #fff;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background: var(--card-bg);
+            padding: 20px;
+            border-radius: 12px;
+            max-width: 500px;
+            text-align: center;
+        }
+
+        .close-btn {
+            margin-top: 15px;
+            padding: 8px 16px;
+            background: var(--accent);
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        button {
+            margin-top: 5px;
+            margin-right: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>My Skills</h2>
+        <div id="skills"></div>
+
+        <form id="skill-form">
+            <input type="text" id="skill-name" placeholder="Skill name" required />
+            <input type="number" id="skill-level" placeholder="Level (0-100)" min="0" max="100" required />
+            <button type="submit">Add Skill</button>
+        </form>
+
+        <div class="tab">
+            <h2>Projects</h2>
+            <div id="projects"></div>
+        </div>
+
+        <button class="toggle-btn" onclick="toggleTheme()">Toggle Dark/Light</button>
+        <button class="toggle-btn" onclick="downloadSkills()">⬇️ Download Skills</button>
+    </div>
+
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <h3 id="modal-title"></h3>
+            <p id="modal-desc"></p>
+            <button class="close-btn" onclick="closeModal()">Close</button>
+        </div>
+    </div>
+
+    <script>
+        const skillsContainer = document.getElementById("skills");
+        const projectsContainer = document.getElementById("projects");
+        const skillForm = document.getElementById("skill-form");
+        const skillNameInput = document.getElementById("skill-name");
+        const skillLevelInput = document.getElementById("skill-level");
+
+        const defaultSkills = [
+            { name: "PHP & Laravel", level: "90%" },
+            { name: "Vue.js & Inertia.js", level: "80%" },
+            { name: "MySQL & MongoDB", level: "85%" },
+            { name: "UI/UX & Responsive Design", level: "75%" }
+        ];
+
+        let skillsData = [];
+
+        const savedSkills = localStorage.getItem("skills");
+
+        // Only save defaults if nothing exists or data is invalid
+        if (!savedSkills || savedSkills === "[]") {
+            skillsData = defaultSkills;
+            localStorage.setItem("skills", JSON.stringify(defaultSkills));
+        } else {
+            skillsData = JSON.parse(savedSkills);
+        }
+
+
+        renderSkills();
+
+        fetch("json/projects.json")
+            .then(res => res.json())
+            .then(data => {
+                data.forEach(project => {
+                    const projectDiv = document.createElement("div");
+                    projectDiv.className = "project";
+                    projectDiv.innerHTML = `
+            <i class="fas ${project.icon}"></i>
+            <div class="project-title">${project.title}</div>
+          `;
+                    projectDiv.onclick = () => openModal(project.title, project.description);
+                    projectsContainer.appendChild(projectDiv);
+                });
+            });
+
+        function renderSkills() {
+            skillsContainer.innerHTML = "";
+            skillsData.forEach((skill, index) => {
+                const levelValue = parseInt(skill.level.replace("%", ""));
+                const clampedLevel = Math.max(0, Math.min(100, levelValue));
+                let color = "";
+                let label = "";
+
+                if (clampedLevel < 40) {
+                    color = "#ef4444";
+                    label = "Poor";
+                } else if (clampedLevel < 70) {
+                    color = "#facc15";
+                    label = "Good";
+                } else if (clampedLevel < 88) {
+                    color = "#fb923c";
+                    label = "Excellent";
+                } else {
+                    color = "#22c55e";
+                    label = "Outstanding";
+                }
+
+                const skillDiv = document.createElement("div");
+                skillDiv.className = "skill";
+                skillDiv.innerHTML = `
+          <div class="skill-name">${skill.name} — <strong>${label}</strong></div>
+          <div class="skill-bar">
+            <div class="skill-fill" style="width: ${clampedLevel}%; background: ${color};"></div>
+          </div>
+          <button onclick="editSkill(${index})">✏️ Edit</button>
+          <button onclick="deleteSkill(${index})">🗑️ Delete</button>
+        `;
+                skillsContainer.appendChild(skillDiv);
+            });
+        }
+
+        function addSkillHandler(e) {
+            e.preventDefault();
+            const name = skillNameInput.value.trim();
+            const level = Math.max(0, Math.min(100, parseInt(skillLevelInput.value.trim()))) + "%";
+            if (name && level) {
+                skillsData.push({ name, level });
+                localStorage.setItem("skills", JSON.stringify(skillsData));
+                renderSkills();
+                skillForm.reset();
+            }
+        }
+        skillForm.onsubmit = addSkillHandler;
+
+        function editSkill(index) {
+            const skill = skillsData[index];
+            skillNameInput.value = skill.name;
+            skillLevelInput.value = parseInt(skill.level);
+
+            skillForm.onsubmit = function (e) {
+                e.preventDefault();
+                skill.name = skillNameInput.value.trim();
+                skill.level = Math.max(0, Math.min(100, parseInt(skillLevelInput.value.trim()))) + "%";
+                localStorage.setItem("skills", JSON.stringify(skillsData));
+                renderSkills();
+                skillForm.reset();
+                skillForm.onsubmit = addSkillHandler;
+            };
+        }
+
+        function deleteSkill(index) {
+            skillsData.splice(index, 1);
+            localStorage.setItem("skills", JSON.stringify(skillsData));
+            renderSkills();
+        }
+
+        function openModal(title, desc) {
+            document.getElementById("modal-title").textContent = title;
+            document.getElementById("modal-desc").textContent = desc;
+            document.getElementById("modal").style.display = "flex";
+        }
+
+        function closeModal() {
+            document.getElementById("modal").style.display = "none";
+        }
+
+        function toggleTheme() {
+            const current = document.documentElement.getAttribute("data-theme");
+            const newTheme = current === "dark" ? "light" : "dark";
+            document.documentElement.setAttribute("data-theme", newTheme);
+            localStorage.setItem("theme", newTheme);
+        }
+
+        function downloadSkills() {
+            const dataStr = JSON.stringify(skillsData, null, 2);
+            const blob = new Blob([dataStr], { type: "application/json" });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement("a");
+            a.href = url;
+            a.download = "skills.json";
+            a.click();
+            URL.revokeObjectURL(url);
+        }
+
+
+        const savedTheme = localStorage.getItem("theme") || "light";
+        document.documentElement.setAttribute("data-theme", savedTheme);
+    </script>
+</body>
+
+</html>

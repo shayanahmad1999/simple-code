@@ -1,0 +1,17 @@
+[
+  {
+    "title": "Portfolio Redesign",
+    "description": "Responsive portfolio with dark/light mode.",
+    "icon": "fa-briefcase"
+  },
+  {
+    "title": "Dashboard UI",
+    "description": "Interactive dashboard with filters.",
+    "icon": "fa-chart-line"
+  },
+  {
+    "title": "SEO Optimizer",
+    "description": "Tool to improve SEO for websites.",
+    "icon": "fa-search"
+  }
+]

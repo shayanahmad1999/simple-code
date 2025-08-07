@@ -149,6 +149,11 @@
       "name": "Portfolio Template",
       "link": "portfolio-template.html",
       "icon": "fa-id-card"
+    },
+    {
+      "name": "Skill Showcase Card",
+      "link": "SkillShowcaseCard.html",
+      "icon": "fa-id-card"
     }
   ]
 }
