@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Art Gallery</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: #f8f9fa;
+            padding: 40px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #343a40;
+            margin-bottom: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin-bottom: 30px;
+            font-size: 16px;
+            background-color: #343a40;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #495057;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .art {
+            width: 150px;
+            height: 150px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            color: white;
+            font-weight: bold;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: grab;
+            user-select: none;
+        }
+
+        .art.active {
+            transform: scale(1.1);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+            z-index: 1;
+        }
+
+        .art.dragging {
+            opacity: 0.5;
+            transform: scale(1.05);
+        }
+
+        .sunset {
+            background: linear-gradient(to top, #ff7e5f, #feb47b);
+        }
+
+        .ocean {
+            background: radial-gradient(circle at center, #00c6ff, #0072ff);
+        }
+
+        .forest {
+            background: linear-gradient(to bottom, #56ab2f, #a8e063);
+        }
+
+        .lava {
+            background: repeating-linear-gradient(45deg,
+                    #ff4500,
+                    #ff4500 10px,
+                    #8b0000 10px,
+                    #8b0000 20px);
+        }
+
+        .ice {
+            background: linear-gradient(to right, #e0f7fa, #80deea);
+            color: #00796b;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>CSS Art Gallery</h1>
+    <button onclick="shuffleGallery()">Shuffle</button>
+    <div class="gallery" id="gallery"></div>
+
+    <script>
+        const gallery = document.getElementById('gallery');
+        const themes = ['sunset', 'ocean', 'forest', 'lava', 'ice'];
+        let index = 0;
+
+        // Create tile element
+        function createTile(themeName) {
+            const div = document.createElement('div');
+            div.className = 'art ' + themeName;
+            div.textContent = themeName.charAt(0).toUpperCase() + themeName.slice(1);
+            div.setAttribute('draggable', 'true');
+            div.setAttribute('title', `This is a ${div.textContent} theme`);
+
+            div.addEventListener('click', () => {
+                div.classList.toggle('active');
+            });
+
+            return div;
+        }
+
+        // Load saved order or default
+        function loadGallery() {
+            const savedOrder = JSON.parse(localStorage.getItem('galleryOrder')) || themes;
+            gallery.innerHTML = '';
+            savedOrder.forEach(theme => {
+                gallery.appendChild(createTile(theme));
+            });
+        }
+
+        // Save current order
+        function saveGalleryOrder() {
+            const order = Array.from(gallery.children).map(tile => tile.textContent.toLowerCase());
+            localStorage.setItem('galleryOrder', JSON.stringify(order));
+        }
+
+        // Shuffle tiles
+        function shuffleGallery() {
+            const tiles = Array.from(gallery.children);
+            tiles.sort(() => Math.random() - 0.5);
+            tiles.forEach(tile => gallery.appendChild(tile));
+            saveGalleryOrder();
+        }
+
+        // Auto-rotate themes
+        setInterval(() => {
+            document.querySelectorAll('.art').forEach((tile, i) => {
+                const theme = themes[(index + i) % themes.length];
+                tile.className = 'art ' + theme;
+                tile.textContent = theme.charAt(0).toUpperCase() + theme.slice(1);
+                tile.setAttribute('title', `This is a ${tile.textContent} theme`);
+            });
+            index = (index + 1) % themes.length;
+            saveGalleryOrder();
+        }, 3000);
+
+        // Drag-and-drop sorting
+        let draggedItem = null;
+
+        gallery.addEventListener('dragstart', e => {
+            if (e.target.classList.contains('art')) {
+                draggedItem = e.target;
+                e.target.classList.add('dragging');
+            }
+        });
+
+        gallery.addEventListener('dragend', e => {
+            if (draggedItem) {
+                draggedItem.classList.remove('dragging');
+                draggedItem = null;
+                saveGalleryOrder();
+            }
+        });
+
+        gallery.addEventListener('dragover', e => {
+            e.preventDefault();
+            const afterElement = getDragAfterElement(gallery, e.clientY);
+            if (draggedItem && afterElement) {
+                gallery.insertBefore(draggedItem, afterElement);
+            } else if (draggedItem) {
+                gallery.appendChild(draggedItem);
+            }
+        });
+
+        function getDragAfterElement(container, y) {
+            const draggableElements = [...container.querySelectorAll('.art:not(.dragging)')];
+
+            return draggableElements.reduce((closest, child) => {
+                const box = child.getBoundingClientRect();
+                const offset = y - box.top - box.height / 2;
+                if (offset < 0 && offset > closest.offset) {
+                    return { offset: offset, element: child };
+                } else {
+                    return closest;
+                }
+            }, { offset: Number.NEGATIVE_INFINITY }).element;
+        }
+
+        // Initialize
+        loadGallery();
+    </script>
+</body>
+
+</html>

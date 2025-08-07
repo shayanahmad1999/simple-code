@@ -6,95 +6,283 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SIMPLE-CODE Index</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
     <style>
+        :root {
+            --bg-light: #f5f7fa;
+            --bg-dark: #1e1e2f;
+            --text-light: #333;
+            --text-dark: #f0f0f0;
+            --primary-light: #2575fc;
+            --primary-dark: #6a11cb;
+        }
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            transition: background 0.3s, color 0.3s;
         }
 
         body {
             font-family: 'Poppins', sans-serif;
-            background: linear-gradient(to right, #eef2f3, #ffffff);
-            color: #333;
+            background: var(--bg-light);
+            color: var(--text-light);
+        }
+
+        body.dark-mode {
+            background: var(--bg-dark);
+            color: var(--text-dark);
         }
 
         header {
-            background: #6a11cb;
-            background: linear-gradient(to right, #2575fc, #6a11cb);
+            background: linear-gradient(to right, var(--primary-light), var(--primary-dark));
             padding: 1.5rem 2rem;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            position: relative;
         }
 
-        nav {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 1rem;
-        }
-
-        nav a {
-            color: #fff;
-            background-color: rgba(255, 255, 255, 0.1);
-            text-decoration: none;
-            padding: 0.6rem 1rem;
-            border-radius: 30px;
+        .toggle-btn {
+            position: absolute;
+            top: 1.5rem;
+            right: 2rem;
+            background: #fff;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
             font-weight: 600;
-            transition: all 0.3s ease;
+            cursor: pointer;
         }
 
-        nav a:hover {
-            background-color: #fff;
-            color: #2575fc;
-            transform: scale(1.05);
+        body.dark-mode .toggle-btn {
+            background: #333;
+            color: #fff;
         }
 
         .container {
             text-align: center;
             padding: 3rem 1rem;
+            animation: fadeSlide 1s ease-out;
         }
 
         h1 {
             font-size: 2.5rem;
-            color: #6a11cb;
+            color: var(--primary-dark);
             margin-bottom: 1rem;
+        }
+
+        body.dark-mode h1 {
+            color: #fff;
         }
 
         p {
             font-size: 1.1rem;
             color: #555;
         }
+
+        body.dark-mode p {
+            color: #ccc;
+        }
+
+        #search {
+            margin: 1rem auto;
+            display: block;
+            padding: 0.6rem 1rem;
+            font-size: 1rem;
+            border-radius: 30px;
+            border: 1px solid #ccc;
+            width: 90%;
+            max-width: 400px;
+        }
+
+        details {
+            margin: 1rem auto;
+            max-width: 900px;
+            background: #fff;
+            border-radius: 10px;
+            padding: 1rem;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        body.dark-mode details {
+            background: #2c2c3c;
+        }
+
+        summary {
+            font-size: 1.3rem;
+            font-weight: 600;
+            cursor: pointer;
+            margin-bottom: 1rem;
+        }
+
+        .demo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 1rem;
+        }
+
+        .demo-item {
+            text-align: center;
+            border-radius: 10px;
+            background: #f0f0f0;
+            padding: 1rem 0.5rem;
+            transition: transform 0.3s;
+        }
+
+        body.dark-mode .demo-item {
+            background: #444;
+        }
+
+        .demo-item:hover {
+            transform: scale(1.03);
+        }
+
+        .demo-item i {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            color: var(--primary-light);
+            transition: transform 0.3s;
+        }
+
+        .demo-item i:hover {
+            animation: floatIcon 0.6s ease-in-out infinite alternate;
+        }
+
+        body.dark-mode .demo-item i {
+            color: var(--primary-dark);
+        }
+
+        .demo-item a {
+            display: block;
+            font-weight: 600;
+            text-decoration: none;
+            color: var(--primary-light);
+        }
+
+        body.dark-mode .demo-item a {
+            color: var(--primary-dark);
+        }
+
+        @keyframes fadeSlide {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes floatIcon {
+            from {
+                transform: translateY(0);
+            }
+
+            to {
+                transform: translateY(-5px);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .toggle-btn {
+                top: 1rem;
+                right: 1rem;
+            }
+        }
     </style>
 </head>
 
 <body>
     <header>
-        <nav>
-            <a href="accordion-section.html">Accordion</a>
-            <a href="add-row.html">Add Row</a>
-            <a href="age-calculater.html">Age Calculator</a>
-            <a href="age-calculater-adv.html">Advanced Age</a>
-            <a href="clipboard.html">Clipboard</a>
-            <a href="color-change.html">Color Changer</a>
-            <a href="dark-light.html">Dark/Light</a>
-            <a href="emoji-rating.html">Emoji Rating</a>
-            <a href="form-validation.html">Form Validation</a>
-            <a href="image-carousal.html">Carousel</a>
-            <a href="img-single.html">Single Image</a>
-            <a href="img-multiple.html">Multi Image</a>
-            <a href="range-slider.html">Slider</a>
-            <a href="real-time.html">Real-Time</a>
-            <a href="tag-input.html">Tag Input</a>
-            <a href="todo-list.html">Todo List</a>
-            <a href="datalist.html">Data List</a>
-            <a href="password-validation.html">Password Validation</a>
-        </nav>
+        <button class="toggle-btn" onclick="toggleMode()">🌙 Dark Mode</button>
     </header>
 
     <div class="container">
         <h1>Welcome to SIMPLE-CODE 🌟</h1>
-        <p>Click any button above to explore a cool HTML demo crafted with love and simplicity.</p>
+        <p>Explore categorized HTML demos with icons, search, and theme toggle.</p>
+        <input type="text" id="search" placeholder="Search demos..." />
     </div>
+
+    <div id="demo-sections"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100
+        });
+
+        async function fetchDemos() {
+            try {
+                const response = await fetch('json/navbar.json');
+                const demos = await response.json();
+                renderDemos(demos);
+            } catch (error) {
+                console.error('Failed to load navbar.json:', error);
+                document.getElementById('demo-sections').innerHTML = `
+                    <p style="text-align:center; color:red;">⚠️ Unable to load demo items. Please try again later.</p>
+                `;
+            }
+        }
+
+        function renderDemos(demos) {
+            const container = document.getElementById('demo-sections');
+            container.innerHTML = '';
+            for (const category in demos) {
+                const section = document.createElement('details');
+                section.open = true;
+                section.innerHTML = `<summary>${category}</summary><div class="demo-grid"></div>`;
+                const grid = section.querySelector('.demo-grid');
+
+                demos[category].forEach((demo, index) => {
+                    const item = document.createElement('div');
+                    item.className = 'demo-item';
+                    item.setAttribute('data-aos', 'fade-up');
+                    item.setAttribute('data-aos-delay', `${index * 50}`);
+                    item.innerHTML = `
+                        <i class="fas ${demo.icon}"></i>
+                        <a href="${demo.link}">${demo.name}</a>
+                    `;
+                    grid.appendChild(item);
+                });
+
+                container.appendChild(section);
+            }
+        }
+
+        let debounceTimer;
+        document.getElementById('search').addEventListener('input', () => {
+            clearTimeout(debounceTimer);
+            debounceTimer = setTimeout(filterDemos, 300);
+        });
+
+        function filterDemos() {
+            const query = document.getElementById('search').value.toLowerCase();
+            document.querySelectorAll('.demo-item').forEach(item => {
+                const text = item.querySelector('a').textContent.toLowerCase();
+                item.style.display = text.includes(query) ? 'block' : 'none';
+            });
+        }
+
+        function toggleMode() {
+            document.body.classList.toggle('dark-mode');
+            const isDark = document.body.classList.contains('dark-mode');
+            document.querySelector('.toggle-btn').textContent = isDark ? '☀️ Light Mode' : '🌙 Dark Mode';
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        }
+
+        if (localStorage.getItem('theme') === 'dark') {
+            document.body.classList.add('dark-mode');
+            document.querySelector('.toggle-btn').textContent = '☀️ Light Mode';
+        }
+
+        fetchDemos();
+    </script>
 </body>
 
 </html>

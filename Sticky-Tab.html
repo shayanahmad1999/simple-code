@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Sticky Tab Navigation</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            margin: 0;
+            background: #f8f9fa;
+        }
+
+        .navbar {
+            position: sticky;
+            top: 0;
+            background: #343a40;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 15px;
+            z-index: 1000;
+        }
+
+        .navbar button {
+            background: #495057;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .navbar button.active {
+            background: #007bff;
+        }
+
+        .navbar button:hover {
+            background: #6c757d;
+        }
+
+        .tab-content {
+            padding: 40px;
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        h2 {
+            color: #343a40;
+        }
+
+        p {
+            color: #495057;
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="navbar">
+        <button class="active" onclick="showTab('home')">Home</button>
+        <button onclick="showTab('about')">About</button>
+        <button onclick="showTab('contact')">Contact</button>
+    </div>
+
+    <div id="home" class="tab-content active">
+        <h2>Welcome to My Site</h2>
+        <p>This is the home section. Scroll down to see the sticky navigation in action.</p>
+    </div>
+
+    <div id="about" class="tab-content">
+        <h2>About Me</h2>
+        <p>I’m a web developer focused on Laravel, Livewire, and building dynamic user experiences.</p>
+    </div>
+
+    <div id="contact" class="tab-content">
+        <h2>Contact</h2>
+        <p><strong>Email:</strong> <a href="mailto:shayanahmad235@gmail.com">shayanahmad235@gmail.com</a></p>
+        <p><strong>GitHub:</strong> <a href="https://github.com/shayanahmad1999" target="_blank">shayanahmad1999</a></p>
+    </div>
+
+    <script>
+        function showTab(tabId) {
+            document.querySelectorAll('.tab-content').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            document.getElementById(tabId).classList.add('active');
+
+            document.querySelectorAll('.navbar button').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            event.target.classList.add('active');
+        }
+    </script>
+</body>
+
+</html>

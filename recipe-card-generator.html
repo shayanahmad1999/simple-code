@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Recipe Card Generator</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #fffaf0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 50px;
+    }
+
+    h1 {
+      color: #6f4e37;
+    }
+
+    .input-box {
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      width: 400px;
+      margin-bottom: 30px;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      font-size: 16px;
+      border: 2px solid #d2b48c;
+      border-radius: 5px;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background: #d2691e;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #a0522d;
+    }
+
+    .card {
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      width: 400px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    }
+
+    .card h2 {
+      color: #8b4513;
+      margin-bottom: 10px;
+    }
+
+    .card h3 {
+      margin-top: 15px;
+      color: #6f4e37;
+    }
+
+    .card ul, .card ol {
+      margin-left: 20px;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <h1>Recipe Card Generator</h1>
+  <div class="input-box">
+    <input type="text" id="recipeName" placeholder="Recipe Name">
+    <textarea id="ingredients" placeholder="Ingredients (one per line)"></textarea>
+    <textarea id="steps" placeholder="Steps (one per line)"></textarea>
+    <button onclick="generateCard()">Generate Card</button>
+  </div>
+
+  <div class="card" id="recipeCard" style="display:none;"></div>
+
+  <script>
+    function generateCard() {
+      const name = document.getElementById("recipeName").value.trim();
+      const ingredients = document.getElementById("ingredients").value.trim().split("\n");
+      const steps = document.getElementById("steps").value.trim().split("\n");
+
+      if (!name || ingredients.length === 0 || steps.length === 0) return;
+
+      let cardHTML = `<h2>${name}</h2>`;
+      cardHTML += `<h3>Ingredients</h3><ul>`;
+      ingredients.forEach(item => {
+        cardHTML += `<li>${item}</li>`;
+      });
+      cardHTML += `</ul><h3>Steps</h3><ol>`;
+      steps.forEach(step => {
+        cardHTML += `<li>${step}</li>`;
+      });
+      cardHTML += `</ol>`;
+
+      const card = document.getElementById("recipeCard");
+      card.innerHTML = cardHTML;
+      card.style.display = "block";
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Smart Image Gallery</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(to right, #f8f9fa, #e9ecef);
+            padding: 40px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #343a40;
+            margin-bottom: 20px;
+            font-size: 2.5em;
+        }
+
+        input[type="file"] {
+            margin-bottom: 30px;
+            padding: 10px;
+            font-size: 16px;
+            border: 2px solid #ced4da;
+            border-radius: 8px;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 25px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .image-tile {
+            position: relative;
+            width: 100%;
+            padding-top: 100%;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            background-color: white;
+            transition: transform 0.3s ease;
+            cursor: grab;
+        }
+
+        .image-tile.dragging {
+            opacity: 0.6;
+            transform: scale(1.05);
+            z-index: 10;
+        }
+
+        .image-tile:hover {
+            transform: scale(1.03);
+        }
+
+        .image-tile img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 12px;
+        }
+
+        .remove-btn {
+            position: absolute;
+            top: 8px;
+            right: 8px;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 28px;
+            height: 28px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        .remove-btn:hover {
+            background: rgba(255, 0, 0, 0.8);
+        }
+
+        .caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 5px;
+            font-size: 14px;
+            text-align: center;
+            border-top: 1px solid #ccc;
+        }
+
+        .caption input {
+            width: 90%;
+            border: none;
+            background: transparent;
+            text-align: center;
+            font-size: 14px;
+            outline: none;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>📸 Smart Image Gallery</h1>
+    <input type="file" id="imageInput" multiple accept="image/*">
+    <div class="gallery" id="gallery"></div>
+
+    <script>
+        const imageInput = document.getElementById('imageInput');
+        const gallery = document.getElementById('gallery');
+        let draggedItem = null;
+
+        // Load saved images
+        window.addEventListener('DOMContentLoaded', () => {
+            const saved = JSON.parse(localStorage.getItem('imageGallery')) || [];
+            saved.forEach(({ src, caption }) => addImageTile(src, caption));
+        });
+
+        // Save current gallery to localStorage
+        function saveGallery() {
+            const tiles = Array.from(gallery.children).map(tile => {
+                return {
+                    src: tile.querySelector('img').src,
+                    caption: tile.querySelector('input').value
+                };
+            });
+            localStorage.setItem('imageGallery', JSON.stringify(tiles));
+        }
+
+        imageInput.addEventListener('change', (e) => {
+            const files = Array.from(e.target.files);
+            files.forEach(file => {
+                const reader = new FileReader();
+                reader.onload = () => {
+                    addImageTile(reader.result, '');
+                    saveGallery();
+                };
+                reader.readAsDataURL(file);
+            });
+            imageInput.value = '';
+        });
+
+        function addImageTile(src, captionText) {
+            const tile = document.createElement('div');
+            tile.className = 'image-tile';
+            tile.setAttribute('draggable', 'true');
+
+            const img = document.createElement('img');
+            img.src = src;
+
+            const removeBtn = document.createElement('button');
+            removeBtn.className = 'remove-btn';
+            removeBtn.textContent = '×';
+            removeBtn.onclick = () => {
+                tile.remove();
+                saveGallery();
+            };
+
+            const caption = document.createElement('div');
+            caption.className = 'caption';
+            const input = document.createElement('input');
+            input.type = 'text';
+            input.placeholder = 'Enter caption';
+            input.value = captionText;
+            input.oninput = saveGallery;
+            caption.appendChild(input);
+
+            tile.appendChild(img);
+            tile.appendChild(removeBtn);
+            tile.appendChild(caption);
+            gallery.appendChild(tile);
+
+            tile.addEventListener('dragstart', () => {
+                draggedItem = tile;
+                tile.classList.add('dragging');
+            });
+
+            tile.addEventListener('dragend', () => {
+                tile.classList.remove('dragging');
+                draggedItem = null;
+                saveGallery();
+            });
+        }
+
+        gallery.addEventListener('dragover', e => {
+            e.preventDefault();
+            const afterElement = getDragAfterElement(gallery, e.clientY);
+            if (draggedItem && afterElement) {
+                gallery.insertBefore(draggedItem, afterElement);
+            } else if (draggedItem) {
+                gallery.appendChild(draggedItem);
+            }
+        });
+
+        function getDragAfterElement(container, y) {
+            const draggableElements = [...container.querySelectorAll('.image-tile:not(.dragging)')];
+
+            return draggableElements.reduce((closest, child) => {
+                const box = child.getBoundingClientRect();
+                const offset = y - box.top - box.height / 2;
+                if (offset < 0 && offset > closest.offset) {
+                    return { offset: offset, element: child };
+                } else {
+                    return closest;
+                }
+            }, { offset: Number.NEGATIVE_INFINITY }).element;
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Mood Selector</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            transition: background 0.5s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 50px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        select {
+            padding: 10px;
+            font-size: 16px;
+            margin-top: 20px;
+            border-radius: 5px;
+            border: 2px solid #ccc;
+        }
+
+        .mood-display {
+            margin-top: 30px;
+            font-size: 48px;
+            color: #212529;
+        }
+
+        .quote {
+            margin-top: 10px;
+            font-size: 18px;
+            color: #495057;
+            text-align: center;
+            max-width: 400px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Select Your Mood</h1>
+    <select id="moodSelect" onchange="updateMood()">
+        <option value="">-- Choose a mood --</option>
+        <option value="happy">😊 Happy</option>
+        <option value="sad">😢 Sad</option>
+        <option value="angry">😠 Angry</option>
+        <option value="excited">🤩 Excited</option>
+        <option value="calm">😌 Calm</option>
+    </select>
+
+    <div class="mood-display" id="emoji"></div>
+    <div class="quote" id="quote"></div>
+
+    <script>
+        const moodMap = {
+            happy: {
+                emoji: "😊",
+                quote: "Keep smiling, it makes people wonder what you're up to.",
+                color: "#ffeeba"
+            },
+            sad: {
+                emoji: "😢",
+                quote: "Every storm runs out of rain.",
+                color: "#d6d8db"
+            },
+            angry: {
+                emoji: "😠",
+                quote: "Speak when you are angry and you will make the best speech you will ever regret.",
+                color: "#f8d7da"
+            },
+            excited: {
+                emoji: "🤩",
+                quote: "The best is yet to come!",
+                color: "#c3e6cb"
+            },
+            calm: {
+                emoji: "😌",
+                quote: "Peace comes from within. Do not seek it without.",
+                color: "#d1ecf1"
+            }
+        };
+
+        function updateMood() {
+            const mood = document.getElementById("moodSelect").value;
+            const emoji = document.getElementById("emoji");
+            const quote = document.getElementById("quote");
+
+            if (moodMap[mood]) {
+                emoji.textContent = moodMap[mood].emoji;
+                quote.textContent = moodMap[mood].quote;
+                document.body.style.background = moodMap[mood].color;
+            } else {
+                emoji.textContent = "";
+                quote.textContent = "";
+                document.body.style.background = "#f8f9fa";
+            }
+        }
+    </script>
+</body>
+
+</html>

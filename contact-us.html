@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us</title>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+        (function () {
+            emailjs.init("YOUR_PUBLIC_KEY"); // Replace with your EmailJS public key
+        })();
+    </script>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(to right, #74ebd5, #ACB6E5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .contact-form {
+            background: #fff;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            width: 100%;
+            animation: fadeIn 0.8s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .contact-form h2 {
+            margin-bottom: 1rem;
+            color: #333;
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 1rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #555;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            border-color: #74ebd5;
+            outline: none;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .submit-btn {
+            background: #74ebd5;
+            color: #fff;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.3s;
+            width: 100%;
+        }
+
+        .submit-btn:hover {
+            background: #57c7b6;
+        }
+
+        .spinner {
+            border: 3px solid #fff;
+            border-top: 3px solid #57c7b6;
+            border-radius: 50%;
+            width: 16px;
+            height: 16px;
+            display: inline-block;
+            animation: spin 0.8s linear infinite;
+            vertical-align: middle;
+            margin-right: 8px;
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .toast-container {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 9999;
+        }
+
+        .toast {
+            background-color: #333;
+            color: #fff;
+            padding: 1rem 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            opacity: 0;
+            transform: translateX(100%);
+            animation: slideIn 0.5s forwards;
+        }
+
+        .toast.success {
+            background-color: #4CAF50;
+        }
+
+        .toast.error {
+            background-color: #f44336;
+        }
+
+        @keyframes slideIn {
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <form class="contact-form" id="contact-form">
+        <h2>Contact Us</h2>
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="from_name" />
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="reply_to" />
+        </div>
+        <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" ></textarea>
+        </div>
+        <button type="submit" class="submit-btn" id="submit-btn">Send Message</button>
+    </form>
+
+    <div class="toast-container" id="toast-container"></div>
+
+    <script>
+        const form = document.getElementById("contact-form");
+        const submitBtn = document.getElementById("submit-btn");
+
+        function showToast(message, type = 'success') {
+            const toast = document.createElement('div');
+            toast.className = `toast ${type}`;
+            toast.textContent = message;
+
+            const container = document.getElementById('toast-container');
+            container.appendChild(toast);
+
+            setTimeout(() => {
+                toast.remove();
+            }, 3000);
+        }
+
+        function isValidEmail(email) {
+            return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+        }
+
+        form.addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            const name = form.elements["from_name"].value.trim();
+            const email = form.elements["reply_to"].value.trim();
+            const message = form.elements["message"].value.trim();
+
+            if (!name) {
+                showToast("Please enter your name.", "error");
+                return;
+            }
+
+            if (!email || !isValidEmail(email)) {
+                showToast("Please enter a valid email address.", "error");
+                return;
+            }
+
+            if (!message) {
+                showToast("Please enter your message.", "error");
+                return;
+            }
+
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = `<span class="spinner"></span> Sending...`;
+
+            emailjs.sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", form)
+                .then(() => {
+                    showToast("Message sent successfully!", "success");
+                    form.reset();
+                })
+                .catch(() => {
+                    showToast("Failed to send message. Try again.", "error");
+                })
+                .finally(() => {
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = "Send Message";
+                });
+        });
+    </script>
+
+</body>
+
+</html>

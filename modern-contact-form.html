@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact | Shayan Ahmad</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <!-- reCAPTCHA -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f2f4f8;
+            color: #333;
+        }
+
+        section {
+            max-width: 700px;
+            margin: 80px auto;
+            padding: 40px;
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .section-title {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #222;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .input-wrap {
+            position: relative;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 16px 14px;
+            border: 1.5px solid #ccc;
+            border-radius: 10px;
+            font-size: 16px;
+            background: transparent;
+            outline: none;
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+
+        label {
+            position: absolute;
+            top: 16px;
+            left: 18px;
+            background: #fff;
+            padding: 0 6px;
+            font-size: 14px;
+            color: #777;
+            transition: 0.2s ease;
+            pointer-events: none;
+        }
+
+        input:focus+label,
+        input:not(:placeholder-shown)+label,
+        textarea:focus+label,
+        textarea:not(:placeholder-shown)+label {
+            top: -10px;
+            left: 12px;
+            font-size: 12px;
+            color: #f5b301;
+        }
+
+        input.invalid,
+        textarea.invalid {
+            border-color: #dc3545;
+            background-image: url('https://cdn-icons-png.flaticon.com/512/1828/1828843.png');
+            background-repeat: no-repeat;
+            background-size: 18px 18px;
+            background-position: right 12px center;
+        }
+
+        input:valid,
+        textarea:valid {
+            border-color: #28a745;
+            background-image: url('https://cdn-icons-png.flaticon.com/512/190/190411.png');
+            background-repeat: no-repeat;
+            background-size: 18px 18px;
+            background-position: right 12px center;
+        }
+
+        .glow-btn {
+            background: #f5b301;
+            color: #222;
+            font-weight: 700;
+            font-size: 16px;
+            padding: 14px 28px;
+            border: none;
+            border-radius: 12px;
+            box-shadow: 0 6px 24px rgba(245, 179, 1, 0.3);
+            cursor: pointer;
+            transition: box-shadow 0.3s ease;
+        }
+
+        .glow-btn:hover {
+            box-shadow: 0 8px 30px rgba(245, 179, 1, 0.5);
+        }
+
+        .g-recaptcha {
+            transform: scale(1.05);
+            transform-origin: 0;
+        }
+
+        #form-status {
+            margin-top: 10px;
+            font-weight: 600;
+        }
+
+        @media (max-width: 600px) {
+            section {
+                margin: 40px 20px;
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section data-aos="fade-up">
+        <div class="section-title">Get in Touch</div>
+        <p><strong>Email:</strong> <a href="mailto:shayanahmad235@gmail.com">shayanahmad235@gmail.com</a></p>
+        <p><strong>GitHub:</strong> <a href="https://github.com/shayanahmad1999" target="_blank">shayanahmad1999</a></p>
+
+        <form id="contact-form" onsubmit="sendEmail(event)">
+            <div class="input-wrap">
+                <input type="text" name="name" placeholder=" " required />
+                <label>Your Name</label>
+            </div>
+
+            <div class="input-wrap">
+                <input type="email" name="email" placeholder=" " required />
+                <label>Your Email</label>
+            </div>
+
+            <div class="input-wrap">
+                <textarea name="message" id="typed-message" placeholder=" " rows="5" required></textarea>
+                <label>Your Message</label>
+            </div>
+            <p>to create cature please visit to below link</p>
+            <a href="https://www.google.com/recaptcha/admin/create" target="_blank">Click</a>
+            <div class="g-recaptcha" data-sitekey="YOUR_RECAPTCHA_SITE_KEY"></div>
+
+            <button type="submit" class="glow-btn">🚀 Send Message</button>
+            <p id="form-status"></p>
+        </form>
+    </section>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script>
+        AOS.init();
+        emailjs.init("SzFEhSQc_e1xpyF-X"); //public key
+
+        function sendEmail(event) {
+            event.preventDefault();
+            const form = document.getElementById("contact-form");
+            const status = document.getElementById("form-status");
+            const recaptchaResponse = grecaptcha.getResponse();
+
+            if (!recaptchaResponse) {
+                status.textContent = "❗ Please verify you're not a robot.";
+                status.style.color = "red";
+                return;
+            }
+            // service id          template id
+            emailjs.sendForm("service_kqdhy8q", "template_2vlt7sq", form).then(
+                () => {
+                    status.textContent = "✅ Message sent successfully!";
+                    status.style.color = "green";
+                    form.reset();
+                    grecaptcha.reset();
+                },
+                (error) => {
+                    status.textContent = "❌ Failed to send message. Try again later.";
+                    status.style.color = "red";
+                    console.error("EmailJS error:", error);
+                }
+            );
+        }
+
+        // Live validation with icons
+        document.querySelectorAll("input, textarea").forEach((input) => {
+            input.addEventListener("input", () => {
+                input.classList.toggle("invalid", !input.checkValidity());
+            });
+        });
+
+        // Typewriter animation in placeholder
+        const messageField = document.getElementById("typed-message");
+        const messages = [
+            "Hi Shayan, I'm interested in your services...",
+            "Can we work together on a Laravel project?",
+            "I'd like to collaborate on something exciting!",
+        ];
+        let charIndex = 0;
+        let msgIndex = 0;
+
+        function typeMessage() {
+            const currentMsg = messages[msgIndex];
+            messageField.setAttribute("placeholder", currentMsg.substring(0, charIndex++));
+
+            if (charIndex <= currentMsg.length) {
+                setTimeout(typeMessage, 80);
+            } else {
+                setTimeout(() => {
+                    charIndex = 0;
+                    msgIndex = (msgIndex + 1) % messages.length;
+                    typeMessage();
+                }, 2500);
+            }
+        }
+
+        typeMessage();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sticky Notes Board</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f8f9fa;
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    h1 {
+      color: #343a40;
+    }
+
+    .note-input {
+      margin-bottom: 20px;
+      display: flex;
+      gap: 10px;
+    }
+
+    input {
+      padding: 10px;
+      font-size: 16px;
+      width: 300px;
+      border: 2px solid #ced4da;
+      border-radius: 5px;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background: #28a745;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #218838;
+    }
+
+    .board {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-top: 30px;
+      max-width: 800px;
+    }
+
+    .note {
+      background: #fff3cd;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      width: 200px;
+      position: relative;
+      font-size: 16px;
+    }
+
+    .note button {
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      background: #dc3545;
+      border: none;
+      color: white;
+      padding: 5px 8px;
+      font-size: 12px;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+
+    .note button:hover {
+      background: #c82333;
+    }
+  </style>
+</head>
+<body>
+  <h1>Sticky Notes Board</h1>
+  <div class="note-input">
+    <input type="text" id="noteText" placeholder="Write a note...">
+    <button onclick="addNote()">Add Note</button>
+  </div>
+  <div class="board" id="board"></div>
+
+  <script>
+    function addNote() {
+      const text = document.getElementById("noteText").value.trim();
+      if (text === "") return;
+
+      const note = document.createElement("div");
+      note.className = "note";
+      note.innerHTML = `
+        ${text}
+        <button onclick="this.parentElement.remove()">×</button>
+      `;
+
+      document.getElementById("board").appendChild(note);
+      document.getElementById("noteText").value = "";
+    }
+  </script>
+</body>
+</html>

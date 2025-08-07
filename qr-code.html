@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>QR Code Generator</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: #f0f0f0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        .qr-box {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 400px;
+            max-width: 90%;
+            text-align: center;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            margin-bottom: 15px;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #218838;
+        }
+
+        img {
+            margin-top: 20px;
+            max-width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>QR Code Generator</h1>
+    <div class="qr-box">
+        <input type="text" id="qrText" placeholder="Enter text or URL...">
+        <button onclick="generateQR()">Generate QR Code</button>
+        <div id="qrResult">
+            <!-- QR code will appear here -->
+        </div>
+    </div>
+
+    <script>
+        function generateQR() {
+            const text = document.getElementById("qrText").value.trim();
+            const qrResult = document.getElementById("qrResult");
+
+            if (text === "") {
+                qrResult.innerHTML = "<p style='color:red;'>Please enter some text.</p>";
+                return;
+            }
+
+            const qrURL = `https://api.qrserver.com/v1/create-qr-code/?data=${encodeURIComponent(text)}&size=200x200`;
+            qrResult.innerHTML = `<img src="${qrURL}" alt="QR Code">`;
+        }
+    </script>
+</body>
+
+</html>

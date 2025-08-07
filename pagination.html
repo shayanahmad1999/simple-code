@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Elegant Pagination</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(to right, #f0f4f8, #d9e2ec);
+            padding: 2rem;
+            margin: 0;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: #333;
+        }
+
+        #items-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .item {
+            background: white;
+            border-radius: 8px;
+            padding: 1rem;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+            transition: transform 0.2s ease;
+        }
+
+        .item:hover {
+            transform: translateY(-3px);
+        }
+
+        #pagination-controls {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        #pagination-controls button {
+            padding: 0.6rem 1rem;
+            border: none;
+            border-radius: 6px;
+            background-color: #007bff;
+            color: white;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        #pagination-controls button:hover:not(:disabled) {
+            background-color: #0056b3;
+        }
+
+        #pagination-controls button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+
+        #pagination-controls .active {
+            background-color: #0056b3;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Elegant Paginated Items</h2>
+    <div id="items-container"></div>
+    <div id="pagination-controls"></div>
+
+    <script>
+        const items = Array.from({ length: 42 }, (_, i) => `Item ${i + 1}`);
+        const itemsPerPage = 6;
+        let currentPage = 1;
+
+        function renderItems() {
+            const start = (currentPage - 1) * itemsPerPage;
+            const end = start + itemsPerPage;
+            const visibleItems = items.slice(start, end);
+
+            document.getElementById('items-container').innerHTML = visibleItems
+                .map(item => `<div class="item">${item}</div>`)
+                .join('');
+        }
+
+        function renderPagination() {
+            const totalPages = Math.ceil(items.length / itemsPerPage);
+            const controls = [];
+
+            controls.push(
+                `<button onclick="goToPage(${currentPage - 1})" ${currentPage === 1 ? 'disabled' : ''}>Previous</button>`
+            );
+
+            for (let i = 1; i <= totalPages; i++) {
+                controls.push(
+                    `<button onclick="goToPage(${i})" class="${i === currentPage ? 'active' : ''}">${i}</button>`
+                );
+            }
+
+            controls.push(
+                `<button onclick="goToPage(${currentPage + 1})" ${currentPage === totalPages ? 'disabled' : ''}>Next</button>`
+            );
+
+            document.getElementById('pagination-controls').innerHTML = controls.join('');
+        }
+
+        function goToPage(page) {
+            const totalPages = Math.ceil(items.length / itemsPerPage);
+            if (page < 1 || page > totalPages) return;
+            currentPage = page;
+            renderItems();
+            renderPagination();
+        }
+
+        // Initial render
+        renderItems();
+        renderPagination();
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Typing Animation Banner</title>
+    <style>
+        body {
+            font-family: 'Courier New', monospace;
+            background: #1e1e2f;
+            color: #00ffcc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .banner {
+            font-size: 32px;
+            border-right: 2px solid #00ffcc;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+
+        @keyframes blink {
+            50% {
+                border-color: transparent;
+            }
+        }
+
+        .banner::after {
+            content: '';
+            animation: blink 0.7s step-end infinite;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="banner" id="banner"></div>
+
+    <script>
+        const phrases = [
+            "Welcome to Shayan's Dev Playground",
+            "Crafting Laravel Magic ✨",
+            "Solving Complex Queries 🔍",
+            "Building Interactive UIs 💡"
+        ];
+
+        const banner = document.getElementById("banner");
+        let phraseIndex = 0;
+        let charIndex = 0;
+
+        function type() {
+            if (charIndex < phrases[phraseIndex].length) {
+                banner.textContent += phrases[phraseIndex].charAt(charIndex);
+                charIndex++;
+                setTimeout(type, 100);
+            } else {
+                setTimeout(erase, 1500);
+            }
+        }
+
+        function erase() {
+            if (charIndex > 0) {
+                banner.textContent = phrases[phraseIndex].substring(0, charIndex - 1);
+                charIndex--;
+                setTimeout(erase, 50);
+            } else {
+                phraseIndex = (phraseIndex + 1) % phrases.length;
+                setTimeout(type, 500);
+            }
+        }
+
+        type(); // start typing
+    </script>
+</body>
+
+</html>

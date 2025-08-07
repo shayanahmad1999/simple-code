@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Live Currency Converter</title>
+
+    <!-- Select2 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Select2 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: #f8f9fa;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 50px;
+            margin: 0;
+        }
+
+        h1 {
+            color: #343a40;
+            margin-bottom: 30px;
+        }
+
+        .converter-box {
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 420px;
+            text-align: center;
+        }
+
+        input,
+        select {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            font-size: 16px;
+            border: 2px solid #ced4da;
+            border-radius: 6px;
+        }
+
+        .select2-container {
+            width: 100% !important;
+        }
+
+        button {
+            padding: 12px 24px;
+            font-size: 16px;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            margin-top: 15px;
+            transition: background 0.3s ease;
+        }
+
+        button:hover {
+            background: #0056b3;
+        }
+
+        .result {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #495057;
+        }
+
+        @media (max-width: 500px) {
+            .converter-box {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Live Currency Converter</h1>
+    <div class="converter-box">
+        <input type="number" id="amount" placeholder="Enter amount">
+        <select id="fromCurrency" class="currency-select"></select>
+        <select id="toCurrency" class="currency-select"></select>
+        <button onclick="convertCurrency()">Convert</button>
+        <div class="result" id="result"></div>
+    </div>
+
+    <script>
+        const apiBase = "https://open.er-api.com/v6/latest/";
+        let currencyCodes = [];
+
+        async function fetchCurrencies() {
+            try {
+                const response = await fetch(apiBase + "USD");
+                const data = await response.json();
+
+                if (data.result !== "success") throw new Error("API error");
+
+                currencyCodes = Object.keys(data.rates);
+                populateDropdowns(currencyCodes);
+
+                // Set default selections
+                $('#fromCurrency').val('USD').trigger('change');
+                $('#toCurrency').val('PKR').trigger('change');
+            } catch (error) {
+                document.getElementById("result").textContent = "Failed to load currencies.";
+                console.error(error);
+            }
+        }
+
+        function populateDropdowns(codes) {
+            const fromSelect = document.getElementById("fromCurrency");
+            const toSelect = document.getElementById("toCurrency");
+
+            codes.forEach(code => {
+                const option1 = document.createElement("option");
+                option1.value = code;
+                option1.textContent = code;
+                fromSelect.appendChild(option1);
+
+                const option2 = document.createElement("option");
+                option2.value = code;
+                option2.textContent = code;
+                toSelect.appendChild(option2);
+            });
+
+            // Initialize Select2
+            $('.currency-select').select2({
+                placeholder: "Select a currency",
+                allowClear: true,
+                width: '100%'
+            });
+        }
+
+        async function convertCurrency() {
+            const amount = parseFloat(document.getElementById("amount").value);
+            const from = document.getElementById("fromCurrency").value;
+            const to = document.getElementById("toCurrency").value;
+            const result = document.getElementById("result");
+
+            if (isNaN(amount) || amount <= 0) {
+                result.textContent = "Please enter a valid amount.";
+                return;
+            }
+
+            if (from === to) {
+                result.textContent = `Converted amount: ${amount.toFixed(2)} ${to}`;
+                return;
+            }
+
+            try {
+                const response = await fetch(apiBase + from);
+                const data = await response.json();
+
+                if (data.result !== "success") throw new Error("API error");
+
+                const rate = data.rates[to];
+                const converted = (amount * rate).toFixed(2);
+                result.textContent = `Converted amount: ${converted} ${to}`;
+            } catch (error) {
+                result.textContent = "Conversion failed. Try again.";
+                console.error(error);
+            }
+        }
+
+        fetchCurrencies();
+    </script>
+</body>
+
+</html>

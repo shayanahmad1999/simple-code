@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Flashcard Quiz with Pagination</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(to right, #e3f2fd, #fce4ec);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 20px;
+        }
+
+        h1 {
+            color: #333;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        #timerDisplay {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        #categoryFilter {
+            margin-bottom: 20px;
+            padding: 8px 12px;
+            font-size: 1rem;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+        }
+
+        .progress-wrapper {
+            width: 100%;
+            max-width: 600px;
+            margin-bottom: 20px;
+        }
+
+        #progressText {
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        #progressBarContainer {
+            background: #ddd;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        #progressBar {
+            height: 10px;
+            width: 0%;
+            background: #4caf50;
+            transition: width 0.3s ease;
+        }
+
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
+            width: 100%;
+            max-width: 1000px;
+        }
+
+        .card {
+            perspective: 1000px;
+            cursor: pointer;
+            outline: none;
+        }
+
+        .card-inner {
+            position: relative;
+            width: 100%;
+            height: 140px;
+            transition: transform 0.6s ease;
+            transform-style: preserve-3d;
+        }
+
+        .card.flipped .card-inner {
+            transform: rotateY(180deg);
+        }
+
+        .card-front,
+        .card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+            padding: 15px;
+            backface-visibility: hidden;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-front {
+            background: #2196f3;
+            color: white;
+        }
+
+        .card-back {
+            background: #ffca28;
+            color: #212121;
+            transform: rotateY(180deg);
+        }
+
+        #paginationControls {
+            margin-top: 20px;
+        }
+
+        #paginationControls button {
+            padding: 8px 16px;
+            font-size: 1rem;
+            margin: 0 5px;
+            border: none;
+            border-radius: 6px;
+            background: #007bff;
+            color: white;
+            cursor: pointer;
+        }
+
+        #paginationControls button:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+
+        @media (max-width: 600px) {
+            .card-inner {
+                height: 120px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Flashcard Quiz</h1>
+
+    <div id="timerDisplay">
+        Time Left: <span id="timeLeft">60</span> seconds
+    </div>
+
+    <select id="categoryFilter">
+        <option value="All">All Categories</option>
+        <option value="Laravel">Laravel</option>
+        <option value="PHP">PHP</option>
+        <option value="Web">Web</option>
+        <option value="Programming">Programming</option>
+        <option value="General">General</option>
+        <option value="DevOps">DevOps</option>
+        <option value="Databases">Databases</option>
+        <option value="JavaScript">JavaScript</option>
+        <option value="HTML">HTML</option>
+    </select>
+
+    <div class="progress-wrapper">
+        <div id="progressText">Progress: 0 / 0</div>
+        <div id="progressBarContainer">
+            <div id="progressBar"></div>
+        </div>
+    </div>
+
+    <div class="card-container" id="cardContainer"></div>
+
+    <div id="paginationControls">
+        <button id="prevPage" disabled>Previous</button>
+        <span id="pageInfo">Page 1</span>
+        <button id="nextPage">Next</button>
+    </div>
+
+    <script>
+        let flashcards = [];
+        let filteredCards = [];
+        let flippedCount = 0;
+        let timeLeft = 60;
+        let timerInterval;
+        let currentPage = 1;
+        const cardsPerPage = 12;
+
+        const container = document.getElementById("cardContainer");
+        const progressText = document.getElementById("progressText");
+        const progressBar = document.getElementById("progressBar");
+        const categoryFilter = document.getElementById("categoryFilter");
+        const timeDisplay = document.getElementById("timeLeft");
+        const pageInfo = document.getElementById("pageInfo");
+        const prevPageBtn = document.getElementById("prevPage");
+        const nextPageBtn = document.getElementById("nextPage");
+
+        function updateProgressDisplay(count, total) {
+            const percent = (count / total) * 100;
+            progressText.textContent = `Progress: ${count} / ${total}`;
+            progressBar.style.width = `${percent}%`;
+        }
+
+        function startTimer(duration) {
+            timeLeft = duration;
+            timeDisplay.textContent = timeLeft;
+            clearInterval(timerInterval);
+
+            timerInterval = setInterval(() => {
+                timeLeft--;
+                timeDisplay.textContent = timeLeft;
+
+                if (timeLeft <= 0) {
+                    clearInterval(timerInterval);
+                    disableAllCards();
+                }
+            }, 1000);
+        }
+
+        function disableAllCards() {
+            const cards = document.querySelectorAll(".card");
+            cards.forEach(card => {
+                card.onclick = null;
+                card.onkeydown = null;
+                card.style.opacity = "0.5";
+                card.style.cursor = "not-allowed";
+            });
+        }
+
+        function updatePaginationControls(totalPages) {
+            pageInfo.textContent = `Page ${currentPage} of ${totalPages}`;
+            prevPageBtn.disabled = currentPage === 1;
+            nextPageBtn.disabled = currentPage === totalPages;
+        }
+
+        function renderCards(category = "All", page = 1) {
+            container.innerHTML = "";
+            flippedCount = 0;
+            currentPage = page;
+
+            filteredCards = category === "All"
+                ? flashcards
+                : flashcards.filter(card => card.category === category);
+
+            const totalPages = Math.ceil(filteredCards.length / cardsPerPage);
+            const start = (page - 1) * cardsPerPage;
+            const end = start + cardsPerPage;
+            const cardsToShow = filteredCards.slice(start, end);
+
+            updateProgressDisplay(0, cardsToShow.length);
+            startTimer(60);
+            updatePaginationControls(totalPages);
+
+            cardsToShow.forEach(({ question, answer }) => {
+                const card = document.createElement("div");
+                card.className = "card";
+                card.setAttribute("role", "button");
+                card.setAttribute("tabindex", "0");
+                card.setAttribute("aria-label", question);
+
+                card.innerHTML = `
+                    <div class="card-inner">
+                        <div class="card-front">${question}</div>
+                        <div class="card-back">${answer}</div>
+                    </div>
+                `;
+
+                card.onclick = () => {
+                    if (!card.classList.contains("flipped")) {
+                        flippedCount++;
+                        updateProgressDisplay(flippedCount, cardsToShow.length);
+                    }
+                    card.classList.toggle("flipped");
+                };
+
+                card.onkeydown = (e) => {
+                    if (e.key === "Enter" || e.key === " ") {
+                        card.click();
+                    }
+                };
+
+                container.appendChild(card);
+            });
+        }
+
+        // Pagination button listeners
+        prevPageBtn.addEventListener("click", () => {
+            if (currentPage > 1) {
+                renderCards(categoryFilter.value, currentPage - 1);
+            }
+        });
+
+        nextPageBtn.addEventListener("click", () => {
+            const totalPages = Math.ceil(filteredCards.length / cardsPerPage);
+            if (currentPage < totalPages) {
+                renderCards(categoryFilter.value, currentPage + 1);
+            }
+        });
+
+        // Category filter listener
+        categoryFilter.addEventListener("change", e => {
+            renderCards(e.target.value, 1);
+        });
+
+        // Load flashcards from JSON
+        fetch("json/flashcards.json")
+            .then(res => res.json())
+            .then(data => {
+                flashcards = data;
+                renderCards("All", 1);
+            })
+            .catch(err => console.error("Failed to load flashcards:", err));
+    </script>
+</body>
+
+</html>

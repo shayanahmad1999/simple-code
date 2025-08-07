@@ -1,0 +1,5002 @@
+[
+  {
+    "question": "Which tag is used for a hyperlink in HTML?",
+    "answer": "<a>",
+    "category": "Web"
+  },
+  {
+    "question": "What is a primary key?",
+    "answer": "A unique identifier for a record",
+    "category": "Databases"
+  },
+  {
+    "question": "Difference between `==` and `===`?",
+    "answer": "`===` checks value and type",
+    "category": "PHP"
+  },
+  {
+    "question": "What is the purpose of CSS?",
+    "answer": "Styling web pages",
+    "category": "Web"
+  },
+  {
+    "question": "What is a variable?",
+    "answer": "Storage for data",
+    "category": "Programming"
+  },
+  {
+    "question": "What is React?",
+    "answer": "A JavaScript library for building UI",
+    "category": "React"
+  },
+  {
+    "question": "Difference between `==` and `===`?",
+    "answer": "`===` checks value and type",
+    "category": "PHP"
+  },
+  {
+    "question": "Which planet is known as the Red Planet?",
+    "answer": "Mars",
+    "category": "General"
+  },
+  {
+    "question": "What is useEffect used for?",
+    "answer": "Handling side effects",
+    "category": "React"
+  },
+  {
+    "question": "What is a foreign key?",
+    "answer": "A key used to link two tables",
+    "category": "Databases"
+  },
+  {
+    "question": "What is HTTP used for?",
+    "answer": "Transmitting web pages",
+    "category": "Networking"
+  },
+  {
+    "question": "How many continents are there?",
+    "answer": "7",
+    "category": "General"
+  },
+  {
+    "question": "What is normalization?",
+    "answer": "Organizing data to reduce redundancy",
+    "category": "Databases"
+  },
+  {
+    "question": "Who wrote 'Hamlet'?",
+    "answer": "William Shakespeare",
+    "category": "General"
+  },
+  {
+    "question": "What is HTTP used for?",
+    "answer": "Transmitting web pages",
+    "category": "Networking"
+  },
+  {
+    "question": "What is the largest ocean on Earth?",
+    "answer": "Pacific Ocean",
+    "category": "General"
+  },
+  {
+    "question": "What is CI/CD?",
+    "answer": "Continuous Integration / Continuous Deployment",
+    "category": "DevOps"
+  },
+  {
+    "question": "What does SQL stand for?",
+    "answer": "Structured Query Language",
+    "category": "Databases"
+  },
+  {
+    "question": "What is Docker?",
+    "answer": "A containerization platform",
+    "category": "DevOps"
+  },
+  {
+    "question": "What is a loop?",
+    "answer": "A way to repeat code",
+    "category": "Programming"
+  },
+  {
+    "question": "What does HTTP stand for?",
+    "answer": "HyperText Transfer Protocol",
+    "category": "Web"
+  },
+  {
+    "question": "What is the largest ocean on Earth?",
+    "answer": "Pacific Ocean",
+    "category": "General"
+  },
+  {
+    "question": "Difference between `==` and `===`?",
+    "answer": "`===` checks value and type",
+    "category": "PHP"
+  },
+  {
+    "question": "What is Kubernetes?",
+    "answer": "Container orchestration system",
+    "category": "DevOps"
+  },
+  {
+    "question": "What is JSON?",
+    "answer": "JavaScript Object Notation",
+    "category": "Programming"
+  },
+  {
+    "question": "What is a foreign key?",
+    "answer": "A key used to link two tables",
+    "category": "Databases"
+  },
+  {
+    "question": "What does PHP stand for?",
+    "answer": "Hypertext Preprocessor",
+    "category": "PHP"
+  },
+  {
+    "question": "What is JSON?",
+    "answer": "JavaScript Object Notation",
+    "category": "Programming"
+  },
+  {
+    "question": "What is the largest ocean on Earth?",
+    "answer": "Pacific Ocean",
+    "category": "General"
+  },
+  {
+    "question": "What is Composer?",
+    "answer": "Dependency manager for PHP",
+    "category": "PHP"
+  },
+  {
+    "question": "What is a seeder in Laravel?",
+    "answer": "Used to populate database with test data",
+    "category": "Laravel"
+  },
+  {
+    "question": "Difference between `==` and `===`?",
+    "answer": "`===` checks value and type",
+    "category": "PHP"
+  },
+  {
+    "question": "What is Eloquent in Laravel?",
+    "answer": "ORM (Object Relational Mapper)",
+    "category": "Laravel"
+  },
+  {
+    "question": "Which tag is used for a hyperlink in HTML?",
+    "answer": "<a>",
+    "category": "Web"
+  },
+  {
+    "question": "What does HTML stand for?",
+    "answer": "HyperText Markup Language",
+    "category": "Web"
+  },
+  {
+    "question": "What is a primary key?",
+    "answer": "A unique identifier for a record",
+    "category": "Databases"
+  },
+  {
+    "question": "What is a router?",
+    "answer": "A device that forwards data packets",
+    "category": "Networking"
+  },
+  {
+    "question": "Difference between `==` and `===`?",
+    "answer": "`===` checks value and type",
+    "category": "PHP"
+  },
+  {
+    "question": "What is a variable?",
+    "answer": "Storage for data",
+    "category": "Programming"
+  },
+  {
+    "question": "What is Laravel?",
+    "answer": "PHP Framework",
+    "category": "Laravel"
+  },
+  {
+    "question": "How many continents are there?",
+    "answer": "7",
+    "category": "General"
+  },
+  {
+    "question": "What is Livewire?",
+    "answer": "Reactive Laravel components",
+    "category": "Laravel"
+  },
+  {
+    "question": "What is a foreign key?",
+    "answer": "A key used to link two tables",
+    "category": "Databases"
+  },
+  {
+    "question": "What is an API?",
+    "answer": "Application Programming Interface",
+    "category": "Programming"
+  },
+  {
+    "question": "What is a function?",
+    "answer": "Reusable block of code",
+    "category": "Programming"
+  },
+  {
+    "question": "What does PHP stand for?",
+    "answer": "Hypertext Preprocessor",
+    "category": "PHP"
+  },
+  {
+    "question": "Which tag is used for a hyperlink in HTML?",
+    "answer": "<a>",
+    "category": "Web"
+  },
+  {
+    "question": "What does DNS stand for?",
+    "answer": "Domain Name System",
+    "category": "Networking"
+  },
+  {
+    "question": "What is a component in React?",
+    "answer": "A reusable UI element",
+    "category": "React"
+  },
+  {
+    "question": "What is a MAC address?",
+    "answer": "Unique hardware address",
+    "category": "Networking"
+  },
+  {
+    "question": "What is a primary key?",
+    "answer": "A unique identifier for a record",
+    "category": "Databases"
+  },
+  {
+    "question": "What is Eloquent in Laravel?",
+    "answer": "ORM (Object Relational Mapper)",
+    "category": "Laravel"
+  },
+  {
+    "question": "What is CI/CD?",
+    "answer": "Continuous Integration / Continuous Deployment",
+    "category": "DevOps"
+  },
+  {
+    "question": "What is a MAC address?",
+    "answer": "Unique hardware address",
+    "category": "Networking"
+  },
+  {
+    "question": "What is Kubernetes?",
+    "answer": "Container orchestration system",
+    "category": "DevOps"
+  },
+  {
+    "question": "What is JSON?",
+    "answer": "JavaScript Object Notation",
+    "category": "Programming"
+  },
+  {
+    "question": "What is Kubernetes?",
+    "answer": "Container orchestration system",
+    "category": "DevOps"
+  },
+  {
+    "question": "What does PHP stand for?",
+    "answer": "Hypertext Preprocessor",
+    "category": "PHP"
+  },
+  {
+    "question": "How many continents are there?",
+    "answer": "7",
+    "category": "General"
+  },
+  {
+    "question": "What is useEffect used for?",
+    "answer": "Handling side effects",
+    "category": "React"
+  },
+  {
+    "question": "What is HTTP used for?",
+    "answer": "Transmitting web pages",
+    "category": "Networking"
+  },
+  {
+    "question": "What is a primary key?",
+    "answer": "A unique identifier for a record",
+    "category": "Databases"
+  },
+  {
+    "question": "What is a primary key?",
+    "answer": "A unique identifier for a record",
+    "category": "Databases"
+  },
+  {
+    "question": "Difference between `==` and `===`?",
+    "answer": "`===` checks value and type",
+    "category": "PHP"
+  },
+  {
+    "question": "What does HTTP stand for?",
+    "answer": "HyperText Transfer Protocol",
+    "category": "Web"
+  },
+  {
+    "question": "What is a router?",
+    "answer": "A device that forwards data packets",
+    "category": "Networking"
+  },
+  {
+    "question": "What is Kubernetes?",
+    "answer": "Container orchestration system",
+    "category": "DevOps"
+  },
+  {
+    "question": "What is the largest ocean on Earth?",
+    "answer": "Pacific Ocean",
+    "category": "General"
+  },
+  {
+    "question": "What is JSON?",
+    "answer": "JavaScript Object Notation",
+    "category": "Programming"
+  },
+  {
+    "question": "What does `php artisan migrate` do?",
+    "answer": "Runs migrations",
+    "category": "Laravel"
+  },
+  {
+    "question": "Who wrote 'Hamlet'?",
+    "answer": "William Shakespeare",
+    "category": "General"
+  },
+  {
+    "question": "What is the purpose of CSS?",
+    "answer": "Styling web pages",
+    "category": "Web"
+  },
+  {
+    "question": "What is Laravel?",
+    "answer": "PHP Framework",
+    "category": "Laravel"
+  },
+  {
+    "question": "Who wrote 'Hamlet'?",
+    "answer": "William Shakespeare",
+    "category": "General"
+  },
+  {
+    "question": "Which planet is known as the Red Planet?",
+    "answer": "Mars",
+    "category": "General"
+  },
+  {
+    "question": "What is a loop?",
+    "answer": "A way to repeat code",
+    "category": "Programming"
+  },
+  {
+    "question": "What is a variable?",
+    "answer": "Storage for data",
+    "category": "Programming"
+  },
+  {
+    "question": "What does PHP stand for?",
+    "answer": "Hypertext Preprocessor",
+    "category": "PHP"
+  },
+  {
+    "question": "Which planet is known as the Red Planet?",
+    "answer": "Mars",
+    "category": "General"
+  },
+  {
+    "question": "What is Eloquent in Laravel?",
+    "answer": "ORM (Object Relational Mapper)",
+    "category": "Laravel"
+  },
+  {
+    "question": "What does SQL stand for?",
+    "answer": "Structured Query Language",
+    "category": "Databases"
+  },
+  {
+    "question": "Which planet is known as the Red Planet?",
+    "answer": "Mars",
+    "category": "General"
+  },
+  {
+    "question": "What is the largest ocean on Earth?",
+    "answer": "Pacific Ocean",
+    "category": "General"
+  },
+  {
+    "question": "What is React?",
+    "answer": "A JavaScript library for building UI",
+    "category": "React"
+  },
+  {
+    "question": "What is HTTP used for?",
+    "answer": "Transmitting web pages",
+    "category": "Networking"
+  },
+  {
+    "question": "What does IP stand for?",
+    "answer": "Internet Protocol",
+    "category": "Networking"
+  },
+  {
+    "question": "What is React?",
+    "answer": "A JavaScript library for building UI",
+    "category": "React"
+  },
+  {
+    "question": "What is JSON?",
+    "answer": "JavaScript Object Notation",
+    "category": "Programming"
+  },
+  {
+    "question": "What is JSON?",
+    "answer": "JavaScript Object Notation",
+    "category": "Programming"
+  },
+  {
+    "question": "What is Laravel?",
+    "answer": "PHP Framework",
+    "category": "Laravel"
+  },
+  {
+    "question": "What is useState in React?",
+    "answer": "Hook for managing state",
+    "category": "React"
+  },
+  {
+    "question": "What is a loop?",
+    "answer": "A way to repeat code",
+    "category": "Programming"
+  },
+  {
+    "question": "Which tag is used for a hyperlink in HTML?",
+    "answer": "<a>",
+    "category": "Web"
+  },
+  {
+    "question": "What is React?",
+    "answer": "A JavaScript library for building UI",
+    "category": "React"
+  },
+  {
+    "question": "What is Eloquent in Laravel?",
+    "answer": "ORM (Object Relational Mapper)",
+    "category": "Laravel"
+  },
+  {
+    "question": "Who wrote 'Hamlet'?",
+    "answer": "William Shakespeare",
+    "category": "General"
+  },
+  {
+    "question": "What is the largest ocean on Earth?",
+    "answer": "Pacific Ocean",
+    "category": "General"
+  },
+  {
+    "question": "What does SQL stand for?",
+    "answer": "Structured Query Language",
+    "category": "Databases"
+  },
+  {
+    "question": "What is the capital of Spain?",
+    "answer": "Madrid",
+    "category": "General"
+  },
+  {
+    "question": "What does SQL stand for?",
+    "answer": "Structured Query Language",
+    "category": "Databases"
+  },
+  {
+    "question": "What does HTML stand for?",
+    "answer": "HyperText Markup Language",
+    "category": "Web"
+  },
+  {
+    "question": "What is a router?",
+    "answer": "A device that forwards data packets",
+    "category": "Networking"
+  },
+  {
+    "question": "What is a primary key?",
+    "answer": "A unique identifier for a record",
+    "category": "Databases"
+  },
+  {
+    "question": "What is Kubernetes?",
+    "answer": "Container orchestration system",
+    "category": "DevOps"
+  },
+  {
+    "question": "What is a function?",
+    "answer": "Reusable block of code",
+    "category": "Programming"
+  },
+  {
+    "question": "What is JSX?",
+    "answer": "JavaScript XML",
+    "category": "React"
+  },
+  {
+    "question": "What does PHP stand for?",
+    "answer": "Hypertext Preprocessor",
+    "category": "PHP"
+  },
+  {
+    "question": "What is Kubernetes?",
+    "answer": "Container orchestration system",
+    "category": "DevOps"
+  },
+  {
+    "question": "What does PHP stand for?",
+    "answer": "Hypertext Preprocessor",
+    "category": "PHP"
+  },
+  {
+    "question": "What is JSX?",
+    "answer": "JavaScript XML",
+    "category": "React"
+  },
+  {
+    "question": "What does PHP stand for?",
+    "answer": "Hypertext Preprocessor",
+    "category": "PHP"
+  },
+  {
+    "question": "What is Livewire?",
+    "answer": "Reactive Laravel components",
+    "category": "Laravel"
+  },
+  {
+    "question": "What does HTML stand for?",
+    "answer": "HyperText Markup Language",
+    "category": "Web"
+  },
+  {
+    "question": "What is a function?",
+    "answer": "Reusable block of code",
+    "category": "Programming"
+  },
+  {
+    "question": "What is a function?",
+    "answer": "Reusable block of code",
+    "category": "Programming"
+  },
+  {
+    "question": "What is a trait in PHP?",
+    "answer": "A mechanism for code reuse",
+    "category": "PHP"
+  },
+  {
+    "question": "What is an API?",
+    "answer": "Application Programming Interface",
+    "category": "Programming"
+  },
+  {
+    "question": "Difference between `==` and `===`?",
+    "answer": "`===` checks value and type",
+    "category": "PHP"
+  },
+  {
+    "question": "Which tag is used for a hyperlink in HTML?",
+    "answer": "<a>",
+    "category": "Web"
+  },
+  {
+    "question": "What is a foreign key?",
+    "answer": "A key used to link two tables",
+    "category": "Databases"
+  },
+  {
+    "question": "What is Docker?",
+    "answer": "A containerization platform",
+    "category": "DevOps"
+  },
+  {
+    "question": "Which tag is used for a hyperlink in HTML?",
+    "answer": "<a>",
+    "category": "Web"
+  },
+  {
+    "question": "What is a variable?",
+    "answer": "Storage for data",
+    "category": "Programming"
+  },
+  {
+    "question": "What is a MAC address?",
+    "answer": "Unique hardware address",
+    "category": "Networking"
+  },
+  {
+    "question": "What is version control?",
+    "answer": "Managing changes to source code",
+    "category": "DevOps"
+  },
+  {
+    "question": "What is a router?",
+    "answer": "A device that forwards data packets",
+    "category": "Networking"
+  },
+  {
+    "question": "What is the largest ocean on Earth?",
+    "answer": "Pacific Ocean",
+    "category": "General"
+  },
+  {
+    "question": "What is the purpose of CSS?",
+    "answer": "Styling web pages",
+    "category": "Web"
+  },
+  {
+    "question": "What is a variable?",
+    "answer": "Storage for data",
+    "category": "Programming"
+  },
+  {
+    "question": "Which planet is known as the Red Planet?",
+    "answer": "Mars",
+    "category": "General"
+  },
+  {
+    "question": "What is a component in React?",
+    "answer": "A reusable UI element",
+    "category": "React"
+  },
+  {
+    "question": "What is Laravel?",
+    "answer": "PHP Framework",
+    "category": "Laravel"
+  },
+  {
+    "question": "Difference between `==` and `===`?",
+    "answer": "`===` checks value and type",
+    "category": "PHP"
+  },
+  {
+    "question": "What does DNS stand for?",
+    "answer": "Domain Name System",
+    "category": "Networking"
+  },
+  {
+    "question": "What is a trait in PHP?",
+    "answer": "A mechanism for code reuse",
+    "category": "PHP"
+  },
+  {
+    "question": "What is a primary key?",
+    "answer": "A unique identifier for a record",
+    "category": "Databases"
+  },
+  {
+    "question": "What is JSX?",
+    "answer": "JavaScript XML",
+    "category": "React"
+  },
+  {
+    "question": "Which tag is used for a hyperlink in HTML?",
+    "answer": "<a>",
+    "category": "Web"
+  },
+  {
+    "question": "What is HTTP used for?",
+    "answer": "Transmitting web pages",
+    "category": "Networking"
+  },
+  {
+    "question": "How many continents are there?",
+    "answer": "7",
+    "category": "General"
+  },
+  {
+    "question": "What is CI/CD?",
+    "answer": "Continuous Integration / Continuous Deployment",
+    "category": "DevOps"
+  },
+  {
+    "question": "What is version control?",
+    "answer": "Managing changes to source code",
+    "category": "DevOps"
+  },
+  {
+    "question": "What is useState in React?",
+    "answer": "Hook for managing state",
+    "category": "React"
+  },
+  {
+    "question": "Who wrote 'Hamlet'?",
+    "answer": "William Shakespeare",
+    "category": "General"
+  },
+  {
+    "question": "What is JSON?",
+    "answer": "JavaScript Object Notation",
+    "category": "Programming"
+  },
+  {
+    "question": "What is HTTP used for?",
+    "answer": "Transmitting web pages",
+    "category": "Networking"
+  },
+  {
+    "question": "What is the purpose of CSS?",
+    "answer": "Styling web pages",
+    "category": "Web"
+  },
+  {
+    "question": "What is Livewire?",
+    "answer": "Reactive Laravel components",
+    "category": "Laravel"
+  },
+  {
+    "question": "What is a foreign key?",
+    "answer": "A key used to link two tables",
+    "category": "Databases"
+  },
+  {
+    "question": "What is the purpose of CSS?",
+    "answer": "Styling web pages",
+    "category": "Web"
+  },
+  {
+    "question": "What is Livewire?",
+    "answer": "Reactive Laravel components",
+    "category": "Laravel"
+  },
+  {
+    "question": "What is the purpose of CSS?",
+    "answer": "Styling web pages",
+    "category": "Web"
+  },
+  {
+    "question": "What does DNS stand for?",
+    "answer": "Domain Name System",
+    "category": "Networking"
+  },
+  {
+    "question": "What is React?",
+    "answer": "A JavaScript library for building UI",
+    "category": "React"
+  },
+  {
+    "question": "Difference between `==` and `===`?",
+    "answer": "`===` checks value and type",
+    "category": "PHP"
+  },
+  {
+    "question": "What is CI/CD?",
+    "answer": "Continuous Integration / Continuous Deployment",
+    "category": "DevOps"
+  },
+  {
+    "question": "What does PHP stand for?",
+    "answer": "Hypertext Preprocessor",
+    "category": "PHP"
+  },
+  {
+    "question": "What is version control?",
+    "answer": "Managing changes to source code",
+    "category": "DevOps"
+  },
+  {
+    "question": "What is JSON?",
+    "answer": "JavaScript Object Notation",
+    "category": "Programming"
+  },
+  {
+    "question": "What does HTML stand for?",
+    "answer": "HyperText Markup Language",
+    "category": "Web"
+  },
+  {
+    "question": "Difference between `==` and `===`?",
+    "answer": "`===` checks value and type",
+    "category": "PHP"
+  },
+  {
+    "question": "What does SQL stand for?",
+    "answer": "Structured Query Language",
+    "category": "Databases"
+  },
+  {
+    "question": "What is the capital of Spain?",
+    "answer": "Madrid",
+    "category": "General"
+  },
+  {
+    "question": "What does `php artisan migrate` do?",
+    "answer": "Runs migrations",
+    "category": "Laravel"
+  },
+  {
+    "question": "What is CI/CD?",
+    "answer": "Continuous Integration / Continuous Deployment",
+    "category": "DevOps"
+  },
+  {
+    "question": "What is Jenkins?",
+    "answer": "Automation server for CI/CD",
+    "category": "DevOps"
+  },
+  {
+    "question": "What is a loop?",
+    "answer": "A way to repeat code",
+    "category": "Programming"
+  },
+  {
+    "question": "What is Jenkins?",
+    "answer": "Automation server for CI/CD",
+    "category": "DevOps"
+  },
+  {
+    "question": "What is the purpose of CSS?",
+    "answer": "Styling web pages",
+    "category": "Web"
+  },
+  {
+    "question": "What is a primary key?",
+    "answer": "A unique identifier for a record",
+    "category": "Databases"
+  },
+  {
+    "question": "What is HTTP used for?",
+    "answer": "Transmitting web pages",
+    "category": "Networking"
+  },
+  {
+    "question": "Which planet is known as the Red Planet?",
+    "answer": "Mars",
+    "category": "General"
+  },
+  {
+    "question": "Who wrote 'Hamlet'?",
+    "answer": "William Shakespeare",
+    "category": "General"
+  },
+  {
+    "question": "Who wrote 'Hamlet'?",
+    "answer": "William Shakespeare",
+    "category": "General"
+  },
+  {
+    "question": "What is useState in React?",
+    "answer": "Hook for managing state",
+    "category": "React"
+  },
+  {
+    "question": "What is a foreign key?",
+    "answer": "A key used to link two tables",
+    "category": "Databases"
+  },
+  {
+    "question": "What does PHP stand for?",
+    "answer": "Hypertext Preprocessor",
+    "category": "PHP"
+  },
+  {
+    "question": "What is a primary key?",
+    "answer": "A unique identifier for a record",
+    "category": "Databases"
+  },
+  {
+    "question": "Which planet is known as the Red Planet?",
+    "answer": "Mars",
+    "category": "General"
+  },
+  {
+    "question": "What is a loop?",
+    "answer": "A way to repeat code",
+    "category": "Programming"
+  },
+  {
+    "question": "What is version control?",
+    "answer": "Managing changes to source code",
+    "category": "DevOps"
+  },
+  {
+    "question": "What is a component in React?",
+    "answer": "A reusable UI element",
+    "category": "React"
+  },
+  {
+    "question": "What is an API?",
+    "answer": "Application Programming Interface",
+    "category": "Programming"
+  },
+  {
+    "question": "What is Laravel?",
+    "answer": "PHP Framework",
+    "category": "Laravel"
+  },
+  {
+    "question": "What is HTTP used for?",
+    "answer": "Transmitting web pages",
+    "category": "Networking"
+  },
+  {
+    "question": "What is JSON?",
+    "answer": "JavaScript Object Notation",
+    "category": "Programming"
+  },
+  {
+    "question": "What is Livewire?",
+    "answer": "Reactive Laravel components",
+    "category": "Laravel"
+  },
+  {
+    "question": "What is Composer?",
+    "answer": "Dependency manager for PHP",
+    "category": "PHP"
+  },
+  {
+    "question": "What is a trait in PHP?",
+    "answer": "A mechanism for code reuse",
+    "category": "PHP"
+  },
+  {
+    "question": "How many continents are there?",
+    "answer": "7",
+    "category": "General"
+  },
+  {
+    "question": "What is the capital of Spain?",
+    "answer": "Madrid",
+    "category": "General"
+  },
+  {
+    "question": "What is JSX?",
+    "answer": "JavaScript XML",
+    "category": "React"
+  },
+  {
+    "question": "What is Jenkins?",
+    "answer": "Automation server for CI/CD",
+    "category": "DevOps"
+  },
+  {
+    "question": "What is version control?",
+    "answer": "Managing changes to source code",
+    "category": "DevOps"
+  },
+  {
+    "question": "What is the capital of Spain?",
+    "answer": "Madrid",
+    "category": "General"
+  },
+  {
+    "question": "Which tag is used for a hyperlink in HTML?",
+    "answer": "<a>",
+    "category": "Web"
+  },
+  {
+    "question": "What is the largest ocean on Earth?",
+    "answer": "Pacific Ocean",
+    "category": "General"
+  },
+  {
+    "question": "What is Kubernetes?",
+    "answer": "Container orchestration system",
+    "category": "DevOps"
+  },
+  {
+    "question": "What is a seeder in Laravel?",
+    "answer": "Used to populate database with test data",
+    "category": "Laravel"
+  },
+  {
+    "question": "What does DNS stand for?",
+    "answer": "Domain Name System",
+    "category": "Networking"
+  },
+  {
+    "question": "What is normalization?",
+    "answer": "Organizing data to reduce redundancy",
+    "category": "Databases"
+  },
+  {
+    "question": "What does `php artisan migrate` do?",
+    "answer": "Runs migrations",
+    "category": "Laravel"
+  },
+  {
+    "question": "Difference between `==` and `===`?",
+    "answer": "`===` checks value and type",
+    "category": "PHP"
+  },
+  {
+    "question": "What is Jenkins?",
+    "answer": "Automation server for CI/CD",
+    "category": "DevOps"
+  },
+  {
+    "question": "Which tag is used for a hyperlink in HTML?",
+    "answer": "<a>",
+    "category": "Web"
+  },
+  {
+    "question": "What is Eloquent in Laravel?",
+    "answer": "ORM (Object Relational Mapper)",
+    "category": "Laravel"
+  },
+  {
+    "question": "What is a MAC address?",
+    "answer": "Unique hardware address",
+    "category": "Networking"
+  },
+  {
+    "question": "Which planet is known as the Red Planet?",
+    "answer": "Mars",
+    "category": "General"
+  },
+  {
+    "question": "What is the largest ocean on Earth?",
+    "answer": "Pacific Ocean",
+    "category": "General"
+  },
+  {
+    "question": "What is a primary key?",
+    "answer": "A unique identifier for a record",
+    "category": "Databases"
+  },
+  {
+    "question": "What is Jenkins?",
+    "answer": "Automation server for CI/CD",
+    "category": "DevOps"
+  },
+  {
+    "question": "What is a component in React?",
+    "answer": "A reusable UI element",
+    "category": "React"
+  },
+  {
+    "question": "What is version control?",
+    "answer": "Managing changes to source code",
+    "category": "DevOps"
+  },
+  {
+    "question": "Difference between `==` and `===`?",
+    "answer": "`===` checks value and type",
+    "category": "PHP"
+  },
+  {
+    "question": "What is the largest ocean on Earth?",
+    "answer": "Pacific Ocean",
+    "category": "General"
+  },
+  {
+    "question": "What is an API?",
+    "answer": "Application Programming Interface",
+    "category": "Programming"
+  },
+  {
+    "question": "What is the largest ocean on Earth?",
+    "answer": "Pacific Ocean",
+    "category": "General"
+  },
+  {
+    "question": "What is HTTP used for?",
+    "answer": "Transmitting web pages",
+    "category": "Networking"
+  },
+  {
+    "question": "What is a seeder in Laravel?",
+    "answer": "Used to populate database with test data",
+    "category": "Laravel"
+  },
+  {
+    "question": "What is JSON?",
+    "answer": "JavaScript Object Notation",
+    "category": "Programming"
+  },
+  {
+    "question": "What is a router?",
+    "answer": "A device that forwards data packets",
+    "category": "Networking"
+  },
+  {
+    "question": "What is the largest ocean on Earth?",
+    "answer": "Pacific Ocean",
+    "category": "General"
+  },
+  {
+    "question": "What is `isset()` used for?",
+    "answer": "Checks if a variable is set",
+    "category": "PHP"
+  },
+  {
+    "question": "What is Livewire?",
+    "answer": "Reactive Laravel components",
+    "category": "Laravel"
+  },
+  {
+    "question": "What is a function?",
+    "answer": "Reusable block of code",
+    "category": "Programming"
+  },
+  {
+    "question": "What does `php artisan migrate` do?",
+    "answer": "Runs migrations",
+    "category": "Laravel"
+  },
+  {
+    "question": "What is version control?",
+    "answer": "Managing changes to source code",
+    "category": "DevOps"
+  },
+  {
+    "question": "What is CI/CD?",
+    "answer": "Continuous Integration / Continuous Deployment",
+    "category": "DevOps"
+  },
+  {
+    "question": "What is Docker?",
+    "answer": "A containerization platform",
+    "category": "DevOps"
+  },
+  {
+    "question": "What is a component in React?",
+    "answer": "A reusable UI element",
+    "category": "React"
+  },
+  {
+    "question": "Which planet is known as the Red Planet?",
+    "answer": "Mars",
+    "category": "General"
+  },
+  {
+    "question": "What is an API?",
+    "answer": "Application Programming Interface",
+    "category": "Programming"
+  },
+  {
+    "question": "What does DNS stand for?",
+    "answer": "Domain Name System",
+    "category": "Networking"
+  },
+  {
+    "question": "What is Docker?",
+    "answer": "A containerization platform",
+    "category": "DevOps"
+  },
+  {
+    "question": "What is version control?",
+    "answer": "Managing changes to source code",
+    "category": "DevOps"
+  },
+  {
+    "question": "What is useEffect used for?",
+    "answer": "Handling side effects",
+    "category": "React"
+  },
+  {
+    "question": "What is JSX?",
+    "answer": "JavaScript XML",
+    "category": "React"
+  },
+  {
+    "question": "What is CI/CD?",
+    "answer": "Continuous Integration / Continuous Deployment",
+    "category": "DevOps"
+  },
+  {
+    "question": "What is Livewire?",
+    "answer": "Reactive Laravel components",
+    "category": "Laravel"
+  },
+  {
+    "question": "What is Eloquent in Laravel?",
+    "answer": "ORM (Object Relational Mapper)",
+    "category": "Laravel"
+  },
+  {
+    "question": "What is Composer?",
+    "answer": "Dependency manager for PHP",
+    "category": "PHP"
+  },
+  {
+    "question": "JavaScript is mainly used for?",
+    "answer": "Client-side scripting",
+    "category": "Web"
+  },
+  {
+    "question": "What is a trait in PHP?",
+    "answer": "A mechanism for code reuse",
+    "category": "PHP"
+  },
+  {
+    "question": "What is Composer?",
+    "answer": "Dependency manager for PHP",
+    "category": "PHP"
+  },
+  {
+    "question": "What does PHP stand for?",
+    "answer": "Hypertext Preprocessor",
+    "category": "PHP"
+  },
+  {
+    "question": "What is Composer?",
+    "answer": "Dependency manager for PHP",
+    "category": "PHP"
+  },
+  {
+    "question": "What is normalization?",
+    "answer": "Organizing data to reduce redundancy",
+    "category": "Databases"
+  },
+  {
+    "question": "What does SQL stand for?",
+    "answer": "Structured Query Language",
+    "category": "Databases"
+  },
+  {
+    "question": "What is Composer?",
+    "answer": "Dependency manager for PHP",
+    "category": "PHP"
+  },
+  {
+    "question": "Who wrote 'Hamlet'?",
+    "answer": "William Shakespeare",
+    "category": "General"
+  },
+  {
+    "question": "What is JSON?",
+    "answer": "JavaScript Object Notation",
+    "category": "Programming"
+  },
+  {
+    "question": "What is JSON?",
+    "answer": "JavaScript Object Notation",
+    "category": "Programming"
+  },
+  {
+    "question": "What does SQL stand for?",
+    "answer": "Structured Query Language",
+    "category": "Databases"
+  },
+  {
+    "question": "How many continents are there?",
+    "answer": "7",
+    "category": "General"
+  },
+  {
+    "question": "What is Laravel?",
+    "answer": "PHP Framework",
+    "category": "Laravel"
+  },
+  {
+    "question": "Which planet is known as the Red Planet?",
+    "answer": "Mars",
+    "category": "General"
+  },
+  {
+    "question": "What is Composer?",
+    "answer": "Dependency manager for PHP",
+    "category": "PHP"
+  },
+  {
+    "question": "What does DNS stand for?",
+    "answer": "Domain Name System",
+    "category": "Networking"
+  },
+  {
+    "question": "What is useState in React?",
+    "answer": "Hook for managing state",
+    "category": "React"
+  },
+  {
+    "question": "What is a router?",
+    "answer": "A device that forwards data packets",
+    "category": "Networking"
+  },
+  {
+    "question": "What is a loop?",
+    "answer": "A way to repeat code",
+    "category": "Programming"
+  },
+  {
+    "question": "What is Jenkins?",
+    "answer": "Automation server for CI/CD",
+    "category": "DevOps"
+  },
+  {
+    "question": "Difference between `==` and `===`?",
+    "answer": "`===` checks value and type",
+    "category": "PHP"
+  },
+  {
+    "question": "What does HTML stand for?",
+    "answer": "HyperText Markup Language",
+    "category": "Web"
+  },
+  {
+    "question": "What does DNS stand for?",
+    "answer": "Domain Name System",
+    "category": "Networking"
+  },
+  {
+    "question": "What is version control?",
+    "answer": "Managing changes to source code",
+    "category": "DevOps"
+  },
+  {
+    "question": "Which tag is used for a hyperlink in HTML?",
+    "answer": "<a>",
+    "category": "Web"
+  },
+  {
+    "question": "What is Eloquent in Laravel?",
+    "answer": "ORM (Object Relational Mapper)",
+    "category": "Laravel"
+  },
+  {
+    "question": "How many continents are there?",
+    "answer": "7",
+    "category": "General"
+  },
+  {
+    "question": "What is normalization?",
+    "answer": "Organizing data to reduce redundancy",
+    "category": "Databases"
+  },
+  {
+    "question": "What is a function?",
+    "answer": "Reusable block of code",
+    "category": "Programming"
+  },
+  {
+    "question": "JavaScript is mainly used for?",
+    "answer": "Client-side scripting",
+    "category": "Web"
+  },
+  {
+    "question": "What is a variable?",
+    "answer": "Storage for data",
+    "category": "Programming"
+  },
+  {
+    "question": "What is an API?",
+    "answer": "Application Programming Interface",
+    "category": "Programming"
+  },
+  {
+    "question": "What is JSON?",
+    "answer": "JavaScript Object Notation",
+    "category": "Programming"
+  },
+  {
+    "question": "What does `php artisan migrate` do?",
+    "answer": "Runs migrations",
+    "category": "Laravel"
+  },
+  {
+    "question": "What is JSON?",
+    "answer": "JavaScript Object Notation",
+    "category": "Programming"
+  },
+  {
+    "question": "What does DNS stand for?",
+    "answer": "Domain Name System",
+    "category": "Networking"
+  },
+  {
+    "question": "What is the largest ocean on Earth?",
+    "answer": "Pacific Ocean",
+    "category": "General"
+  },
+  {
+    "question": "What is a variable?",
+    "answer": "Storage for data",
+    "category": "Programming"
+  },
+  {
+    "question": "What is an index in a database?",
+    "answer": "Used to speed up searches",
+    "category": "Databases"
+  },
+  {
+    "question": "What is a function?",
+    "answer": "Reusable block of code",
+    "category": "Programming"
+  },
+  {
+    "question": "What is normalization?",
+    "answer": "Organizing data to reduce redundancy",
+    "category": "Databases"
+  },
+  {
+    "question": "What does IP stand for?",
+    "answer": "Internet Protocol",
+    "category": "Networking"
+  },
+  {
+    "question": "What is Eloquent in Laravel?",
+    "answer": "ORM (Object Relational Mapper)",
+    "category": "Laravel"
+  },
+  {
+    "question": "What is JSON?",
+    "answer": "JavaScript Object Notation",
+    "category": "Programming"
+  },
+  {
+    "question": "Which planet is known as the Red Planet?",
+    "answer": "Mars",
+    "category": "General"
+  },
+  {
+    "question": "What is Docker?",
+    "answer": "A containerization platform",
+    "category": "DevOps"
+  },
+  {
+    "question": "What is Composer?",
+    "answer": "Dependency manager for PHP",
+    "category": "PHP"
+  },
+  {
+    "question": "What is Laravel?",
+    "answer": "PHP Framework",
+    "category": "Laravel"
+  },
+  {
+    "question": "Which planet is known as the Red Planet?",
+    "answer": "Mars",
+    "category": "General"
+  },
+  {
+    "question": "Who wrote 'Hamlet'?",
+    "answer": "William Shakespeare",
+    "category": "General"
+  },
+  {
+    "question": "What is React?",
+    "answer": "A JavaScript library for building UI",
+    "category": "React"
+  },
+  {
+    "question": "How many continents are there?",
+    "answer": "7",
+    "category": "General"
+  },
+  {
+    "question": "What is the capital of Spain?",
+    "answer": "Madrid",
+    "category": "General"
+  },
+  {
+    "question": "Difference between `==` and `===`?",
+    "answer": "`===` checks value and type",
+    "category": "PHP"
+  },
+  {
+    "question": "What is a seeder in Laravel?",
+    "answer": "Used to populate database with test data",
+    "category": "Laravel"
+  },
+  {
+    "question": "What is normalization?",
+    "answer": "Organizing data to reduce redundancy",
+    "category": "Databases"
+  },
+  {
+    "question": "What is a function?",
+    "answer": "Reusable block of code",
+    "category": "Programming"
+  },
+  {
+    "question": "What is Livewire?",
+    "answer": "Reactive Laravel components",
+    "category": "Laravel"
+  },
+  {
+    "question": "What is a trait in PHP?",
+    "answer": "A mechanism for code reuse",
+    "category": "PHP"
+  },
+  {
+    "question": "What is HTTP used for?",
+    "answer": "Transmitting web pages",
+    "category": "Networking"
+  },
+  {
+    "question": "What is a loop?",
+    "answer": "A way to repeat code",
+    "category": "Programming"
+  },
+  {
+    "question": "How many continents are there?",
+    "answer": "7",
+    "category": "General"
+  },
+  {
+    "question": "What is CI/CD?",
+    "answer": "Continuous Integration / Continuous Deployment",
+    "category": "DevOps"
+  },
+  {
+    "question": "How many continents are there?",
+    "answer": "7",
+    "category": "General"
+  },
+  {
+    "question": "What is Kubernetes?",
+    "answer": "Container orchestration system",
+    "category": "DevOps"
+  },
+  {
+    "question": "What is HTTP used for?",
+    "answer": "Transmitting web pages",
+    "category": "Networking"
+  },
+  {
+    "question": "What does PHP stand for?",
+    "answer": "Hypertext Preprocessor",
+    "category": "PHP"
+  },
+  {
+    "question": "What is JSX?",
+    "answer": "JavaScript XML",
+    "category": "React"
+  },
+  {
+    "question": "What is CI/CD?",
+    "answer": "Continuous Integration / Continuous Deployment",
+    "category": "DevOps"
+  },
+  {
+    "question": "What is Laravel?",
+    "answer": "PHP Framework",
+    "category": "Laravel"
+  },
+  {
+    "question": "How many continents are there?",
+    "answer": "7",
+    "category": "General"
+  },
+  {
+    "question": "What is a variable?",
+    "answer": "Storage for data",
+    "category": "Programming"
+  },
+  {
+    "question": "What is a foreign key?",
+    "answer": "A key used to link two tables",
+    "category": "Databases"
+  },
+  {
+    "question": "What is a trait in PHP?",
+    "answer": "A mechanism for code reuse",
+    "category": "PHP"
+  },
+  {
+    "question": "What is the largest ocean on Earth?",
+    "answer": "Pacific Ocean",
+    "category": "General"
+  },
+  {
+    "question": "What is Eloquent in Laravel?",
+    "answer": "ORM (Object Relational Mapper)",
+    "category": "Laravel"
+  },
+  {
+    "question": "What does `php artisan migrate` do?",
+    "answer": "Runs migrations",
+    "category": "Laravel"
+  },
+  {
+    "question": "What is useState in React?",
+    "answer": "Hook for managing state",
+    "category": "React"
+  },
+  {
+    "question": "Which tag is used for a hyperlink in HTML?",
+    "answer": "<a>",
+    "category": "Web"
+  },
+  {
+    "question": "What is a foreign key?",
+    "answer": "A key used to link two tables",
+    "category": "Databases"
+  },
+  {
+    "question": "What is CI/CD?",
+    "answer": "Continuous Integration / Continuous Deployment",
+    "category": "DevOps"
+  },
+  {
+    "question": "What is JSX?",
+    "answer": "JavaScript XML",
+    "category": "React"
+  },
+  {
+    "question": "What is normalization?",
+    "answer": "Organizing data to reduce redundancy",
+    "category": "Databases"
+  },
+  {
+    "question": "What is a router?",
+    "answer": "A device that forwards data packets",
+    "category": "Networking"
+  },
+  {
+    "question": "What is a loop?",
+    "answer": "A way to repeat code",
+    "category": "Programming"
+  },
+  {
+    "question": "What is Livewire?",
+    "answer": "Reactive Laravel components",
+    "category": "Laravel"
+  },
+  {
+    "question": "Which tag is used for a hyperlink in HTML?",
+    "answer": "<a>",
+    "category": "Web"
+  },
+  {
+    "question": "What does HTTP stand for?",
+    "answer": "HyperText Transfer Protocol",
+    "category": "Web"
+  },
+  {
+    "question": "What is JSON?",
+    "answer": "JavaScript Object Notation",
+    "category": "Programming"
+  },
+  {
+    "question": "Who wrote 'Hamlet'?",
+    "answer": "William Shakespeare",
+    "category": "General"
+  },
+  {
+    "question": "What is Livewire?",
+    "answer": "Reactive Laravel components",
+    "category": "Laravel"
+  },
+  {
+    "question": "How many continents are there?",
+    "answer": "7",
+    "category": "General"
+  },
+  {
+    "question": "What is Laravel?",
+    "answer": "PHP Framework",
+    "category": "Laravel"
+  },
+  {
+    "question": "What is `isset()` used for?",
+    "answer": "Checks if a variable is set",
+    "category": "PHP"
+  },
+  {
+    "question": "What is React?",
+    "answer": "A JavaScript library for building UI",
+    "category": "React"
+  },
+  {
+    "question": "JavaScript is mainly used for?",
+    "answer": "Client-side scripting",
+    "category": "Web"
+  },
+  {
+    "question": "What does HTTP stand for?",
+    "answer": "HyperText Transfer Protocol",
+    "category": "Web"
+  },
+  {
+    "question": "What is the purpose of CSS?",
+    "answer": "Styling web pages",
+    "category": "Web"
+  },
+  {
+    "question": "What is Laravel?",
+    "answer": "PHP Framework",
+    "category": "Laravel"
+  },
+  {
+    "question": "Who wrote 'Hamlet'?",
+    "answer": "William Shakespeare",
+    "category": "General"
+  },
+  {
+    "question": "What is a trait in PHP?",
+    "answer": "A mechanism for code reuse",
+    "category": "PHP"
+  },
+  {
+    "question": "What is a foreign key?",
+    "answer": "A key used to link two tables",
+    "category": "Databases"
+  },
+  {
+    "question": "What is `isset()` used for?",
+    "answer": "Checks if a variable is set",
+    "category": "PHP"
+  },
+  {
+    "question": "JavaScript is mainly used for?",
+    "answer": "Client-side scripting",
+    "category": "Web"
+  },
+  {
+    "question": "What is normalization?",
+    "answer": "Organizing data to reduce redundancy",
+    "category": "Databases"
+  },
+  {
+    "question": "What is a seeder in Laravel?",
+    "answer": "Used to populate database with test data",
+    "category": "Laravel"
+  },
+  {
+    "question": "What is HTTP used for?",
+    "answer": "Transmitting web pages",
+    "category": "Networking"
+  },
+  {
+    "question": "What is Laravel?",
+    "answer": "PHP Framework",
+    "category": "Laravel"
+  },
+  {
+    "question": "What is a seeder in Laravel?",
+    "answer": "Used to populate database with test data",
+    "category": "Laravel"
+  },
+  {
+    "question": "What is JSX?",
+    "answer": "JavaScript XML",
+    "category": "React"
+  },
+  {
+    "question": "What is a router?",
+    "answer": "A device that forwards data packets",
+    "category": "Networking"
+  },
+  {
+    "question": "What is the purpose of CSS?",
+    "answer": "Styling web pages",
+    "category": "Web"
+  },
+  {
+    "question": "What is a router?",
+    "answer": "A device that forwards data packets",
+    "category": "Networking"
+  },
+  {
+    "question": "Which tag is used for a hyperlink in HTML?",
+    "answer": "<a>",
+    "category": "Web"
+  },
+  {
+    "question": "What is Eloquent in Laravel?",
+    "answer": "ORM (Object Relational Mapper)",
+    "category": "Laravel"
+  },
+  {
+    "question": "What is CI/CD?",
+    "answer": "Continuous Integration / Continuous Deployment",
+    "category": "DevOps"
+  },
+  {
+    "question": "What is useState in React?",
+    "answer": "Hook for managing state",
+    "category": "React"
+  },
+  {
+    "question": "What is a component in React?",
+    "answer": "A reusable UI element",
+    "category": "React"
+  },
+  {
+    "question": "What is the capital of Spain?",
+    "answer": "Madrid",
+    "category": "General"
+  },
+  {
+    "question": "What is Docker?",
+    "answer": "A containerization platform",
+    "category": "DevOps"
+  },
+  {
+    "question": "What is React?",
+    "answer": "A JavaScript library for building UI",
+    "category": "React"
+  },
+  {
+    "question": "What is Docker?",
+    "answer": "A containerization platform",
+    "category": "DevOps"
+  },
+  {
+    "question": "What does IP stand for?",
+    "answer": "Internet Protocol",
+    "category": "Networking"
+  },
+  {
+    "question": "JavaScript is mainly used for?",
+    "answer": "Client-side scripting",
+    "category": "Web"
+  },
+  {
+    "question": "What is a loop?",
+    "answer": "A way to repeat code",
+    "category": "Programming"
+  },
+  {
+    "question": "What is CI/CD?",
+    "answer": "Continuous Integration / Continuous Deployment",
+    "category": "DevOps"
+  },
+  {
+    "question": "What does DNS stand for?",
+    "answer": "Domain Name System",
+    "category": "Networking"
+  },
+  {
+    "question": "What is JSON?",
+    "answer": "JavaScript Object Notation",
+    "category": "Programming"
+  },
+  {
+    "question": "What is Composer?",
+    "answer": "Dependency manager for PHP",
+    "category": "PHP"
+  },
+  {
+    "question": "What is HTTP used for?",
+    "answer": "Transmitting web pages",
+    "category": "Networking"
+  },
+  {
+    "question": "What is JSX?",
+    "answer": "JavaScript XML",
+    "category": "React"
+  },
+  {
+    "question": "What is useState in React?",
+    "answer": "Hook for managing state",
+    "category": "React"
+  },
+  {
+    "question": "What is Docker?",
+    "answer": "A containerization platform",
+    "category": "DevOps"
+  },
+  {
+    "question": "What is a function?",
+    "answer": "Reusable block of code",
+    "category": "Programming"
+  },
+  {
+    "question": "What is Kubernetes?",
+    "answer": "Container orchestration system",
+    "category": "DevOps"
+  },
+  {
+    "question": "What is a primary key?",
+    "answer": "A unique identifier for a record",
+    "category": "Databases"
+  },
+  {
+    "question": "What does HTTP stand for?",
+    "answer": "HyperText Transfer Protocol",
+    "category": "Web"
+  },
+  {
+    "question": "What is the capital of Spain?",
+    "answer": "Madrid",
+    "category": "General"
+  },
+  {
+    "question": "What is useEffect used for?",
+    "answer": "Handling side effects",
+    "category": "React"
+  },
+  {
+    "question": "What is Jenkins?",
+    "answer": "Automation server for CI/CD",
+    "category": "DevOps"
+  },
+  {
+    "question": "What is useEffect used for?",
+    "answer": "Handling side effects",
+    "category": "React"
+  },
+  {
+    "question": "What is the purpose of CSS?",
+    "answer": "Styling web pages",
+    "category": "Web"
+  },
+  {
+    "question": "JavaScript is mainly used for?",
+    "answer": "Client-side scripting",
+    "category": "Web"
+  },
+  {
+    "question": "What is an index in a database?",
+    "answer": "Used to speed up searches",
+    "category": "Databases"
+  },
+  {
+    "question": "What does DNS stand for?",
+    "answer": "Domain Name System",
+    "category": "Networking"
+  },
+  {
+    "question": "What is Docker?",
+    "answer": "A containerization platform",
+    "category": "DevOps"
+  },
+  {
+    "question": "What is the capital of Spain?",
+    "answer": "Madrid",
+    "category": "General"
+  },
+  {
+    "question": "What is a primary key?",
+    "answer": "A unique identifier for a record",
+    "category": "Databases"
+  },
+  {
+    "question": "What is React?",
+    "answer": "A JavaScript library for building UI",
+    "category": "React"
+  },
+  {
+    "question": "What does HTML stand for?",
+    "answer": "HyperText Markup Language",
+    "category": "Web"
+  },
+  {
+    "question": "What does `php artisan migrate` do?",
+    "answer": "Runs migrations",
+    "category": "Laravel"
+  },
+  {
+    "question": "Who wrote 'Hamlet'?",
+    "answer": "William Shakespeare",
+    "category": "General"
+  },
+  {
+    "question": "What is React?",
+    "answer": "A JavaScript library for building UI",
+    "category": "React"
+  },
+  {
+    "question": "Who wrote 'Hamlet'?",
+    "answer": "William Shakespeare",
+    "category": "General"
+  },
+  {
+    "question": "What is version control?",
+    "answer": "Managing changes to source code",
+    "category": "DevOps"
+  },
+  {
+    "question": "What is a variable?",
+    "answer": "Storage for data",
+    "category": "Programming"
+  },
+  {
+    "question": "What is React?",
+    "answer": "A JavaScript library for building UI",
+    "category": "React"
+  },
+  {
+    "question": "What is JSON?",
+    "answer": "JavaScript Object Notation",
+    "category": "Programming"
+  },
+  {
+    "question": "What is an API?",
+    "answer": "Application Programming Interface",
+    "category": "Programming"
+  },
+  {
+    "question": "What does `php artisan migrate` do?",
+    "answer": "Runs migrations",
+    "category": "Laravel"
+  },
+  {
+    "question": "What does DNS stand for?",
+    "answer": "Domain Name System",
+    "category": "Networking"
+  },
+  {
+    "question": "JavaScript is mainly used for?",
+    "answer": "Client-side scripting",
+    "category": "Web"
+  },
+  {
+    "question": "What is a function?",
+    "answer": "Reusable block of code",
+    "category": "Programming"
+  },
+  {
+    "question": "What is Livewire?",
+    "answer": "Reactive Laravel components",
+    "category": "Laravel"
+  },
+  {
+    "question": "What is Docker?",
+    "answer": "A containerization platform",
+    "category": "DevOps"
+  },
+  {
+    "question": "What is Docker?",
+    "answer": "A containerization platform",
+    "category": "DevOps"
+  },
+  {
+    "question": "What is an index in a database?",
+    "answer": "Used to speed up searches",
+    "category": "Databases"
+  },
+  {
+    "question": "What is a router?",
+    "answer": "A device that forwards data packets",
+    "category": "Networking"
+  },
+  {
+    "question": "What does IP stand for?",
+    "answer": "Internet Protocol",
+    "category": "Networking"
+  },
+  {
+    "question": "What is Kubernetes?",
+    "answer": "Container orchestration system",
+    "category": "DevOps"
+  },
+  {
+    "question": "What is `isset()` used for?",
+    "answer": "Checks if a variable is set",
+    "category": "PHP"
+  },
+  {
+    "question": "What does IP stand for?",
+    "answer": "Internet Protocol",
+    "category": "Networking"
+  },
+  {
+    "question": "What is useEffect used for?",
+    "answer": "Handling side effects",
+    "category": "React"
+  },
+  {
+    "question": "What is a variable?",
+    "answer": "Storage for data",
+    "category": "Programming"
+  },
+  {
+    "question": "What is useEffect used for?",
+    "answer": "Handling side effects",
+    "category": "React"
+  },
+  {
+    "question": "What is the purpose of CSS?",
+    "answer": "Styling web pages",
+    "category": "Web"
+  },
+  {
+    "question": "What is HTTP used for?",
+    "answer": "Transmitting web pages",
+    "category": "Networking"
+  },
+  {
+    "question": "What does DNS stand for?",
+    "answer": "Domain Name System",
+    "category": "Networking"
+  },
+  {
+    "question": "What is React?",
+    "answer": "A JavaScript library for building UI",
+    "category": "React"
+  },
+  {
+    "question": "What is an index in a database?",
+    "answer": "Used to speed up searches",
+    "category": "Databases"
+  },
+  {
+    "question": "What is version control?",
+    "answer": "Managing changes to source code",
+    "category": "DevOps"
+  },
+  {
+    "question": "What does SQL stand for?",
+    "answer": "Structured Query Language",
+    "category": "Databases"
+  },
+  {
+    "question": "What is the capital of Spain?",
+    "answer": "Madrid",
+    "category": "General"
+  },
+  {
+    "question": "What is the largest ocean on Earth?",
+    "answer": "Pacific Ocean",
+    "category": "General"
+  },
+  {
+    "question": "What is `isset()` used for?",
+    "answer": "Checks if a variable is set",
+    "category": "PHP"
+  },
+  {
+    "question": "What is CI/CD?",
+    "answer": "Continuous Integration / Continuous Deployment",
+    "category": "DevOps"
+  },
+  {
+    "question": "What is a MAC address?",
+    "answer": "Unique hardware address",
+    "category": "Networking"
+  },
+  {
+    "question": "What is a router?",
+    "answer": "A device that forwards data packets",
+    "category": "Networking"
+  },
+  {
+    "question": "What is a seeder in Laravel?",
+    "answer": "Used to populate database with test data",
+    "category": "Laravel"
+  },
+  {
+    "question": "What is a variable?",
+    "answer": "Storage for data",
+    "category": "Programming"
+  },
+  {
+    "question": "What is useState in React?",
+    "answer": "Hook for managing state",
+    "category": "React"
+  },
+  {
+    "question": "What does PHP stand for?",
+    "answer": "Hypertext Preprocessor",
+    "category": "PHP"
+  },
+  {
+    "question": "What is `isset()` used for?",
+    "answer": "Checks if a variable is set",
+    "category": "PHP"
+  },
+  {
+    "question": "Difference between `==` and `===`?",
+    "answer": "`===` checks value and type",
+    "category": "PHP"
+  },
+  {
+    "question": "What is JSX?",
+    "answer": "JavaScript XML",
+    "category": "React"
+  },
+  {
+    "question": "How many continents are there?",
+    "answer": "7",
+    "category": "General"
+  },
+  {
+    "question": "What is normalization?",
+    "answer": "Organizing data to reduce redundancy",
+    "category": "Databases"
+  },
+  {
+    "question": "What does DNS stand for?",
+    "answer": "Domain Name System",
+    "category": "Networking"
+  },
+  {
+    "question": "What is a MAC address?",
+    "answer": "Unique hardware address",
+    "category": "Networking"
+  },
+  {
+    "question": "JavaScript is mainly used for?",
+    "answer": "Client-side scripting",
+    "category": "Web"
+  },
+  {
+    "question": "What is CI/CD?",
+    "answer": "Continuous Integration / Continuous Deployment",
+    "category": "DevOps"
+  },
+  {
+    "question": "What does IP stand for?",
+    "answer": "Internet Protocol",
+    "category": "Networking"
+  },
+  {
+    "question": "How many continents are there?",
+    "answer": "7",
+    "category": "General"
+  },
+  {
+    "question": "What is a MAC address?",
+    "answer": "Unique hardware address",
+    "category": "Networking"
+  },
+  {
+    "question": "What is a variable?",
+    "answer": "Storage for data",
+    "category": "Programming"
+  },
+  {
+    "question": "What is Livewire?",
+    "answer": "Reactive Laravel components",
+    "category": "Laravel"
+  },
+  {
+    "question": "What is Docker?",
+    "answer": "A containerization platform",
+    "category": "DevOps"
+  },
+  {
+    "question": "What is Laravel?",
+    "answer": "PHP Framework",
+    "category": "Laravel"
+  },
+  {
+    "question": "What does IP stand for?",
+    "answer": "Internet Protocol",
+    "category": "Networking"
+  },
+  {
+    "question": "What is a loop?",
+    "answer": "A way to repeat code",
+    "category": "Programming"
+  },
+  {
+    "question": "What is an API?",
+    "answer": "Application Programming Interface",
+    "category": "Programming"
+  },
+  {
+    "question": "What is CI/CD?",
+    "answer": "Continuous Integration / Continuous Deployment",
+    "category": "DevOps"
+  },
+  {
+    "question": "What is Eloquent in Laravel?",
+    "answer": "ORM (Object Relational Mapper)",
+    "category": "Laravel"
+  },
+  {
+    "question": "What is Livewire?",
+    "answer": "Reactive Laravel components",
+    "category": "Laravel"
+  },
+  {
+    "question": "What does HTTP stand for?",
+    "answer": "HyperText Transfer Protocol",
+    "category": "Web"
+  },
+  {
+    "question": "What is a MAC address?",
+    "answer": "Unique hardware address",
+    "category": "Networking"
+  },
+  {
+    "question": "What is JSX?",
+    "answer": "JavaScript XML",
+    "category": "React"
+  },
+  {
+    "question": "What is Laravel?",
+    "answer": "PHP Framework",
+    "category": "Laravel"
+  },
+  {
+    "question": "JavaScript is mainly used for?",
+    "answer": "Client-side scripting",
+    "category": "Web"
+  },
+  {
+    "question": "Which tag is used for a hyperlink in HTML?",
+    "answer": "<a>",
+    "category": "Web"
+  },
+  {
+    "question": "What is CI/CD?",
+    "answer": "Continuous Integration / Continuous Deployment",
+    "category": "DevOps"
+  },
+  {
+    "question": "What is Jenkins?",
+    "answer": "Automation server for CI/CD",
+    "category": "DevOps"
+  },
+  {
+    "question": "What is Composer?",
+    "answer": "Dependency manager for PHP",
+    "category": "PHP"
+  },
+  {
+    "question": "What is CI/CD?",
+    "answer": "Continuous Integration / Continuous Deployment",
+    "category": "DevOps"
+  },
+  {
+    "question": "What does HTTP stand for?",
+    "answer": "HyperText Transfer Protocol",
+    "category": "Web"
+  },
+  {
+    "question": "What is a seeder in Laravel?",
+    "answer": "Used to populate database with test data",
+    "category": "Laravel"
+  },
+  {
+    "question": "What does SQL stand for?",
+    "answer": "Structured Query Language",
+    "category": "Databases"
+  },
+  {
+    "question": "What does IP stand for?",
+    "answer": "Internet Protocol",
+    "category": "Networking"
+  },
+  {
+    "question": "What is Livewire?",
+    "answer": "Reactive Laravel components",
+    "category": "Laravel"
+  },
+  {
+    "question": "What is a foreign key?",
+    "answer": "A key used to link two tables",
+    "category": "Databases"
+  },
+  {
+    "question": "What is Laravel?",
+    "answer": "PHP Framework",
+    "category": "Laravel"
+  },
+  {
+    "question": "What is the capital of Spain?",
+    "answer": "Madrid",
+    "category": "General"
+  },
+  {
+    "question": "What does HTTP stand for?",
+    "answer": "HyperText Transfer Protocol",
+    "category": "Web"
+  },
+  {
+    "question": "What is useState in React?",
+    "answer": "Hook for managing state",
+    "category": "React"
+  },
+  {
+    "question": "What is a variable?",
+    "answer": "Storage for data",
+    "category": "Programming"
+  },
+  {
+    "question": "What is the capital of Spain?",
+    "answer": "Madrid",
+    "category": "General"
+  },
+  {
+    "question": "What does IP stand for?",
+    "answer": "Internet Protocol",
+    "category": "Networking"
+  },
+  {
+    "question": "What is normalization?",
+    "answer": "Organizing data to reduce redundancy",
+    "category": "Databases"
+  },
+  {
+    "question": "What is Docker?",
+    "answer": "A containerization platform",
+    "category": "DevOps"
+  },
+  {
+    "question": "Which tag is used for a hyperlink in HTML?",
+    "answer": "<a>",
+    "category": "Web"
+  },
+  {
+    "question": "What is HTTP used for?",
+    "answer": "Transmitting web pages",
+    "category": "Networking"
+  },
+  {
+    "question": "Which tag is used for a hyperlink in HTML?",
+    "answer": "<a>",
+    "category": "Web"
+  },
+  {
+    "question": "What is Composer?",
+    "answer": "Dependency manager for PHP",
+    "category": "PHP"
+  },
+  {
+    "question": "What is a component in React?",
+    "answer": "A reusable UI element",
+    "category": "React"
+  },
+  {
+    "question": "What is Laravel?",
+    "answer": "PHP Framework",
+    "category": "Laravel"
+  },
+  {
+    "question": "Difference between `==` and `===`?",
+    "answer": "`===` checks value and type",
+    "category": "PHP"
+  },
+  {
+    "question": "What is CI/CD?",
+    "answer": "Continuous Integration / Continuous Deployment",
+    "category": "DevOps"
+  },
+  {
+    "question": "What is an API?",
+    "answer": "Application Programming Interface",
+    "category": "Programming"
+  },
+  {
+    "question": "Who wrote 'Hamlet'?",
+    "answer": "William Shakespeare",
+    "category": "General"
+  },
+  {
+    "question": "What is Jenkins?",
+    "answer": "Automation server for CI/CD",
+    "category": "DevOps"
+  },
+  {
+    "question": "What is Kubernetes?",
+    "answer": "Container orchestration system",
+    "category": "DevOps"
+  },
+  {
+    "question": "What is the largest ocean on Earth?",
+    "answer": "Pacific Ocean",
+    "category": "General"
+  },
+  {
+    "question": "What is JSON?",
+    "answer": "JavaScript Object Notation",
+    "category": "Programming"
+  },
+  {
+    "question": "What is Laravel?",
+    "answer": "PHP Framework",
+    "category": "Laravel"
+  },
+  {
+    "question": "What does PHP stand for?",
+    "answer": "Hypertext Preprocessor",
+    "category": "PHP"
+  },
+  {
+    "question": "What is a function?",
+    "answer": "Reusable block of code",
+    "category": "Programming"
+  },
+  {
+    "question": "JavaScript is mainly used for?",
+    "answer": "Client-side scripting",
+    "category": "Web"
+  },
+  {
+    "question": "What does PHP stand for?",
+    "answer": "Hypertext Preprocessor",
+    "category": "PHP"
+  },
+  {
+    "question": "What is Composer?",
+    "answer": "Dependency manager for PHP",
+    "category": "PHP"
+  },
+  {
+    "question": "What is a seeder in Laravel?",
+    "answer": "Used to populate database with test data",
+    "category": "Laravel"
+  },
+  {
+    "question": "What does `php artisan migrate` do?",
+    "answer": "Runs migrations",
+    "category": "Laravel"
+  },
+  {
+    "question": "How many continents are there?",
+    "answer": "7",
+    "category": "General"
+  },
+  {
+    "question": "What is useEffect used for?",
+    "answer": "Handling side effects",
+    "category": "React"
+  },
+  {
+    "question": "What does `php artisan migrate` do?",
+    "answer": "Runs migrations",
+    "category": "Laravel"
+  },
+  {
+    "question": "What is `isset()` used for?",
+    "answer": "Checks if a variable is set",
+    "category": "PHP"
+  },
+  {
+    "question": "What is Livewire?",
+    "answer": "Reactive Laravel components",
+    "category": "Laravel"
+  },
+  {
+    "question": "What is Jenkins?",
+    "answer": "Automation server for CI/CD",
+    "category": "DevOps"
+  },
+  {
+    "question": "What does PHP stand for?",
+    "answer": "Hypertext Preprocessor",
+    "category": "PHP"
+  },
+  {
+    "question": "What is Kubernetes?",
+    "answer": "Container orchestration system",
+    "category": "DevOps"
+  },
+  {
+    "question": "What is Composer?",
+    "answer": "Dependency manager for PHP",
+    "category": "PHP"
+  },
+  {
+    "question": "What is a loop?",
+    "answer": "A way to repeat code",
+    "category": "Programming"
+  },
+  {
+    "question": "What is Jenkins?",
+    "answer": "Automation server for CI/CD",
+    "category": "DevOps"
+  },
+  {
+    "question": "What does HTTP stand for?",
+    "answer": "HyperText Transfer Protocol",
+    "category": "Web"
+  },
+  {
+    "question": "What is useEffect used for?",
+    "answer": "Handling side effects",
+    "category": "React"
+  },
+  {
+    "question": "Difference between `==` and `===`?",
+    "answer": "`===` checks value and type",
+    "category": "PHP"
+  },
+  {
+    "question": "Who wrote 'Hamlet'?",
+    "answer": "William Shakespeare",
+    "category": "General"
+  },
+  {
+    "question": "How many continents are there?",
+    "answer": "7",
+    "category": "General"
+  },
+  {
+    "question": "What is useState in React?",
+    "answer": "Hook for managing state",
+    "category": "React"
+  },
+  {
+    "question": "What is a loop?",
+    "answer": "A way to repeat code",
+    "category": "Programming"
+  },
+  {
+    "question": "What is an API?",
+    "answer": "Application Programming Interface",
+    "category": "Programming"
+  },
+  {
+    "question": "What is Laravel?",
+    "answer": "PHP Framework",
+    "category": "Laravel"
+  },
+  {
+    "question": "What is a variable?",
+    "answer": "Storage for data",
+    "category": "Programming"
+  },
+  {
+    "question": "Which planet is known as the Red Planet?",
+    "answer": "Mars",
+    "category": "General"
+  },
+  {
+    "question": "What is an index in a database?",
+    "answer": "Used to speed up searches",
+    "category": "Databases"
+  },
+  {
+    "question": "What is `isset()` used for?",
+    "answer": "Checks if a variable is set",
+    "category": "PHP"
+  },
+  {
+    "question": "What is CI/CD?",
+    "answer": "Continuous Integration / Continuous Deployment",
+    "category": "DevOps"
+  },
+  {
+    "question": "What is Jenkins?",
+    "answer": "Automation server for CI/CD",
+    "category": "DevOps"
+  },
+  {
+    "question": "What is Composer?",
+    "answer": "Dependency manager for PHP",
+    "category": "PHP"
+  },
+  {
+    "question": "What is `isset()` used for?",
+    "answer": "Checks if a variable is set",
+    "category": "PHP"
+  },
+  {
+    "question": "What is Eloquent in Laravel?",
+    "answer": "ORM (Object Relational Mapper)",
+    "category": "Laravel"
+  },
+  {
+    "question": "What is a variable?",
+    "answer": "Storage for data",
+    "category": "Programming"
+  },
+  {
+    "question": "What is a foreign key?",
+    "answer": "A key used to link two tables",
+    "category": "Databases"
+  },
+  {
+    "question": "What is an index in a database?",
+    "answer": "Used to speed up searches",
+    "category": "Databases"
+  },
+  {
+    "question": "What is the largest ocean on Earth?",
+    "answer": "Pacific Ocean",
+    "category": "General"
+  },
+  {
+    "question": "What is a component in React?",
+    "answer": "A reusable UI element",
+    "category": "React"
+  },
+  {
+    "question": "How many continents are there?",
+    "answer": "7",
+    "category": "General"
+  },
+  {
+    "question": "What does DNS stand for?",
+    "answer": "Domain Name System",
+    "category": "Networking"
+  },
+  {
+    "question": "What is a primary key?",
+    "answer": "A unique identifier for a record",
+    "category": "Databases"
+  },
+  {
+    "question": "What is Livewire?",
+    "answer": "Reactive Laravel components",
+    "category": "Laravel"
+  },
+  {
+    "question": "What is a foreign key?",
+    "answer": "A key used to link two tables",
+    "category": "Databases"
+  },
+  {
+    "question": "Who wrote 'Hamlet'?",
+    "answer": "William Shakespeare",
+    "category": "General"
+  },
+  {
+    "question": "What does `php artisan migrate` do?",
+    "answer": "Runs migrations",
+    "category": "Laravel"
+  },
+  {
+    "question": "What does DNS stand for?",
+    "answer": "Domain Name System",
+    "category": "Networking"
+  },
+  {
+    "question": "What does IP stand for?",
+    "answer": "Internet Protocol",
+    "category": "Networking"
+  },
+  {
+    "question": "What does HTTP stand for?",
+    "answer": "HyperText Transfer Protocol",
+    "category": "Web"
+  },
+  {
+    "question": "What is Laravel?",
+    "answer": "PHP Framework",
+    "category": "Laravel"
+  },
+  {
+    "question": "What is the capital of Spain?",
+    "answer": "Madrid",
+    "category": "General"
+  },
+  {
+    "question": "What is useEffect used for?",
+    "answer": "Handling side effects",
+    "category": "React"
+  },
+  {
+    "question": "What is a router?",
+    "answer": "A device that forwards data packets",
+    "category": "Networking"
+  },
+  {
+    "question": "What is a loop?",
+    "answer": "A way to repeat code",
+    "category": "Programming"
+  },
+  {
+    "question": "What is Eloquent in Laravel?",
+    "answer": "ORM (Object Relational Mapper)",
+    "category": "Laravel"
+  },
+  {
+    "question": "What is Composer?",
+    "answer": "Dependency manager for PHP",
+    "category": "PHP"
+  },
+  {
+    "question": "What is CI/CD?",
+    "answer": "Continuous Integration / Continuous Deployment",
+    "category": "DevOps"
+  },
+  {
+    "question": "What is Eloquent in Laravel?",
+    "answer": "ORM (Object Relational Mapper)",
+    "category": "Laravel"
+  },
+  {
+    "question": "What is the purpose of CSS?",
+    "answer": "Styling web pages",
+    "category": "Web"
+  },
+  {
+    "question": "What is a MAC address?",
+    "answer": "Unique hardware address",
+    "category": "Networking"
+  },
+  {
+    "question": "What is React?",
+    "answer": "A JavaScript library for building UI",
+    "category": "React"
+  },
+  {
+    "question": "What is a loop?",
+    "answer": "A way to repeat code",
+    "category": "Programming"
+  },
+  {
+    "question": "What is HTTP used for?",
+    "answer": "Transmitting web pages",
+    "category": "Networking"
+  },
+  {
+    "question": "What is Jenkins?",
+    "answer": "Automation server for CI/CD",
+    "category": "DevOps"
+  },
+  {
+    "question": "What is a variable?",
+    "answer": "Storage for data",
+    "category": "Programming"
+  },
+  {
+    "question": "Which planet is known as the Red Planet?",
+    "answer": "Mars",
+    "category": "General"
+  },
+  {
+    "question": "What is a component in React?",
+    "answer": "A reusable UI element",
+    "category": "React"
+  },
+  {
+    "question": "Difference between `==` and `===`?",
+    "answer": "`===` checks value and type",
+    "category": "PHP"
+  },
+  {
+    "question": "What is an API?",
+    "answer": "Application Programming Interface",
+    "category": "Programming"
+  },
+  {
+    "question": "Difference between `==` and `===`?",
+    "answer": "`===` checks value and type",
+    "category": "PHP"
+  },
+  {
+    "question": "What is Kubernetes?",
+    "answer": "Container orchestration system",
+    "category": "DevOps"
+  },
+  {
+    "question": "What is useState in React?",
+    "answer": "Hook for managing state",
+    "category": "React"
+  },
+  {
+    "question": "Which tag is used for a hyperlink in HTML?",
+    "answer": "<a>",
+    "category": "Web"
+  },
+  {
+    "question": "Who wrote 'Hamlet'?",
+    "answer": "William Shakespeare",
+    "category": "General"
+  },
+  {
+    "question": "What is `isset()` used for?",
+    "answer": "Checks if a variable is set",
+    "category": "PHP"
+  },
+  {
+    "question": "What is HTTP used for?",
+    "answer": "Transmitting web pages",
+    "category": "Networking"
+  },
+  {
+    "question": "What is JSX?",
+    "answer": "JavaScript XML",
+    "category": "React"
+  },
+  {
+    "question": "What does SQL stand for?",
+    "answer": "Structured Query Language",
+    "category": "Databases"
+  },
+  {
+    "question": "What is a trait in PHP?",
+    "answer": "A mechanism for code reuse",
+    "category": "PHP"
+  },
+  {
+    "question": "What is normalization?",
+    "answer": "Organizing data to reduce redundancy",
+    "category": "Databases"
+  },
+  {
+    "question": "What is a router?",
+    "answer": "A device that forwards data packets",
+    "category": "Networking"
+  },
+  {
+    "question": "Which tag is used for a hyperlink in HTML?",
+    "answer": "<a>",
+    "category": "Web"
+  },
+  {
+    "question": "Which tag is used for a hyperlink in HTML?",
+    "answer": "<a>",
+    "category": "Web"
+  },
+  {
+    "question": "What is a foreign key?",
+    "answer": "A key used to link two tables",
+    "category": "Databases"
+  },
+  {
+    "question": "What is Docker?",
+    "answer": "A containerization platform",
+    "category": "DevOps"
+  },
+  {
+    "question": "What is CI/CD?",
+    "answer": "Continuous Integration / Continuous Deployment",
+    "category": "DevOps"
+  },
+  {
+    "question": "What is version control?",
+    "answer": "Managing changes to source code",
+    "category": "DevOps"
+  },
+  {
+    "question": "What does HTML stand for?",
+    "answer": "HyperText Markup Language",
+    "category": "Web"
+  },
+  {
+    "question": "What is Jenkins?",
+    "answer": "Automation server for CI/CD",
+    "category": "DevOps"
+  },
+  {
+    "question": "What does SQL stand for?",
+    "answer": "Structured Query Language",
+    "category": "Databases"
+  },
+  {
+    "question": "What is normalization?",
+    "answer": "Organizing data to reduce redundancy",
+    "category": "Databases"
+  },
+  {
+    "question": "What is Livewire?",
+    "answer": "Reactive Laravel components",
+    "category": "Laravel"
+  },
+  {
+    "question": "Difference between `==` and `===`?",
+    "answer": "`===` checks value and type",
+    "category": "PHP"
+  },
+  {
+    "question": "What is useState in React?",
+    "answer": "Hook for managing state",
+    "category": "React"
+  },
+  {
+    "question": "What is a seeder in Laravel?",
+    "answer": "Used to populate database with test data",
+    "category": "Laravel"
+  },
+  {
+    "question": "What is a trait in PHP?",
+    "answer": "A mechanism for code reuse",
+    "category": "PHP"
+  },
+  {
+    "question": "What is Composer?",
+    "answer": "Dependency manager for PHP",
+    "category": "PHP"
+  },
+  {
+    "question": "What does SQL stand for?",
+    "answer": "Structured Query Language",
+    "category": "Databases"
+  },
+  {
+    "question": "What does SQL stand for?",
+    "answer": "Structured Query Language",
+    "category": "Databases"
+  },
+  {
+    "question": "What does HTTP stand for?",
+    "answer": "HyperText Transfer Protocol",
+    "category": "Web"
+  },
+  {
+    "question": "What does IP stand for?",
+    "answer": "Internet Protocol",
+    "category": "Networking"
+  },
+  {
+    "question": "What is Docker?",
+    "answer": "A containerization platform",
+    "category": "DevOps"
+  },
+  {
+    "question": "What is Eloquent in Laravel?",
+    "answer": "ORM (Object Relational Mapper)",
+    "category": "Laravel"
+  },
+  {
+    "question": "What is version control?",
+    "answer": "Managing changes to source code",
+    "category": "DevOps"
+  },
+  {
+    "question": "What is a foreign key?",
+    "answer": "A key used to link two tables",
+    "category": "Databases"
+  },
+  {
+    "question": "What is an index in a database?",
+    "answer": "Used to speed up searches",
+    "category": "Databases"
+  },
+  {
+    "question": "Which planet is known as the Red Planet?",
+    "answer": "Mars",
+    "category": "General"
+  },
+  {
+    "question": "What is a function?",
+    "answer": "Reusable block of code",
+    "category": "Programming"
+  },
+  {
+    "question": "What is a foreign key?",
+    "answer": "A key used to link two tables",
+    "category": "Databases"
+  },
+  {
+    "question": "What is Jenkins?",
+    "answer": "Automation server for CI/CD",
+    "category": "DevOps"
+  },
+  {
+    "question": "What does SQL stand for?",
+    "answer": "Structured Query Language",
+    "category": "Databases"
+  },
+  {
+    "question": "What is Composer?",
+    "answer": "Dependency manager for PHP",
+    "category": "PHP"
+  },
+  {
+    "question": "What is useEffect used for?",
+    "answer": "Handling side effects",
+    "category": "React"
+  },
+  {
+    "question": "What does DNS stand for?",
+    "answer": "Domain Name System",
+    "category": "Networking"
+  },
+  {
+    "question": "Which planet is known as the Red Planet?",
+    "answer": "Mars",
+    "category": "General"
+  },
+  {
+    "question": "What is Jenkins?",
+    "answer": "Automation server for CI/CD",
+    "category": "DevOps"
+  },
+  {
+    "question": "What is useState in React?",
+    "answer": "Hook for managing state",
+    "category": "React"
+  },
+  {
+    "question": "What is a variable?",
+    "answer": "Storage for data",
+    "category": "Programming"
+  },
+  {
+    "question": "What does HTML stand for?",
+    "answer": "HyperText Markup Language",
+    "category": "Web"
+  },
+  {
+    "question": "What is a primary key?",
+    "answer": "A unique identifier for a record",
+    "category": "Databases"
+  },
+  {
+    "question": "What is Composer?",
+    "answer": "Dependency manager for PHP",
+    "category": "PHP"
+  },
+  {
+    "question": "What is CI/CD?",
+    "answer": "Continuous Integration / Continuous Deployment",
+    "category": "DevOps"
+  },
+  {
+    "question": "What is version control?",
+    "answer": "Managing changes to source code",
+    "category": "DevOps"
+  },
+  {
+    "question": "What is a loop?",
+    "answer": "A way to repeat code",
+    "category": "Programming"
+  },
+  {
+    "question": "What is a foreign key?",
+    "answer": "A key used to link two tables",
+    "category": "Databases"
+  },
+  {
+    "question": "What does SQL stand for?",
+    "answer": "Structured Query Language",
+    "category": "Databases"
+  },
+  {
+    "question": "What is an index in a database?",
+    "answer": "Used to speed up searches",
+    "category": "Databases"
+  },
+  {
+    "question": "What is the largest ocean on Earth?",
+    "answer": "Pacific Ocean",
+    "category": "General"
+  },
+  {
+    "question": "What is a loop?",
+    "answer": "A way to repeat code",
+    "category": "Programming"
+  },
+  {
+    "question": "What is Livewire?",
+    "answer": "Reactive Laravel components",
+    "category": "Laravel"
+  },
+  {
+    "question": "What is Livewire?",
+    "answer": "Reactive Laravel components",
+    "category": "Laravel"
+  },
+  {
+    "question": "What does SQL stand for?",
+    "answer": "Structured Query Language",
+    "category": "Databases"
+  },
+  {
+    "question": "What does `php artisan migrate` do?",
+    "answer": "Runs migrations",
+    "category": "Laravel"
+  },
+  {
+    "question": "What is normalization?",
+    "answer": "Organizing data to reduce redundancy",
+    "category": "Databases"
+  },
+  {
+    "question": "What is the capital of Spain?",
+    "answer": "Madrid",
+    "category": "General"
+  },
+  {
+    "question": "What is JSON?",
+    "answer": "JavaScript Object Notation",
+    "category": "Programming"
+  },
+  {
+    "question": "What is useState in React?",
+    "answer": "Hook for managing state",
+    "category": "React"
+  },
+  {
+    "question": "What is a seeder in Laravel?",
+    "answer": "Used to populate database with test data",
+    "category": "Laravel"
+  },
+  {
+    "question": "What is CI/CD?",
+    "answer": "Continuous Integration / Continuous Deployment",
+    "category": "DevOps"
+  },
+  {
+    "question": "What is Kubernetes?",
+    "answer": "Container orchestration system",
+    "category": "DevOps"
+  },
+  {
+    "question": "What is Composer?",
+    "answer": "Dependency manager for PHP",
+    "category": "PHP"
+  },
+  {
+    "question": "How many continents are there?",
+    "answer": "7",
+    "category": "General"
+  },
+  {
+    "question": "What does DNS stand for?",
+    "answer": "Domain Name System",
+    "category": "Networking"
+  },
+  {
+    "question": "What is Jenkins?",
+    "answer": "Automation server for CI/CD",
+    "category": "DevOps"
+  },
+  {
+    "question": "What is normalization?",
+    "answer": "Organizing data to reduce redundancy",
+    "category": "Databases"
+  },
+  {
+    "question": "What is useEffect used for?",
+    "answer": "Handling side effects",
+    "category": "React"
+  },
+  {
+    "question": "What is a MAC address?",
+    "answer": "Unique hardware address",
+    "category": "Networking"
+  },
+  {
+    "question": "What is the capital of Spain?",
+    "answer": "Madrid",
+    "category": "General"
+  },
+  {
+    "question": "What is version control?",
+    "answer": "Managing changes to source code",
+    "category": "DevOps"
+  },
+  {
+    "question": "Which tag is used for a hyperlink in HTML?",
+    "answer": "<a>",
+    "category": "Web"
+  },
+  {
+    "question": "What is a router?",
+    "answer": "A device that forwards data packets",
+    "category": "Networking"
+  },
+  {
+    "question": "What is a router?",
+    "answer": "A device that forwards data packets",
+    "category": "Networking"
+  },
+  {
+    "question": "What is Kubernetes?",
+    "answer": "Container orchestration system",
+    "category": "DevOps"
+  },
+  {
+    "question": "Which tag is used for a hyperlink in HTML?",
+    "answer": "<a>",
+    "category": "Web"
+  },
+  {
+    "question": "What is useState in React?",
+    "answer": "Hook for managing state",
+    "category": "React"
+  },
+  {
+    "question": "What is Docker?",
+    "answer": "A containerization platform",
+    "category": "DevOps"
+  },
+  {
+    "question": "What is an API?",
+    "answer": "Application Programming Interface",
+    "category": "Programming"
+  },
+  {
+    "question": "What is an index in a database?",
+    "answer": "Used to speed up searches",
+    "category": "Databases"
+  },
+  {
+    "question": "What does DNS stand for?",
+    "answer": "Domain Name System",
+    "category": "Networking"
+  },
+  {
+    "question": "What is version control?",
+    "answer": "Managing changes to source code",
+    "category": "DevOps"
+  },
+  {
+    "question": "How many continents are there?",
+    "answer": "7",
+    "category": "General"
+  },
+  {
+    "question": "What is useEffect used for?",
+    "answer": "Handling side effects",
+    "category": "React"
+  },
+  {
+    "question": "What does HTTP stand for?",
+    "answer": "HyperText Transfer Protocol",
+    "category": "Web"
+  },
+  {
+    "question": "What is a primary key?",
+    "answer": "A unique identifier for a record",
+    "category": "Databases"
+  },
+  {
+    "question": "What does `php artisan migrate` do?",
+    "answer": "Runs migrations",
+    "category": "Laravel"
+  },
+  {
+    "question": "What is Eloquent in Laravel?",
+    "answer": "ORM (Object Relational Mapper)",
+    "category": "Laravel"
+  },
+  {
+    "question": "What is Laravel?",
+    "answer": "PHP Framework",
+    "category": "Laravel"
+  },
+  {
+    "question": "What is Laravel?",
+    "answer": "PHP Framework",
+    "category": "Laravel"
+  },
+  {
+    "question": "What is the capital of Spain?",
+    "answer": "Madrid",
+    "category": "General"
+  },
+  {
+    "question": "What is Composer?",
+    "answer": "Dependency manager for PHP",
+    "category": "PHP"
+  },
+  {
+    "question": "What is Docker?",
+    "answer": "A containerization platform",
+    "category": "DevOps"
+  },
+  {
+    "question": "What is the largest ocean on Earth?",
+    "answer": "Pacific Ocean",
+    "category": "General"
+  },
+  {
+    "question": "What is a foreign key?",
+    "answer": "A key used to link two tables",
+    "category": "Databases"
+  },
+  {
+    "question": "What is Kubernetes?",
+    "answer": "Container orchestration system",
+    "category": "DevOps"
+  },
+  {
+    "question": "What does DNS stand for?",
+    "answer": "Domain Name System",
+    "category": "Networking"
+  },
+  {
+    "question": "What is a seeder in Laravel?",
+    "answer": "Used to populate database with test data",
+    "category": "Laravel"
+  },
+  {
+    "question": "Difference between `==` and `===`?",
+    "answer": "`===` checks value and type",
+    "category": "PHP"
+  },
+  {
+    "question": "What is an index in a database?",
+    "answer": "Used to speed up searches",
+    "category": "Databases"
+  },
+  {
+    "question": "How many continents are there?",
+    "answer": "7",
+    "category": "General"
+  },
+  {
+    "question": "What is a primary key?",
+    "answer": "A unique identifier for a record",
+    "category": "Databases"
+  },
+  {
+    "question": "What is the largest ocean on Earth?",
+    "answer": "Pacific Ocean",
+    "category": "General"
+  },
+  {
+    "question": "What is `isset()` used for?",
+    "answer": "Checks if a variable is set",
+    "category": "PHP"
+  },
+  {
+    "question": "What is a router?",
+    "answer": "A device that forwards data packets",
+    "category": "Networking"
+  },
+  {
+    "question": "What is a foreign key?",
+    "answer": "A key used to link two tables",
+    "category": "Databases"
+  },
+  {
+    "question": "What is Laravel?",
+    "answer": "PHP Framework",
+    "category": "Laravel"
+  },
+  {
+    "question": "What is HTTP used for?",
+    "answer": "Transmitting web pages",
+    "category": "Networking"
+  },
+  {
+    "question": "What is `isset()` used for?",
+    "answer": "Checks if a variable is set",
+    "category": "PHP"
+  },
+  {
+    "question": "What does IP stand for?",
+    "answer": "Internet Protocol",
+    "category": "Networking"
+  },
+  {
+    "question": "What is a function?",
+    "answer": "Reusable block of code",
+    "category": "Programming"
+  },
+  {
+    "question": "What is the largest ocean on Earth?",
+    "answer": "Pacific Ocean",
+    "category": "General"
+  },
+  {
+    "question": "What is normalization?",
+    "answer": "Organizing data to reduce redundancy",
+    "category": "Databases"
+  },
+  {
+    "question": "What does HTTP stand for?",
+    "answer": "HyperText Transfer Protocol",
+    "category": "Web"
+  },
+  {
+    "question": "What is the capital of Spain?",
+    "answer": "Madrid",
+    "category": "General"
+  },
+  {
+    "question": "What is useState in React?",
+    "answer": "Hook for managing state",
+    "category": "React"
+  },
+  {
+    "question": "What is Eloquent in Laravel?",
+    "answer": "ORM (Object Relational Mapper)",
+    "category": "Laravel"
+  },
+  {
+    "question": "What is a loop?",
+    "answer": "A way to repeat code",
+    "category": "Programming"
+  },
+  {
+    "question": "What is CI/CD?",
+    "answer": "Continuous Integration / Continuous Deployment",
+    "category": "DevOps"
+  },
+  {
+    "question": "What does IP stand for?",
+    "answer": "Internet Protocol",
+    "category": "Networking"
+  },
+  {
+    "question": "What is version control?",
+    "answer": "Managing changes to source code",
+    "category": "DevOps"
+  },
+  {
+    "question": "What does HTTP stand for?",
+    "answer": "HyperText Transfer Protocol",
+    "category": "Web"
+  },
+  {
+    "question": "What is a function?",
+    "answer": "Reusable block of code",
+    "category": "Programming"
+  },
+  {
+    "question": "Which planet is known as the Red Planet?",
+    "answer": "Mars",
+    "category": "General"
+  },
+  {
+    "question": "What is HTTP used for?",
+    "answer": "Transmitting web pages",
+    "category": "Networking"
+  },
+  {
+    "question": "Which planet is known as the Red Planet?",
+    "answer": "Mars",
+    "category": "General"
+  },
+  {
+    "question": "Which planet is known as the Red Planet?",
+    "answer": "Mars",
+    "category": "General"
+  },
+  {
+    "question": "What is CI/CD?",
+    "answer": "Continuous Integration / Continuous Deployment",
+    "category": "DevOps"
+  },
+  {
+    "question": "What is HTTP used for?",
+    "answer": "Transmitting web pages",
+    "category": "Networking"
+  },
+  {
+    "question": "Difference between `==` and `===`?",
+    "answer": "`===` checks value and type",
+    "category": "PHP"
+  },
+  {
+    "question": "What is the capital of Spain?",
+    "answer": "Madrid",
+    "category": "General"
+  },
+  {
+    "question": "What is Jenkins?",
+    "answer": "Automation server for CI/CD",
+    "category": "DevOps"
+  },
+  {
+    "question": "What does `php artisan migrate` do?",
+    "answer": "Runs migrations",
+    "category": "Laravel"
+  },
+  {
+    "question": "What is JSON?",
+    "answer": "JavaScript Object Notation",
+    "category": "Programming"
+  },
+  {
+    "question": "What is a loop?",
+    "answer": "A way to repeat code",
+    "category": "Programming"
+  },
+  {
+    "question": "What is Docker?",
+    "answer": "A containerization platform",
+    "category": "DevOps"
+  },
+  {
+    "question": "What does PHP stand for?",
+    "answer": "Hypertext Preprocessor",
+    "category": "PHP"
+  },
+  {
+    "question": "Which tag is used for a hyperlink in HTML?",
+    "answer": "<a>",
+    "category": "Web"
+  },
+  {
+    "question": "What is React?",
+    "answer": "A JavaScript library for building UI",
+    "category": "React"
+  },
+  {
+    "question": "What does HTML stand for?",
+    "answer": "HyperText Markup Language",
+    "category": "Web"
+  },
+  {
+    "question": "What is Livewire?",
+    "answer": "Reactive Laravel components",
+    "category": "Laravel"
+  },
+  {
+    "question": "What is Composer?",
+    "answer": "Dependency manager for PHP",
+    "category": "PHP"
+  },
+  {
+    "question": "What is Composer?",
+    "answer": "Dependency manager for PHP",
+    "category": "PHP"
+  },
+  {
+    "question": "What is Jenkins?",
+    "answer": "Automation server for CI/CD",
+    "category": "DevOps"
+  },
+  {
+    "question": "What is Laravel?",
+    "answer": "PHP Framework",
+    "category": "Laravel"
+  },
+  {
+    "question": "What is Docker?",
+    "answer": "A containerization platform",
+    "category": "DevOps"
+  },
+  {
+    "question": "What is version control?",
+    "answer": "Managing changes to source code",
+    "category": "DevOps"
+  },
+  {
+    "question": "What is a primary key?",
+    "answer": "A unique identifier for a record",
+    "category": "Databases"
+  },
+  {
+    "question": "What is React?",
+    "answer": "A JavaScript library for building UI",
+    "category": "React"
+  },
+  {
+    "question": "What is version control?",
+    "answer": "Managing changes to source code",
+    "category": "DevOps"
+  },
+  {
+    "question": "What is CI/CD?",
+    "answer": "Continuous Integration / Continuous Deployment",
+    "category": "DevOps"
+  },
+  {
+    "question": "What is `isset()` used for?",
+    "answer": "Checks if a variable is set",
+    "category": "PHP"
+  },
+  {
+    "question": "What is Livewire?",
+    "answer": "Reactive Laravel components",
+    "category": "Laravel"
+  },
+  {
+    "question": "What does HTML stand for?",
+    "answer": "HyperText Markup Language",
+    "category": "Web"
+  },
+  {
+    "question": "What is Docker?",
+    "answer": "A containerization platform",
+    "category": "DevOps"
+  },
+  {
+    "question": "What is JSX?",
+    "answer": "JavaScript XML",
+    "category": "React"
+  },
+  {
+    "question": "What is version control?",
+    "answer": "Managing changes to source code",
+    "category": "DevOps"
+  },
+  {
+    "question": "Which planet is known as the Red Planet?",
+    "answer": "Mars",
+    "category": "General"
+  },
+  {
+    "question": "What is an API?",
+    "answer": "Application Programming Interface",
+    "category": "Programming"
+  },
+  {
+    "question": "What does PHP stand for?",
+    "answer": "Hypertext Preprocessor",
+    "category": "PHP"
+  },
+  {
+    "question": "What is an API?",
+    "answer": "Application Programming Interface",
+    "category": "Programming"
+  },
+  {
+    "question": "What is an index in a database?",
+    "answer": "Used to speed up searches",
+    "category": "Databases"
+  },
+  {
+    "question": "Difference between `==` and `===`?",
+    "answer": "`===` checks value and type",
+    "category": "PHP"
+  },
+  {
+    "question": "What is a variable?",
+    "answer": "Storage for data",
+    "category": "Programming"
+  },
+  {
+    "question": "What does IP stand for?",
+    "answer": "Internet Protocol",
+    "category": "Networking"
+  },
+  {
+    "question": "What is CI/CD?",
+    "answer": "Continuous Integration / Continuous Deployment",
+    "category": "DevOps"
+  },
+  {
+    "question": "How many continents are there?",
+    "answer": "7",
+    "category": "General"
+  },
+  {
+    "question": "What is normalization?",
+    "answer": "Organizing data to reduce redundancy",
+    "category": "Databases"
+  },
+  {
+    "question": "What does PHP stand for?",
+    "answer": "Hypertext Preprocessor",
+    "category": "PHP"
+  },
+  {
+    "question": "What is the capital of Spain?",
+    "answer": "Madrid",
+    "category": "General"
+  },
+  {
+    "question": "What is JSX?",
+    "answer": "JavaScript XML",
+    "category": "React"
+  },
+  {
+    "question": "What is the purpose of CSS?",
+    "answer": "Styling web pages",
+    "category": "Web"
+  },
+  {
+    "question": "What is Docker?",
+    "answer": "A containerization platform",
+    "category": "DevOps"
+  },
+  {
+    "question": "What is an API?",
+    "answer": "Application Programming Interface",
+    "category": "Programming"
+  },
+  {
+    "question": "What is a primary key?",
+    "answer": "A unique identifier for a record",
+    "category": "Databases"
+  },
+  {
+    "question": "What does SQL stand for?",
+    "answer": "Structured Query Language",
+    "category": "Databases"
+  },
+  {
+    "question": "What is CI/CD?",
+    "answer": "Continuous Integration / Continuous Deployment",
+    "category": "DevOps"
+  },
+  {
+    "question": "What is useState in React?",
+    "answer": "Hook for managing state",
+    "category": "React"
+  },
+  {
+    "question": "What is useEffect used for?",
+    "answer": "Handling side effects",
+    "category": "React"
+  },
+  {
+    "question": "What is an API?",
+    "answer": "Application Programming Interface",
+    "category": "Programming"
+  },
+  {
+    "question": "What is a router?",
+    "answer": "A device that forwards data packets",
+    "category": "Networking"
+  },
+  {
+    "question": "What is a loop?",
+    "answer": "A way to repeat code",
+    "category": "Programming"
+  },
+  {
+    "question": "What does IP stand for?",
+    "answer": "Internet Protocol",
+    "category": "Networking"
+  },
+  {
+    "question": "What is useState in React?",
+    "answer": "Hook for managing state",
+    "category": "React"
+  },
+  {
+    "question": "What is a seeder in Laravel?",
+    "answer": "Used to populate database with test data",
+    "category": "Laravel"
+  },
+  {
+    "question": "What is normalization?",
+    "answer": "Organizing data to reduce redundancy",
+    "category": "Databases"
+  },
+  {
+    "question": "What is a foreign key?",
+    "answer": "A key used to link two tables",
+    "category": "Databases"
+  },
+  {
+    "question": "What does SQL stand for?",
+    "answer": "Structured Query Language",
+    "category": "Databases"
+  },
+  {
+    "question": "Who wrote 'Hamlet'?",
+    "answer": "William Shakespeare",
+    "category": "General"
+  },
+  {
+    "question": "What is the purpose of CSS?",
+    "answer": "Styling web pages",
+    "category": "Web"
+  },
+  {
+    "question": "What is the purpose of CSS?",
+    "answer": "Styling web pages",
+    "category": "Web"
+  },
+  {
+    "question": "What is Eloquent in Laravel?",
+    "answer": "ORM (Object Relational Mapper)",
+    "category": "Laravel"
+  },
+  {
+    "question": "What is Kubernetes?",
+    "answer": "Container orchestration system",
+    "category": "DevOps"
+  },
+  {
+    "question": "What is Kubernetes?",
+    "answer": "Container orchestration system",
+    "category": "DevOps"
+  },
+  {
+    "question": "What is a router?",
+    "answer": "A device that forwards data packets",
+    "category": "Networking"
+  },
+  {
+    "question": "What is useEffect used for?",
+    "answer": "Handling side effects",
+    "category": "React"
+  },
+  {
+    "question": "What is `isset()` used for?",
+    "answer": "Checks if a variable is set",
+    "category": "PHP"
+  },
+  {
+    "question": "Which planet is known as the Red Planet?",
+    "answer": "Mars",
+    "category": "General"
+  },
+  {
+    "question": "What is Composer?",
+    "answer": "Dependency manager for PHP",
+    "category": "PHP"
+  },
+  {
+    "question": "What is Kubernetes?",
+    "answer": "Container orchestration system",
+    "category": "DevOps"
+  },
+  {
+    "question": "What does HTML stand for?",
+    "answer": "HyperText Markup Language",
+    "category": "Web"
+  },
+  {
+    "question": "What does PHP stand for?",
+    "answer": "Hypertext Preprocessor",
+    "category": "PHP"
+  },
+  {
+    "question": "What does DNS stand for?",
+    "answer": "Domain Name System",
+    "category": "Networking"
+  },
+  {
+    "question": "What is a primary key?",
+    "answer": "A unique identifier for a record",
+    "category": "Databases"
+  },
+  {
+    "question": "What is Composer?",
+    "answer": "Dependency manager for PHP",
+    "category": "PHP"
+  },
+  {
+    "question": "What is useEffect used for?",
+    "answer": "Handling side effects",
+    "category": "React"
+  },
+  {
+    "question": "What is a foreign key?",
+    "answer": "A key used to link two tables",
+    "category": "Databases"
+  },
+  {
+    "question": "What does HTML stand for?",
+    "answer": "HyperText Markup Language",
+    "category": "Web"
+  },
+  {
+    "question": "What is an API?",
+    "answer": "Application Programming Interface",
+    "category": "Programming"
+  },
+  {
+    "question": "What is a trait in PHP?",
+    "answer": "A mechanism for code reuse",
+    "category": "PHP"
+  },
+  {
+    "question": "What does HTML stand for?",
+    "answer": "HyperText Markup Language",
+    "category": "Web"
+  },
+  {
+    "question": "What is the capital of Spain?",
+    "answer": "Madrid",
+    "category": "General"
+  },
+  {
+    "question": "What does SQL stand for?",
+    "answer": "Structured Query Language",
+    "category": "Databases"
+  },
+  {
+    "question": "What is Docker?",
+    "answer": "A containerization platform",
+    "category": "DevOps"
+  },
+  {
+    "question": "What does PHP stand for?",
+    "answer": "Hypertext Preprocessor",
+    "category": "PHP"
+  },
+  {
+    "question": "What is normalization?",
+    "answer": "Organizing data to reduce redundancy",
+    "category": "Databases"
+  },
+  {
+    "question": "What is a trait in PHP?",
+    "answer": "A mechanism for code reuse",
+    "category": "PHP"
+  },
+  {
+    "question": "What is CI/CD?",
+    "answer": "Continuous Integration / Continuous Deployment",
+    "category": "DevOps"
+  },
+  {
+    "question": "Who wrote 'Hamlet'?",
+    "answer": "William Shakespeare",
+    "category": "General"
+  },
+  {
+    "question": "What does SQL stand for?",
+    "answer": "Structured Query Language",
+    "category": "Databases"
+  },
+  {
+    "question": "What is Livewire?",
+    "answer": "Reactive Laravel components",
+    "category": "Laravel"
+  },
+  {
+    "question": "What is version control?",
+    "answer": "Managing changes to source code",
+    "category": "DevOps"
+  },
+  {
+    "question": "What does PHP stand for?",
+    "answer": "Hypertext Preprocessor",
+    "category": "PHP"
+  },
+  {
+    "question": "What is a variable?",
+    "answer": "Storage for data",
+    "category": "Programming"
+  },
+  {
+    "question": "What does PHP stand for?",
+    "answer": "Hypertext Preprocessor",
+    "category": "PHP"
+  },
+  {
+    "question": "What is a trait in PHP?",
+    "answer": "A mechanism for code reuse",
+    "category": "PHP"
+  },
+  {
+    "question": "What is Eloquent in Laravel?",
+    "answer": "ORM (Object Relational Mapper)",
+    "category": "Laravel"
+  },
+  {
+    "question": "What is the capital of Spain?",
+    "answer": "Madrid",
+    "category": "General"
+  },
+  {
+    "question": "JavaScript is mainly used for?",
+    "answer": "Client-side scripting",
+    "category": "Web"
+  },
+  {
+    "question": "What is useEffect used for?",
+    "answer": "Handling side effects",
+    "category": "React"
+  },
+  {
+    "question": "What is useEffect used for?",
+    "answer": "Handling side effects",
+    "category": "React"
+  },
+  {
+    "question": "Who wrote 'Hamlet'?",
+    "answer": "William Shakespeare",
+    "category": "General"
+  },
+  {
+    "question": "What is a primary key?",
+    "answer": "A unique identifier for a record",
+    "category": "Databases"
+  },
+  {
+    "question": "What is React?",
+    "answer": "A JavaScript library for building UI",
+    "category": "React"
+  },
+  {
+    "question": "What is a primary key?",
+    "answer": "A unique identifier for a record",
+    "category": "Databases"
+  },
+  {
+    "question": "What is a MAC address?",
+    "answer": "Unique hardware address",
+    "category": "Networking"
+  },
+  {
+    "question": "What is JSON?",
+    "answer": "JavaScript Object Notation",
+    "category": "Programming"
+  },
+  {
+    "question": "What does IP stand for?",
+    "answer": "Internet Protocol",
+    "category": "Networking"
+  },
+  {
+    "question": "What is JSON?",
+    "answer": "JavaScript Object Notation",
+    "category": "Programming"
+  },
+  {
+    "question": "Which tag is used for a hyperlink in HTML?",
+    "answer": "<a>",
+    "category": "Web"
+  },
+  {
+    "question": "What is a trait in PHP?",
+    "answer": "A mechanism for code reuse",
+    "category": "PHP"
+  },
+  {
+    "question": "What is CI/CD?",
+    "answer": "Continuous Integration / Continuous Deployment",
+    "category": "DevOps"
+  },
+  {
+    "question": "What is Docker?",
+    "answer": "A containerization platform",
+    "category": "DevOps"
+  },
+  {
+    "question": "What is a primary key?",
+    "answer": "A unique identifier for a record",
+    "category": "Databases"
+  },
+  {
+    "question": "What is a function?",
+    "answer": "Reusable block of code",
+    "category": "Programming"
+  },
+  {
+    "question": "How many continents are there?",
+    "answer": "7",
+    "category": "General"
+  },
+  {
+    "question": "What is Composer?",
+    "answer": "Dependency manager for PHP",
+    "category": "PHP"
+  },
+  {
+    "question": "What is Laravel?",
+    "answer": "PHP Framework",
+    "category": "Laravel"
+  },
+  {
+    "question": "What does IP stand for?",
+    "answer": "Internet Protocol",
+    "category": "Networking"
+  },
+  {
+    "question": "What is JSX?",
+    "answer": "JavaScript XML",
+    "category": "React"
+  },
+  {
+    "question": "What does SQL stand for?",
+    "answer": "Structured Query Language",
+    "category": "Databases"
+  },
+  {
+    "question": "What is normalization?",
+    "answer": "Organizing data to reduce redundancy",
+    "category": "Databases"
+  },
+  {
+    "question": "What does PHP stand for?",
+    "answer": "Hypertext Preprocessor",
+    "category": "PHP"
+  },
+  {
+    "question": "Who wrote 'Hamlet'?",
+    "answer": "William Shakespeare",
+    "category": "General"
+  },
+  {
+    "question": "What is Laravel?",
+    "answer": "PHP Framework",
+    "category": "Laravel"
+  },
+  {
+    "question": "What is useState in React?",
+    "answer": "Hook for managing state",
+    "category": "React"
+  },
+  {
+    "question": "What is `isset()` used for?",
+    "answer": "Checks if a variable is set",
+    "category": "PHP"
+  },
+  {
+    "question": "What is JSON?",
+    "answer": "JavaScript Object Notation",
+    "category": "Programming"
+  },
+  {
+    "question": "What is Kubernetes?",
+    "answer": "Container orchestration system",
+    "category": "DevOps"
+  },
+  {
+    "question": "What does PHP stand for?",
+    "answer": "Hypertext Preprocessor",
+    "category": "PHP"
+  },
+  {
+    "question": "What is a seeder in Laravel?",
+    "answer": "Used to populate database with test data",
+    "category": "Laravel"
+  },
+  {
+    "question": "What is React?",
+    "answer": "A JavaScript library for building UI",
+    "category": "React"
+  },
+  {
+    "question": "What is Livewire?",
+    "answer": "Reactive Laravel components",
+    "category": "Laravel"
+  },
+  {
+    "question": "What is React?",
+    "answer": "A JavaScript library for building UI",
+    "category": "React"
+  },
+  {
+    "question": "What is a variable?",
+    "answer": "Storage for data",
+    "category": "Programming"
+  },
+  {
+    "question": "What is `isset()` used for?",
+    "answer": "Checks if a variable is set",
+    "category": "PHP"
+  },
+  {
+    "question": "Which planet is known as the Red Planet?",
+    "answer": "Mars",
+    "category": "General"
+  },
+  {
+    "question": "What is a loop?",
+    "answer": "A way to repeat code",
+    "category": "Programming"
+  },
+  {
+    "question": "What is React?",
+    "answer": "A JavaScript library for building UI",
+    "category": "React"
+  },
+  {
+    "question": "What is a loop?",
+    "answer": "A way to repeat code",
+    "category": "Programming"
+  },
+  {
+    "question": "What is JSON?",
+    "answer": "JavaScript Object Notation",
+    "category": "Programming"
+  },
+  {
+    "question": "What is a function?",
+    "answer": "Reusable block of code",
+    "category": "Programming"
+  },
+  {
+    "question": "How many continents are there?",
+    "answer": "7",
+    "category": "General"
+  },
+  {
+    "question": "Which planet is known as the Red Planet?",
+    "answer": "Mars",
+    "category": "General"
+  },
+  {
+    "question": "What is a MAC address?",
+    "answer": "Unique hardware address",
+    "category": "Networking"
+  },
+  {
+    "question": "What is JSX?",
+    "answer": "JavaScript XML",
+    "category": "React"
+  },
+  {
+    "question": "What is a foreign key?",
+    "answer": "A key used to link two tables",
+    "category": "Databases"
+  },
+  {
+    "question": "What is `isset()` used for?",
+    "answer": "Checks if a variable is set",
+    "category": "PHP"
+  },
+  {
+    "question": "Difference between `==` and `===`?",
+    "answer": "`===` checks value and type",
+    "category": "PHP"
+  },
+  {
+    "question": "What is Livewire?",
+    "answer": "Reactive Laravel components",
+    "category": "Laravel"
+  },
+  {
+    "question": "What is useState in React?",
+    "answer": "Hook for managing state",
+    "category": "React"
+  },
+  {
+    "question": "What is React?",
+    "answer": "A JavaScript library for building UI",
+    "category": "React"
+  },
+  {
+    "question": "What is HTTP used for?",
+    "answer": "Transmitting web pages",
+    "category": "Networking"
+  },
+  {
+    "question": "What does HTML stand for?",
+    "answer": "HyperText Markup Language",
+    "category": "Web"
+  },
+  {
+    "question": "What is Kubernetes?",
+    "answer": "Container orchestration system",
+    "category": "DevOps"
+  },
+  {
+    "question": "What does SQL stand for?",
+    "answer": "Structured Query Language",
+    "category": "Databases"
+  },
+  {
+    "question": "What is Laravel?",
+    "answer": "PHP Framework",
+    "category": "Laravel"
+  },
+  {
+    "question": "What is a MAC address?",
+    "answer": "Unique hardware address",
+    "category": "Networking"
+  },
+  {
+    "question": "Which planet is known as the Red Planet?",
+    "answer": "Mars",
+    "category": "General"
+  },
+  {
+    "question": "Who wrote 'Hamlet'?",
+    "answer": "William Shakespeare",
+    "category": "General"
+  },
+  {
+    "question": "What is JSON?",
+    "answer": "JavaScript Object Notation",
+    "category": "Programming"
+  },
+  {
+    "question": "What is Jenkins?",
+    "answer": "Automation server for CI/CD",
+    "category": "DevOps"
+  },
+  {
+    "question": "What is version control?",
+    "answer": "Managing changes to source code",
+    "category": "DevOps"
+  },
+  {
+    "question": "What is a variable?",
+    "answer": "Storage for data",
+    "category": "Programming"
+  },
+  {
+    "question": "What is the largest ocean on Earth?",
+    "answer": "Pacific Ocean",
+    "category": "General"
+  },
+  {
+    "question": "Who wrote 'Hamlet'?",
+    "answer": "William Shakespeare",
+    "category": "General"
+  },
+  {
+    "question": "What is Jenkins?",
+    "answer": "Automation server for CI/CD",
+    "category": "DevOps"
+  },
+  {
+    "question": "Difference between `==` and `===`?",
+    "answer": "`===` checks value and type",
+    "category": "PHP"
+  },
+  {
+    "question": "What is `isset()` used for?",
+    "answer": "Checks if a variable is set",
+    "category": "PHP"
+  },
+  {
+    "question": "What does DNS stand for?",
+    "answer": "Domain Name System",
+    "category": "Networking"
+  },
+  {
+    "question": "What is normalization?",
+    "answer": "Organizing data to reduce redundancy",
+    "category": "Databases"
+  },
+  {
+    "question": "Difference between `==` and `===`?",
+    "answer": "`===` checks value and type",
+    "category": "PHP"
+  },
+  {
+    "question": "What is HTTP used for?",
+    "answer": "Transmitting web pages",
+    "category": "Networking"
+  },
+  {
+    "question": "What is JSON?",
+    "answer": "JavaScript Object Notation",
+    "category": "Programming"
+  },
+  {
+    "question": "What does HTTP stand for?",
+    "answer": "HyperText Transfer Protocol",
+    "category": "Web"
+  },
+  {
+    "question": "JavaScript is mainly used for?",
+    "answer": "Client-side scripting",
+    "category": "Web"
+  },
+  {
+    "question": "What is the purpose of CSS?",
+    "answer": "Styling web pages",
+    "category": "Web"
+  },
+  {
+    "question": "What does HTML stand for?",
+    "answer": "HyperText Markup Language",
+    "category": "Web"
+  },
+  {
+    "question": "What is CI/CD?",
+    "answer": "Continuous Integration / Continuous Deployment",
+    "category": "DevOps"
+  },
+  {
+    "question": "Who wrote 'Hamlet'?",
+    "answer": "William Shakespeare",
+    "category": "General"
+  },
+  {
+    "question": "What is an API?",
+    "answer": "Application Programming Interface",
+    "category": "Programming"
+  },
+  {
+    "question": "What is an API?",
+    "answer": "Application Programming Interface",
+    "category": "Programming"
+  },
+  {
+    "question": "What is the purpose of CSS?",
+    "answer": "Styling web pages",
+    "category": "Web"
+  },
+  {
+    "question": "What is a seeder in Laravel?",
+    "answer": "Used to populate database with test data",
+    "category": "Laravel"
+  },
+  {
+    "question": "What is version control?",
+    "answer": "Managing changes to source code",
+    "category": "DevOps"
+  },
+  {
+    "question": "What is CI/CD?",
+    "answer": "Continuous Integration / Continuous Deployment",
+    "category": "DevOps"
+  },
+  {
+    "question": "What does IP stand for?",
+    "answer": "Internet Protocol",
+    "category": "Networking"
+  },
+  {
+    "question": "What does `php artisan migrate` do?",
+    "answer": "Runs migrations",
+    "category": "Laravel"
+  },
+  {
+    "question": "What is a component in React?",
+    "answer": "A reusable UI element",
+    "category": "React"
+  },
+  {
+    "question": "What is a variable?",
+    "answer": "Storage for data",
+    "category": "Programming"
+  },
+  {
+    "question": "What is CI/CD?",
+    "answer": "Continuous Integration / Continuous Deployment",
+    "category": "DevOps"
+  },
+  {
+    "question": "What is Kubernetes?",
+    "answer": "Container orchestration system",
+    "category": "DevOps"
+  },
+  {
+    "question": "What is a variable?",
+    "answer": "Storage for data",
+    "category": "Programming"
+  },
+  {
+    "question": "What is useState in React?",
+    "answer": "Hook for managing state",
+    "category": "React"
+  },
+  {
+    "question": "What is CI/CD?",
+    "answer": "Continuous Integration / Continuous Deployment",
+    "category": "DevOps"
+  },
+  {
+    "question": "What is Kubernetes?",
+    "answer": "Container orchestration system",
+    "category": "DevOps"
+  },
+  {
+    "question": "What is a component in React?",
+    "answer": "A reusable UI element",
+    "category": "React"
+  },
+  {
+    "question": "What is a foreign key?",
+    "answer": "A key used to link two tables",
+    "category": "Databases"
+  },
+  {
+    "question": "What is a variable?",
+    "answer": "Storage for data",
+    "category": "Programming"
+  },
+  {
+    "question": "What is useEffect used for?",
+    "answer": "Handling side effects",
+    "category": "React"
+  },
+  {
+    "question": "What is Livewire?",
+    "answer": "Reactive Laravel components",
+    "category": "Laravel"
+  },
+  {
+    "question": "Which planet is known as the Red Planet?",
+    "answer": "Mars",
+    "category": "General"
+  },
+  {
+    "question": "What is a primary key?",
+    "answer": "A unique identifier for a record",
+    "category": "Databases"
+  },
+  {
+    "question": "What is the purpose of CSS?",
+    "answer": "Styling web pages",
+    "category": "Web"
+  },
+  {
+    "question": "What is a primary key?",
+    "answer": "A unique identifier for a record",
+    "category": "Databases"
+  },
+  {
+    "question": "What does DNS stand for?",
+    "answer": "Domain Name System",
+    "category": "Networking"
+  },
+  {
+    "question": "What does HTML stand for?",
+    "answer": "HyperText Markup Language",
+    "category": "Web"
+  },
+  {
+    "question": "Who wrote 'Hamlet'?",
+    "answer": "William Shakespeare",
+    "category": "General"
+  },
+  {
+    "question": "JavaScript is mainly used for?",
+    "answer": "Client-side scripting",
+    "category": "Web"
+  },
+  {
+    "question": "What is a function?",
+    "answer": "Reusable block of code",
+    "category": "Programming"
+  },
+  {
+    "question": "Which tag is used for a hyperlink in HTML?",
+    "answer": "<a>",
+    "category": "Web"
+  },
+  {
+    "question": "What is a MAC address?",
+    "answer": "Unique hardware address",
+    "category": "Networking"
+  },
+  {
+    "question": "What is `isset()` used for?",
+    "answer": "Checks if a variable is set",
+    "category": "PHP"
+  },
+  {
+    "question": "What is Eloquent in Laravel?",
+    "answer": "ORM (Object Relational Mapper)",
+    "category": "Laravel"
+  },
+  {
+    "question": "What is a component in React?",
+    "answer": "A reusable UI element",
+    "category": "React"
+  },
+  {
+    "question": "What is a router?",
+    "answer": "A device that forwards data packets",
+    "category": "Networking"
+  },
+  {
+    "question": "What is a loop?",
+    "answer": "A way to repeat code",
+    "category": "Programming"
+  },
+  {
+    "question": "What is a foreign key?",
+    "answer": "A key used to link two tables",
+    "category": "Databases"
+  },
+  {
+    "question": "What is HTTP used for?",
+    "answer": "Transmitting web pages",
+    "category": "Networking"
+  },
+  {
+    "question": "What is `isset()` used for?",
+    "answer": "Checks if a variable is set",
+    "category": "PHP"
+  },
+  {
+    "question": "What is a primary key?",
+    "answer": "A unique identifier for a record",
+    "category": "Databases"
+  },
+  {
+    "question": "What is a component in React?",
+    "answer": "A reusable UI element",
+    "category": "React"
+  },
+  {
+    "question": "What is HTTP used for?",
+    "answer": "Transmitting web pages",
+    "category": "Networking"
+  },
+  {
+    "question": "What is useEffect used for?",
+    "answer": "Handling side effects",
+    "category": "React"
+  },
+  {
+    "question": "What is a foreign key?",
+    "answer": "A key used to link two tables",
+    "category": "Databases"
+  },
+  {
+    "question": "What is a seeder in Laravel?",
+    "answer": "Used to populate database with test data",
+    "category": "Laravel"
+  },
+  {
+    "question": "What is a foreign key?",
+    "answer": "A key used to link two tables",
+    "category": "Databases"
+  },
+  {
+    "question": "What is useState in React?",
+    "answer": "Hook for managing state",
+    "category": "React"
+  },
+  {
+    "question": "What is a variable?",
+    "answer": "Storage for data",
+    "category": "Programming"
+  },
+  {
+    "question": "What is a seeder in Laravel?",
+    "answer": "Used to populate database with test data",
+    "category": "Laravel"
+  },
+  {
+    "question": "What is useEffect used for?",
+    "answer": "Handling side effects",
+    "category": "React"
+  },
+  {
+    "question": "What is CI/CD?",
+    "answer": "Continuous Integration / Continuous Deployment",
+    "category": "DevOps"
+  },
+  {
+    "question": "Who wrote 'Hamlet'?",
+    "answer": "William Shakespeare",
+    "category": "General"
+  },
+  {
+    "question": "What is Docker?",
+    "answer": "A containerization platform",
+    "category": "DevOps"
+  },
+  {
+    "question": "What is an index in a database?",
+    "answer": "Used to speed up searches",
+    "category": "Databases"
+  },
+  {
+    "question": "What is `isset()` used for?",
+    "answer": "Checks if a variable is set",
+    "category": "PHP"
+  },
+  {
+    "question": "What is Docker?",
+    "answer": "A containerization platform",
+    "category": "DevOps"
+  },
+  {
+    "question": "What is Laravel?",
+    "answer": "PHP Framework",
+    "category": "Laravel"
+  },
+  {
+    "question": "What is Livewire?",
+    "answer": "Reactive Laravel components",
+    "category": "Laravel"
+  },
+  {
+    "question": "What is a variable?",
+    "answer": "Storage for data",
+    "category": "Programming"
+  },
+  {
+    "question": "What is a router?",
+    "answer": "A device that forwards data packets",
+    "category": "Networking"
+  },
+  {
+    "question": "What is normalization?",
+    "answer": "Organizing data to reduce redundancy",
+    "category": "Databases"
+  },
+  {
+    "question": "What does `php artisan migrate` do?",
+    "answer": "Runs migrations",
+    "category": "Laravel"
+  },
+  {
+    "question": "What is a foreign key?",
+    "answer": "A key used to link two tables",
+    "category": "Databases"
+  },
+  {
+    "question": "Which planet is known as the Red Planet?",
+    "answer": "Mars",
+    "category": "General"
+  },
+  {
+    "question": "What is HTTP used for?",
+    "answer": "Transmitting web pages",
+    "category": "Networking"
+  },
+  {
+    "question": "What is an index in a database?",
+    "answer": "Used to speed up searches",
+    "category": "Databases"
+  },
+  {
+    "question": "What is useState in React?",
+    "answer": "Hook for managing state",
+    "category": "React"
+  },
+  {
+    "question": "What is a seeder in Laravel?",
+    "answer": "Used to populate database with test data",
+    "category": "Laravel"
+  },
+  {
+    "question": "What is a MAC address?",
+    "answer": "Unique hardware address",
+    "category": "Networking"
+  },
+  {
+    "question": "What is a seeder in Laravel?",
+    "answer": "Used to populate database with test data",
+    "category": "Laravel"
+  },
+  {
+    "question": "What does HTML stand for?",
+    "answer": "HyperText Markup Language",
+    "category": "Web"
+  },
+  {
+    "question": "What does HTML stand for?",
+    "answer": "HyperText Markup Language",
+    "category": "Web"
+  },
+  {
+    "question": "What is a function?",
+    "answer": "Reusable block of code",
+    "category": "Programming"
+  },
+  {
+    "question": "What is Laravel?",
+    "answer": "PHP Framework",
+    "category": "Laravel"
+  },
+  {
+    "question": "What is useEffect used for?",
+    "answer": "Handling side effects",
+    "category": "React"
+  },
+  {
+    "question": "What is JSX?",
+    "answer": "JavaScript XML",
+    "category": "React"
+  },
+  {
+    "question": "What does SQL stand for?",
+    "answer": "Structured Query Language",
+    "category": "Databases"
+  },
+  {
+    "question": "What does SQL stand for?",
+    "answer": "Structured Query Language",
+    "category": "Databases"
+  },
+  {
+    "question": "What is JSON?",
+    "answer": "JavaScript Object Notation",
+    "category": "Programming"
+  },
+  {
+    "question": "What does HTML stand for?",
+    "answer": "HyperText Markup Language",
+    "category": "Web"
+  },
+  {
+    "question": "What is a foreign key?",
+    "answer": "A key used to link two tables",
+    "category": "Databases"
+  },
+  {
+    "question": "What is a component in React?",
+    "answer": "A reusable UI element",
+    "category": "React"
+  },
+  {
+    "question": "What is CI/CD?",
+    "answer": "Continuous Integration / Continuous Deployment",
+    "category": "DevOps"
+  },
+  {
+    "question": "JavaScript is mainly used for?",
+    "answer": "Client-side scripting",
+    "category": "Web"
+  },
+  {
+    "question": "What is a function?",
+    "answer": "Reusable block of code",
+    "category": "Programming"
+  },
+  {
+    "question": "Which planet is known as the Red Planet?",
+    "answer": "Mars",
+    "category": "General"
+  },
+  {
+    "question": "What does SQL stand for?",
+    "answer": "Structured Query Language",
+    "category": "Databases"
+  },
+  {
+    "question": "Which planet is known as the Red Planet?",
+    "answer": "Mars",
+    "category": "General"
+  },
+  {
+    "question": "What is Eloquent in Laravel?",
+    "answer": "ORM (Object Relational Mapper)",
+    "category": "Laravel"
+  },
+  {
+    "question": "What is the purpose of CSS?",
+    "answer": "Styling web pages",
+    "category": "Web"
+  },
+  {
+    "question": "What is a component in React?",
+    "answer": "A reusable UI element",
+    "category": "React"
+  },
+  {
+    "question": "Difference between `==` and `===`?",
+    "answer": "`===` checks value and type",
+    "category": "PHP"
+  },
+  {
+    "question": "What is a seeder in Laravel?",
+    "answer": "Used to populate database with test data",
+    "category": "Laravel"
+  },
+  {
+    "question": "What is useEffect used for?",
+    "answer": "Handling side effects",
+    "category": "React"
+  },
+  {
+    "question": "What is a primary key?",
+    "answer": "A unique identifier for a record",
+    "category": "Databases"
+  },
+  {
+    "question": "What is a component in React?",
+    "answer": "A reusable UI element",
+    "category": "React"
+  },
+  {
+    "question": "What is Docker?",
+    "answer": "A containerization platform",
+    "category": "DevOps"
+  },
+  {
+    "question": "What is a router?",
+    "answer": "A device that forwards data packets",
+    "category": "Networking"
+  },
+  {
+    "question": "What is JSX?",
+    "answer": "JavaScript XML",
+    "category": "React"
+  },
+  {
+    "question": "What is Jenkins?",
+    "answer": "Automation server for CI/CD",
+    "category": "DevOps"
+  },
+  {
+    "question": "What does SQL stand for?",
+    "answer": "Structured Query Language",
+    "category": "Databases"
+  },
+  {
+    "question": "What is Docker?",
+    "answer": "A containerization platform",
+    "category": "DevOps"
+  },
+  {
+    "question": "What is a MAC address?",
+    "answer": "Unique hardware address",
+    "category": "Networking"
+  },
+  {
+    "question": "What is an index in a database?",
+    "answer": "Used to speed up searches",
+    "category": "Databases"
+  },
+  {
+    "question": "What is a trait in PHP?",
+    "answer": "A mechanism for code reuse",
+    "category": "PHP"
+  },
+  {
+    "question": "What does `php artisan migrate` do?",
+    "answer": "Runs migrations",
+    "category": "Laravel"
+  },
+  {
+    "question": "What is useEffect used for?",
+    "answer": "Handling side effects",
+    "category": "React"
+  },
+  {
+    "question": "What is a foreign key?",
+    "answer": "A key used to link two tables",
+    "category": "Databases"
+  },
+  {
+    "question": "What is a trait in PHP?",
+    "answer": "A mechanism for code reuse",
+    "category": "PHP"
+  },
+  {
+    "question": "What is Eloquent in Laravel?",
+    "answer": "ORM (Object Relational Mapper)",
+    "category": "Laravel"
+  },
+  {
+    "question": "What is an API?",
+    "answer": "Application Programming Interface",
+    "category": "Programming"
+  },
+  {
+    "question": "Which tag is used for a hyperlink in HTML?",
+    "answer": "<a>",
+    "category": "Web"
+  },
+  {
+    "question": "What is Jenkins?",
+    "answer": "Automation server for CI/CD",
+    "category": "DevOps"
+  }
+]

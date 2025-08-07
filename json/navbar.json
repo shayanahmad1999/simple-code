@@ -1,0 +1,154 @@
+{
+  "Forms": [
+    {
+      "name": "Form Validation",
+      "link": "form-validation.html",
+      "icon": "fa-check-circle"
+    },
+    {
+      "name": "Password Validation",
+      "link": "password-validation.html",
+      "icon": "fa-lock"
+    },
+    { "name": "Contact Us", "link": "contact-us.html", "icon": "fa-envelope" },
+    {
+      "name": "Modern Contact",
+      "link": "modern-contact-form.html",
+      "icon": "fa-paper-plane"
+    },
+    {
+      "name": "Form Validator",
+      "link": "FormValidator.html",
+      "icon": "fa-file-alt"
+    }
+  ],
+  "UI Components": [
+    {
+      "name": "Accordion",
+      "link": "accordion-section.html",
+      "icon": "fa-bars"
+    },
+    { "name": "Add Row", "link": "add-row.html", "icon": "fa-plus-square" },
+    {
+      "name": "Color Changer",
+      "link": "color-change.html",
+      "icon": "fa-palette"
+    },
+    { "name": "Dark/Light", "link": "dark-light.html", "icon": "fa-adjust" },
+    { "name": "Emoji Rating", "link": "emoji-rating.html", "icon": "fa-smile" },
+    {
+      "name": "Image Carousel",
+      "link": "image-carousal.html",
+      "icon": "fa-images"
+    },
+    { "name": "Single Image", "link": "img-single.html", "icon": "fa-image" },
+    { "name": "Multi Image", "link": "img-multiple.html", "icon": "fa-th" },
+    { "name": "Slider", "link": "range-slider.html", "icon": "fa-sliders-h" },
+    {
+      "name": "Sticky Notes",
+      "link": "sticky-notes-board.html",
+      "icon": "fa-sticky-note"
+    },
+    {
+      "name": "Sticky Tab",
+      "link": "Sticky-Tab.html",
+      "icon": "fa-window-maximize"
+    },
+    {
+      "name": "Speech Bubble",
+      "link": "speech-bubble.html",
+      "icon": "fa-comment-dots"
+    },
+    {
+      "name": "Typing Animation Banner",
+      "link": "TypingAnimationBanner.html",
+      "icon": "fa-keyboard"
+    }
+  ],
+  "Tools": [
+    {
+      "name": "Age Calculator",
+      "link": "age-calculater.html",
+      "icon": "fa-calendar-alt"
+    },
+    {
+      "name": "Advanced Age",
+      "link": "age-calculater-adv.html",
+      "icon": "fa-user-clock"
+    },
+    { "name": "Clipboard", "link": "clipboard.html", "icon": "fa-clipboard" },
+    { "name": "Real-Time", "link": "real-time.html", "icon": "fa-clock" },
+    { "name": "Tag Input", "link": "tag-input.html", "icon": "fa-tags" },
+    { "name": "Todo List", "link": "todo-list.html", "icon": "fa-list-check" },
+    { "name": "Data List", "link": "datalist.html", "icon": "fa-database" },
+    {
+      "name": "404 Page",
+      "link": "404-Page.html",
+      "icon": "fa-exclamation-triangle"
+    },
+    {
+      "name": "BMI Calculator",
+      "link": "BMI-Calculator.html",
+      "icon": "fa-weight"
+    },
+    {
+      "name": "Currency Converter",
+      "link": "Currency-Converter.html",
+      "icon": "fa-money-bill-transfer"
+    },
+    {
+      "name": "Flash Card Quiz",
+      "link": "flashcard-quiz.html",
+      "icon": "fa-clone"
+    },
+    {
+      "name": "Pagination",
+      "link": "pagination.html",
+      "icon": "fa-ellipsis-h"
+    },
+    {
+      "name": "Mood Selector",
+      "link": "mood-selector.html",
+      "icon": "fa-face-grin-stars"
+    },
+    {
+      "name": "Progress Tracker",
+      "link": "progress-tracker.html",
+      "icon": "fa-chart-line"
+    },
+    {
+      "name": "QR Code Generator",
+      "link": "qr-code.html",
+      "icon": "fa-qrcode"
+    },
+    {
+      "name": "Real Time Clock",
+      "link": "Real-Time-Clock.html",
+      "icon": "fa-clock-rotate-left"
+    },
+    {
+      "name": "Recipe Card Generator",
+      "link": "recipe-card-generator.html",
+      "icon": "fa-utensils"
+    },
+    { "name": "Stop Watch", "link": "stopwatch.html", "icon": "fa-stopwatch" },
+    {
+      "name": "Typing Speed",
+      "link": "typing-speed.html",
+      "icon": "fa-keyboard"
+    }
+  ],
+  "Creative & Portfolio": [
+    { "name": "CSS ART", "link": "CSS-art.html", "icon": "fa-paint-brush" },
+    {
+      "name": "Image Gallery",
+      "link": "image-gallery.html",
+      "icon": "fa-images"
+    },
+    {
+      "name": "Portfolio Template",
+      "link": "portfolio-template.html",
+      "icon": "fa-id-card"
+    }
+  ]
+}
