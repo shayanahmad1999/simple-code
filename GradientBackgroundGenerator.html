@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Gradient Background Generator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+        :root {
+            --bg1: #0ea5e9;
+            --bg2: #8b5cf6;
+            --card: #ffffff;
+            --muted: #6b7280;
+            --text: #0f172a;
+            --ring: #93c5fd;
+            --border: #e5e7eb;
+            --soft: #f8fafc;
+            --shadow: rgba(2, 6, 23, .12);
+            --btn: #2563eb;
+            --btn-ghost: #eef2ff;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            height: 100%;
+        }
+
+        body {
+            margin: 0;
+            font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Noto Sans", Arial;
+            background: linear-gradient(135deg, var(--bg1), var(--bg2));
+            color: var(--text);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .app {
+            width: 100%;
+            max-width: 1100px;
+            background: var(--card);
+            border-radius: 16px;
+            box-shadow: 0 20px 60px var(--shadow);
+            overflow: hidden;
+            display: grid;
+            gap: 0;
+            grid-template-columns: 1fr 420px;
+        }
+
+        @media (max-width: 980px) {
+            .app {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .preview {
+            min-height: 360px;
+            position: relative;
+            display: grid;
+            place-items: center;
+        }
+
+        .preview-inner {
+            width: 100%;
+            height: 100%;
+            min-height: 360px;
+            background: linear-gradient(135deg, #9ae6b4, #63b3ed);
+        }
+
+        .preview-overlay {
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            background-image:
+                radial-gradient(rgba(255, 255, 255, .12) 1px, transparent 1px),
+                radial-gradient(rgba(255, 255, 255, .08) 1px, transparent 1px);
+            background-position: 0 0, 12px 12px;
+            background-size: 24px 24px, 24px 24px;
+        }
+
+        .panel {
+            padding: 18px 18px 20px;
+            border-left: 1px solid var(--border);
+            background: #fff;
+        }
+
+        .panel h1 {
+            margin: 4px 0 12px;
+            font-size: 1.25rem;
+        }
+
+        .row {
+            display: grid;
+            gap: 10px;
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .row>.field {
+            min-width: 0;
+        }
+
+        @media (max-width: 480px) {
+            .row {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .field {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            margin-bottom: 10px;
+        }
+
+        .label {
+            font-size: .9rem;
+            color: var(--muted);
+        }
+
+        select,
+        input[type="number"],
+        input[type="text"] {
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 8px 10px;
+            font-size: .95rem;
+            width: 100%;
+            outline: none;
+            transition: border .15s ease, box-shadow .15s ease;
+        }
+
+        input[type="range"] {
+            width: 100%;
+        }
+
+        select:focus,
+        input:focus {
+            border-color: var(--ring);
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, .15);
+        }
+
+        .stops {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 6px;
+        }
+
+        .stop {
+            display: grid;
+            grid-template-columns: auto 1fr auto auto auto;
+            gap: 10px;
+            align-items: center;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 10px;
+            background: var(--soft);
+        }
+
+        .stop input[type="color"] {
+            width: 40px;
+            height: 36px;
+            border: none;
+            background: transparent;
+            padding: 0;
+            border-radius: 8px;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .stop .pos {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .stop .pos input[type="number"] {
+            width: 80px;
+        }
+
+        .btn {
+            appearance: none;
+            border: 0;
+            border-radius: 10px;
+            padding: 10px 12px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform .03s ease, filter .18s ease, box-shadow .2s ease;
+        }
+
+        .btn:active {
+            transform: translateY(1px);
+        }
+
+        .btn.primary {
+            background: var(--btn);
+            color: #fff;
+            box-shadow: 0 10px 16px rgba(37, 99, 235, .25);
+        }
+
+        .btn.ghost {
+            background: var(--btn-ghost);
+            color: #1e3a8a;
+        }
+
+        .btn.icon {
+            padding: 8px 10px;
+        }
+
+        .actions {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin: 12px 0 6px;
+        }
+
+        .code {
+            margin-top: 10px;
+            background: #0b1220;
+            color: #e2e8f0;
+            border-radius: 12px;
+            padding: 12px;
+            font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+            font-size: .9rem;
+            position: relative;
+        }
+
+        .code pre {
+            margin: 0;
+            white-space: pre-wrap;
+            word-break: break-word;
+        }
+
+        .code .copy {
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            background: rgba(255, 255, 255, .1);
+            color: #fff;
+            border: 1px solid rgba(255, 255, 255, .2);
+            padding: 6px 10px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        .hint {
+            color: var(--muted);
+            font-size: .87rem;
+            margin-top: 6px;
+        }
+
+        .divider {
+            height: 1px;
+            background: var(--border);
+            margin: 12px 0;
+        }
+
+        .pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: .8rem;
+            padding: 6px 10px;
+            border-radius: 999px;
+            background: #eef2ff;
+            color: #3730a3;
+            border: 1px solid #e0e7ff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="app" role="application" aria-label="Gradient Background Generator">
+        <!-- PREVIEW -->
+        <div class="preview">
+            <div id="preview" class="preview-inner" aria-label="Gradient preview"></div>
+            <div class="preview-overlay" aria-hidden="true"></div>
+        </div>
+
+        <!-- CONTROLS -->
+        <div class="panel">
+            <h1>Gradient Generator</h1>
+            <div class="row">
+                <div class="field">
+                    <span class="label">Type</span>
+                    <select id="type" aria-label="Gradient type">
+                        <option value="linear">Linear</option>
+                        <option value="radial">Radial</option>
+                        <option value="conic">Conic</option>
+                    </select>
+                </div>
+                <div class="field" id="angleField">
+                    <div class="label">Angle: <span id="angleVal">90</span>°</div>
+                    <input id="angle" type="range" min="0" max="360" value="90" />
+                </div>
+            </div>
+
+            <div class="row" id="radialOptions" style="display:none;">
+                <div class="field">
+                    <span class="label">Radial Shape</span>
+                    <select id="radialShape">
+                        <option value="ellipse">Ellipse</option>
+                        <option value="circle">Circle</option>
+                    </select>
+                </div>
+                <div class="field">
+                    <span class="label">Radial Size</span>
+                    <select id="radialSize">
+                        <option value="farthest-corner">Farthest-corner</option>
+                        <option value="closest-corner">Closest-corner</option>
+                        <option value="farthest-side">Farthest-side</option>
+                        <option value="closest-side">Closest-side</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="field">
+                <span class="label">Color Stops</span>
+                <div id="stops" class="stops" aria-live="polite"></div>
+                <div class="actions">
+                    <button class="btn ghost" id="addStop">+ Add Color Stop</button>
+                    <button class="btn ghost" id="randomize">🎲 Randomize</button>
+                    <span class="pill" id="stopCount">0 stops</span>
+                </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="actions">
+                <button class="btn primary" id="applyBtn">Apply</button>
+                <button class="btn ghost" id="reverseBtn">Reverse Stops</button>
+                <button class="btn ghost" id="spreadBtn">Evenly Space</button>
+            </div>
+
+            <div class="code" aria-label="Generated CSS">
+                <button class="copy" id="copyBtn" title="Copy CSS">Copy</button>
+                <pre id="cssOut">background: linear-gradient(90deg, #34d399 0%, #60a5fa 100%);</pre>
+            </div>
+            <div class="hint">Tip: add 3–5 stops for smooth palettes. Conic gradients look great for charts and dials.
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // --- Utilities ---
+        const clamp = (n, min, max) => Math.min(Math.max(n, min), max);
+        const rand = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
+        const genHex = () => '#' + Array.from({ length: 6 }, () => '0123456789ABCDEF'[rand(0, 15)]).join('');
+
+        // State
+        const state = {
+            type: 'linear',
+            angle: 90,
+            radial: { shape: 'ellipse', size: 'farthest-corner' },
+            stops: [
+                { color: '#34d399', pos: 0 },   // emerald-400
+                { color: '#60a5fa', pos: 100 }, // blue-400
+            ]
+        };
+
+        // Elements
+        const preview = document.getElementById('preview');
+        const typeEl = document.getElementById('type');
+        const angleEl = document.getElementById('angle');
+        const angleVal = document.getElementById('angleVal');
+        const angleField = document.getElementById('angleField');
+        const radialOptions = document.getElementById('radialOptions');
+        const radialShape = document.getElementById('radialShape');
+        const radialSize = document.getElementById('radialSize');
+        const stopsEl = document.getElementById('stops');
+        const addStopBtn = document.getElementById('addStop');
+        const randomizeBtn = document.getElementById('randomize');
+        const applyBtn = document.getElementById('applyBtn');
+        const reverseBtn = document.getElementById('reverseBtn');
+        const spreadBtn = document.getElementById('spreadBtn');
+        const cssOut = document.getElementById('cssOut');
+        const copyBtn = document.getElementById('copyBtn');
+        const stopCount = document.getElementById('stopCount');
+
+        // --- Rendering ---
+        function gradientCSS() {
+            const stops = state.stops
+                .slice()
+                .sort((a, b) => a.pos - b.pos)
+                .map(s => `${s.color} ${clamp(s.pos, 0, 100)}%`)
+                .join(', ');
+
+            if (state.type === 'linear') {
+                return `background: linear-gradient(${state.angle}deg, ${stops});`;
+            }
+            if (state.type === 'radial') {
+                return `background: radial-gradient(${state.radial.shape} ${state.radial.size} at center, ${stops});`;
+            }
+            // conic
+            return `background: conic-gradient(from ${state.angle}deg at center, ${stops});`;
+        }
+
+        function applyGradient() {
+            const css = gradientCSS();
+            preview.style = css.replace('background:', '');
+            cssOut.textContent = css;
+            stopCount.textContent = `${state.stops.length} stop${state.stops.length === 1 ? '' : 's'}`;
+        }
+
+        function stopRow(stop, idx) {
+            const row = document.createElement('div');
+            row.className = 'stop';
+
+            // Color input
+            const color = document.createElement('input');
+            color.type = 'color';
+            color.value = stop.color;
+            color.ariaLabel = `Color stop ${idx + 1} color`;
+            color.addEventListener('input', e => { stop.color = e.target.value; applyGradient(); });
+
+            // Position (range + number)
+            const posWrap = document.createElement('div');
+            posWrap.className = 'pos';
+            const range = document.createElement('input');
+            range.type = 'range'; range.min = 0; range.max = 100; range.value = stop.pos;
+            range.addEventListener('input', e => { stop.pos = +e.target.value; number.value = stop.pos; applyGradient(); });
+            const number = document.createElement('input');
+            number.type = 'number'; number.min = 0; number.max = 100; number.value = stop.pos;
+            number.addEventListener('input', e => { stop.pos = clamp(+e.target.value || 0, 0, 100); range.value = stop.pos; applyGradient(); });
+            const pct = document.createElement('span'); pct.textContent = '%';
+            posWrap.append(range, number, pct);
+
+            // Move up/down
+            const upBtn = document.createElement('button');
+            upBtn.className = 'btn icon';
+            upBtn.title = 'Move up';
+            upBtn.textContent = '↑';
+            upBtn.addEventListener('click', () => {
+                const i = state.stops.indexOf(stop);
+                if (i > 0) { [state.stops[i - 1], state.stops[i]] = [state.stops[i], state.stops[i - 1]]; renderStops(); }
+            });
+
+            const downBtn = document.createElement('button');
+            downBtn.className = 'btn icon';
+            downBtn.title = 'Move down';
+            downBtn.textContent = '↓';
+            downBtn.addEventListener('click', () => {
+                const i = state.stops.indexOf(stop);
+                if (i < state.stops.length - 1) { [state.stops[i + 1], state.stops[i]] = [state.stops[i], state.stops[i + 1]]; renderStops(); }
+            });
+
+            // Remove
+            const del = document.createElement('button');
+            del.className = 'btn icon';
+            del.title = 'Remove';
+            del.textContent = '✕';
+            del.addEventListener('click', () => {
+                if (state.stops.length <= 2) return; // keep at least 2
+                state.stops = state.stops.filter(s => s !== stop);
+                renderStops();
+            });
+
+            row.append(color, posWrap, upBtn, downBtn, del);
+            return row;
+        }
+
+        function renderStops() {
+            // Keep positions clamped and sorted visually by pos
+            state.stops.forEach(s => s.pos = clamp(+s.pos || 0, 0, 100));
+            stopsEl.innerHTML = '';
+            state.stops.forEach((s, i) => stopsEl.appendChild(stopRow(s, i)));
+            applyGradient();
+        }
+
+        // --- Events ---
+        typeEl.addEventListener('change', () => {
+            state.type = typeEl.value;
+            const isRadial = state.type === 'radial';
+            radialOptions.style.display = isRadial ? '' : 'none';
+            angleField.style.display = state.type === 'radial' ? 'none' : '';
+            applyGradient();
+        });
+
+        angleEl.addEventListener('input', e => {
+            state.angle = +e.target.value;
+            angleVal.textContent = state.angle;
+            if (state.type !== 'radial') applyGradient();
+        });
+
+        radialShape.addEventListener('change', e => {
+            state.radial.shape = e.target.value;
+            if (state.type === 'radial') applyGradient();
+        });
+        radialSize.addEventListener('change', e => {
+            state.radial.size = e.target.value;
+            if (state.type === 'radial') applyGradient();
+        });
+
+        addStopBtn.addEventListener('click', () => {
+            // new stop between last two positions (or random if only two)
+            const last = state.stops[state.stops.length - 1];
+            const before = state.stops[state.stops.length - 2] ?? { pos: 0 };
+            const pos = clamp(Math.round((before.pos + last.pos) / 2), 0, 100);
+            state.stops.push({ color: genHex(), pos });
+            renderStops();
+        });
+
+        randomizeBtn.addEventListener('click', () => {
+            const count = rand(2, 5);
+            const positions = Array.from({ length: count }, (_, i) => Math.round(i * (100 / (count - 1))));
+            state.stops = positions.map(p => ({ color: genHex(), pos: p }));
+            // randomize type and angle
+            const types = ['linear', 'radial', 'conic'];
+            state.type = types[rand(0, types.length - 1)];
+            typeEl.value = state.type;
+            angleEl.value = state.angle = rand(0, 360);
+            angleVal.textContent = state.angle;
+            radialShape.value = state.radial.shape = (rand(0, 1) ? 'ellipse' : 'circle');
+            const sizes = ['farthest-corner', 'closest-corner', 'farthest-side', 'closest-side'];
+            radialSize.value = state.radial.size = sizes[rand(0, 3)];
+            radialOptions.style.display = state.type === 'radial' ? '' : 'none';
+            angleField.style.display = state.type === 'radial' ? 'none' : '';
+            renderStops();
+        });
+
+        applyBtn.addEventListener('click', applyGradient);
+
+        reverseBtn.addEventListener('click', () => {
+            state.stops = state.stops
+                .map(s => ({ color: s.color, pos: 100 - s.pos }))
+                .sort((a, b) => a.pos - b.pos);
+            renderStops();
+        });
+
+        spreadBtn.addEventListener('click', () => {
+            const n = state.stops.length;
+            state.stops = state.stops
+                .map((s, i) => ({ ...s, pos: Math.round(i * (100 / (n - 1))) }));
+            renderStops();
+        });
+
+        copyBtn.addEventListener('click', async () => {
+            const css = cssOut.textContent;
+            try {
+                await navigator.clipboard.writeText(css);
+                copyBtn.textContent = 'Copied!';
+                setTimeout(() => copyBtn.textContent = 'Copy', 900);
+            } catch {
+                // fallback: create textarea
+                const ta = document.createElement('textarea');
+                ta.value = css; document.body.appendChild(ta); ta.select();
+                try { document.execCommand('copy'); } catch { }
+                document.body.removeChild(ta);
+            }
+        });
+
+        // Init
+        renderStops();
+    </script>
+</body>
+
+</html>

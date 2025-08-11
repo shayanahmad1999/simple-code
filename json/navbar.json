@@ -10,6 +10,16 @@
       "link": "password-validation.html",
       "icon": "fa-lock"
     },
+    {
+      "name": "Password Generator",
+      "link": "password-generator.html",
+      "icon": "fa fa-key"
+    },
+    {
+      "name": "Advance Password Generator",
+      "link": "advance-password-generator.html",
+      "icon": "fas fa-mask"
+    },
     { "name": "Contact Us", "link": "contact-us.html", "icon": "fa-envelope" },
     {
       "name": "Modern Contact",
@@ -63,6 +73,11 @@
       "name": "Typing Animation Banner",
       "link": "TypingAnimationBanner.html",
       "icon": "fa-keyboard"
+    },
+    {
+      "name": "Gradient Background Generator",
+      "link": "GradientBackgroundGenerator.html",
+      "icon": "fa fa-camera"
     }
   ],
   "Tools": [
