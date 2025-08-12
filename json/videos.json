@@ -1,0 +1,30 @@
+[
+  {
+    "id": "bbb",
+    "title": "Big Buck Bunny (MP4)",
+    "src": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
+    "poster": "https://upload.wikimedia.org/wikipedia/commons/c/c5/Big_buck_bunny_poster_big.jpg",
+    "tracks": [
+      {
+        "kind": "subtitles",
+        "src": "subtitles/bbb-en.vtt",
+        "srclang": "en",
+        "label": "English"
+      }
+    ]
+  },
+  {
+    "id": "escape",
+    "title": "For Bigger Escape (MP4)",
+    "src": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4",
+    "poster": "https://assets.tvokids.com/prod/s3fs-public/custom_brand_hero_images/tileSM_bigEscape1.jpg",
+    "tracks": []
+  },
+  {
+    "id": "sintel",
+    "title": "Sintel (MP4)",
+    "src": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/Sintel.mp4",
+    "poster": "https://upload.wikimedia.org/wikipedia/commons/8/8f/Sintel_poster.jpg",
+    "tracks": []
+  }
+]

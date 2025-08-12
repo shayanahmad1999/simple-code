@@ -170,5 +170,22 @@
       "link": "SkillShowcaseCard.html",
       "icon": "fa-id-card"
     }
+  ],
+  "Multimedia": [
+    {
+      "name": "Sample Player",
+      "link": "sample-video.html",
+      "icon": "fas fa-film"
+    },
+    {
+      "name": "YouTube Player",
+      "link": "youtube-video.html",
+      "icon": "fas fa-play"
+    },
+    {
+      "name": "Advance Player",
+      "link": "advance-video.html",
+      "icon": "fas fa-file-video"
+    }
   ]
 }
